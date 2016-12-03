@@ -1,6 +1,12 @@
 var mountains = [];
 // branch size constants
-var rootSize = 42;
+if (window.innerWidth > 900) {
+  var rootSize = 42;
+  var rootLength = 200;
+} else {
+  var rootSize = 36;
+  var rootLength = 170;
+}
 var branchRatio = 0.67;
 // gradient constants
 var c1, c2;
@@ -8,6 +14,9 @@ var c1, c2;
 var tree = [];
 var leaves = [];
 var count = 0;
+// clock
+var time = 0;
+var clockPos;
 
 function setup() {
   var cHeight = window.innerHeight;
@@ -15,6 +24,11 @@ function setup() {
     cHeight = 600;
   }
   createCanvas(window.innerWidth, cHeight);
+
+  clockPos = {
+    'x': width - 150,
+    'y': 100
+  };
 
   c1 = color(255);
   c2 = color(176,196,222);
@@ -26,11 +40,11 @@ function setup() {
   mountains.push(new Mountain(height - 50, height - 300, [94,124,126]));
 
   for (var j = 0; j < mountains.length; j++) {
-    mountains[j].show();
+    mountains[j].create();
   }
 
-  var a = createVector(width / 2, height);
-  var b = createVector(width / 2, height - 200);
+  var a = createVector(width * 0.41, height);
+  var b = createVector(width * 0.41, height - rootLength);
   var root = new Branch(a, b, rootSize);
 
   tree[0] = root;
@@ -38,16 +52,63 @@ function setup() {
   for (var b = 0; b < 10; b++) {
     addBranches();
   }
+}
 
+function draw() {
+  setGradient(0, 0, width, height, c1, c2);
+  for (var j = 0; j < mountains.length; j++) {
+    mountains[j].show();
+  }
   for (var i = 0; i < tree.length; i++) {
     tree[i].show();
   }
-
   for (var i = 0; i < leaves.length; i++) {
     fill(255, 0, 100, 100);
     noStroke();
-    ellipse(leaves[i].x + random(-5, 5), leaves[i].y + random(-20, 20), 8, 8);
+    ellipse(leaves[i].x, leaves[i].y, 8, 8);
   }
+  noFill();
+  strokeWeight(20);
+  stroke(231,201,171);
+  ellipse(clockPos.x, clockPos.y, 100, 100);
+  strokeWeight(1);
+  stroke(0);
+  fill(255);
+  var radius = 50;
+  var angle = radians(time);
+  var x = clockPos.x + (radius * cos(angle));
+  var y = clockPos.y + (radius * sin(angle));
+  ellipse(clockPos.x, clockPos.y, 10, 10);
+  strokeWeight(3);
+  line(clockPos.x, clockPos.y, x, y);
+  time = time % 360;
+  time += 1;
+  noStroke();
+  textSize(16);
+  if (time > 225 && time < 315) {
+    fill(219, 50, 54);
+  } else {
+    fill(0);
+  }
+  text("winter", clockPos.x - 20, 30);
+  if ((time > 315 && time < 365) || (time >= 0 && time < 45)) {
+    fill(72, 133, 237);
+  } else {
+    fill(0);
+  }
+  text("spring", clockPos.x + 70, 100);
+  if (time > 45 && time < 135) {
+    fill(60, 186, 84);
+  } else {
+    fill(0);
+  }
+  text("summer", clockPos.x - 27, 180);
+  if (time >= 135 && time < 225) {
+    fill(244, 194, 13);
+  } else {
+    fill(0);
+  }
+  text("autumn", clockPos.x - 122, 100);
 }
 
 function setGradient(x, y, w, h, c1, c2) {
@@ -64,19 +125,26 @@ function Mountain(minY, maxY, phil) {
   this.yoff = random(1000);
   this.xoff = 0;
   this.fill = phil;
+  this.vertices = [];
 
-  this.show = function() {
-    noStroke();
-    fill(this.fill);
-    // draw a mountain polygon across the width of the screen with perlin noise determined y values
-    beginShape();
-    vertex(0, height);
+  this.create = function() {
+    this.vertices.push([0, height]);
     for (var x = 0; x < width + 7; x += 7) {
       var y = map(noise(this.xoff, this.yoff), 0, 1, minY, maxY);
-      vertex(x, y);
+      this.vertices.push([x, y]);
       this.xoff += 0.05;
     }
-    vertex(width, height);
+    this.vertices.push([width, height]);
+  }
+
+  this.show = function() {
+    // draw a mountain polygon across the width of the screen with perlin noise determined y values
+    noStroke();
+    fill(this.fill);
+    beginShape();
+    this.vertices.forEach(function(vert) {
+      vertex(vert[0], vert[1]);
+    })
     endShape(CLOSE);
   }
 }
@@ -125,6 +193,8 @@ function addBranches() {
     for (var i = 0; i < tree.length; i++) {
       if (!tree[i].finished) {
         var leaf = tree[i].end.copy();
+        leaf.x += random(-20, 20);
+        leaf.y += random(-20, 20);
         leaves.push(leaf);
       }
     }
