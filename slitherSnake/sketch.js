@@ -1,14 +1,13 @@
-var v;
-var ghost;
-
 var food;
 var foodDiameter = 24;
-
-var tailLength = 100;
+var ghost;
+var s;
+var tailLength = 50;
+var snakeSize = 32;
 
 function setup() {
   createCanvas(window.innerWidth,window.innerHeight);
-  v = new Vehicle(width/2, height/2);
+  s = new Snake(0, height/2);
   // snake will chase an invisible ghost to steer
   ghost = new Ghost();
   pickLocation();
@@ -26,14 +25,15 @@ function draw() {
 
   var ghostVect = createVector(ghost.x, ghost.y);
 
-  if (v.eat(food)) {
+  if (s.eat(food)) {
     pickLocation();
   }
 
   // snake follows the ghost to steer
-  v.seek(ghostVect);
-  v.update();
-  v.display();
+  s.seek(ghostVect);
+  s.update();
+  s.death();
+  s.display();
 
   fill(255, 0, 100);
   ellipse(food.x, food.y, foodDiameter, foodDiameter);
@@ -46,28 +46,44 @@ function pickLocation() {
 }
 
 function keyPressed() {
+  var ghostX = ghost.xspeed;
+  var ghostY = ghost.yspeed;
   if (keyCode === UP_ARROW) {
-    ghost.dir(0, -1);
+    if (ghostY < 1) {
+      ghost.dir(0, -1);
+    }
   } else if (keyCode === DOWN_ARROW) {
-    ghost.dir(0, 1);
+    if (ghostY > -1) {
+      ghost.dir(0, 1);
+    }
   } else if (keyCode === RIGHT_ARROW) {
-    ghost.dir(1, 0);
+    if (ghostX > -1) {
+      ghost.dir(1, 0);
+    }
   } else if (keyCode === LEFT_ARROW) {
-    ghost.dir(-1, 0);
+    if (ghostX < 1) {
+      ghost.dir(-1, 0);
+    }
   }
 }
 
-function Vehicle(x,y) {
+function Snake(x,y) {
   this.acceleration = createVector(0,0);
-  this.velocity = createVector(0,-2);
+  this.velocity = createVector(0,0);
   this.position = createVector(x,y);
-  this.r = 32;
+  this.r = snakeSize;
   this.maxspeed = 3;
   this.maxforce = 0.2;
   this.history = [];
 
   // Method to update location
   this.update = function() {
+        var v = createVector(this.position.x,this.position.y);
+    this.history.push(v);
+
+    if (this.history.length > tailLength) {
+        this.history.splice(0,1);
+    }
     // Update velocity
     this.velocity.add(this.acceleration);
     // Limit speed
@@ -75,13 +91,6 @@ function Vehicle(x,y) {
     this.position.add(this.velocity);
     // Reset accelerationelertion to 0 each cycle
     this.acceleration.mult(0);
-
-    var v = createVector(this.position.x,this.position.y);
-    this.history.push(v);
-
-    if (this.history.length > tailLength) {
-        this.history.splice(0,1);
-    }
   };
 
   this.applyForce = function(force) {
@@ -104,6 +113,28 @@ function Vehicle(x,y) {
 
     this.applyForce(steer);
   };
+
+  this.reset = function() {
+     tailLength = 50;
+     this.history = [];
+     this.position = createVector(width/2, height/2);
+  }
+
+  this.death = function() {
+    var outOfBoundsX = this.position.x < 0 || this.position.x > width;
+    var outOfBoundsY = this.position.y < 0 || this.position.y > height;
+    if (outOfBoundsX || outOfBoundsY) {
+      this.reset();
+    } else {
+      for (var i = 0; i < this.history.length - 10; i++) {
+        var pos = this.history[i];
+        var d = dist(this.position.x, this.position.y, pos.x, pos.y);
+        if (d < 2) {
+            this.reset();
+        }
+      }
+    }
+  }
 
   this.eat = function(pos) {
     var d = dist(this.position.x, this.position.y, pos.x, pos.y);
@@ -143,9 +174,9 @@ function Vehicle(x,y) {
 
 function Ghost() {
   this.x = 0;
-  this.y = 0;
+  this.y = width/2;
   this.xspeed = 5;
-  this.yspeed = 5;
+  this.yspeed = 0;
 
   this.dir = function(x, y) {
     this.xspeed = x * 5;
