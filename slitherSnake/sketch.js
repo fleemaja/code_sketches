@@ -1,39 +1,48 @@
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// Seeking "vehicle" follows the mouse position
-
-// Implements Craig Reynold's autonomous steering behaviors
-// One vehicle "seeks"
-// See: http://www.red3d.com/cwr/
-
 var v;
 var ghost;
+
+var food;
+var foodDiameter = 24;
+
+var tailLength = 100;
 
 function setup() {
   createCanvas(window.innerWidth,window.innerHeight);
   v = new Vehicle(width/2, height/2);
+  // snake will chase an invisible ghost to steer
   ghost = new Ghost();
+  pickLocation();
 }
 
 function draw() {
   background(51);
   textSize(16);
-  text("use the arrow keys to move the white block", width/3, 30);
+  text("use the arrow keys to move the snake", width/3, 30);
   text("(make sure the game window is in focus to use arrow keys)", width/3, 60);
+  text("tail length: " + tailLength, width/8, 30);
 
   ghost.update();
   ghost.show();
 
   var ghostVect = createVector(ghost.x, ghost.y);
 
-  // Call the appropriate steering behaviors for our agents
+  if (v.eat(food)) {
+    pickLocation();
+  }
+
   // snake follows the ghost to steer
   v.seek(ghostVect);
   v.update();
   v.display();
 
+  fill(255, 0, 100);
+  ellipse(food.x, food.y, foodDiameter, foodDiameter);
+
+}
+
+function pickLocation() {
+  var offset = 40;
+  food = createVector(random(offset, width - offset), random(offset, height - offset));
 }
 
 function keyPressed() {
@@ -47,12 +56,6 @@ function keyPressed() {
     ghost.dir(-1, 0);
   }
 }
-
-// The Nature of Code
-// Daniel Shiffman
-// http://natureofcode.com
-
-// The "Vehicle" class
 
 function Vehicle(x,y) {
   this.acceleration = createVector(0,0);
@@ -76,7 +79,7 @@ function Vehicle(x,y) {
     var v = createVector(this.position.x,this.position.y);
     this.history.push(v);
 
-    if (this.history.length > 100) {
+    if (this.history.length > tailLength) {
         this.history.splice(0,1);
     }
   };
@@ -102,6 +105,16 @@ function Vehicle(x,y) {
     this.applyForce(steer);
   };
 
+  this.eat = function(pos) {
+    var d = dist(this.position.x, this.position.y, pos.x, pos.y);
+    if (d < foodDiameter) {
+      tailLength += 20;
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   this.display = function() {
     // Draw a snake rotated in the direction of velocity
     var theta = this.velocity.heading() + PI/2;
@@ -119,11 +132,11 @@ function Vehicle(x,y) {
     rotate(theta);
     ellipse(0, 0, this.r, this.r);
     fill(255);
-    ellipse(-this.r/5, 0, 8, 8);
-    ellipse(this.r/5, 0, 8, 8);
+    ellipse(-this.r/5, 0, 12, 12);
+    ellipse(this.r/5, 0, 12, 12);
     fill(98);
-    ellipse(-this.r/5, 0, 4, 4);
-    ellipse(this.r/5, 0, 4, 4);
+    ellipse(-this.r/5, 0, 6, 6);
+    ellipse(this.r/5, 0, 6, 6);
     pop();
   };
 }
@@ -149,7 +162,8 @@ function Ghost() {
   }
 
   this.show = function() {
-    fill(255);
+    fill(255, 0);
+    noStroke();
     rect(this.x, this.y, 20, 20);
   }
 }
