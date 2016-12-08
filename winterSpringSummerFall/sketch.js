@@ -17,6 +17,8 @@ var count = 0;
 // clock
 var time = 0;
 var clockPos;
+// colors
+var green, red;
 
 function setup() {
   var cHeight = window.innerHeight;
@@ -32,6 +34,9 @@ function setup() {
 
   c1 = color(255);
   c2 = color(176,196,222);
+
+  green = color(0, 255, 100, 100);
+  orange = color(255,165,0,100);
 
   setGradient(0, 0, width, height, c1, c2);
 
@@ -62,11 +67,6 @@ function draw() {
   for (var i = 0; i < tree.length; i++) {
     tree[i].show();
   }
-  for (var i = 0; i < leaves.length; i++) {
-    fill(255, 0, 100, 100);
-    noStroke();
-    ellipse(leaves[i].x, leaves[i].y, 8, 8);
-  }
   noFill();
   strokeWeight(20);
   stroke(231,201,171);
@@ -85,30 +85,78 @@ function draw() {
   time += 1;
   noStroke();
   textSize(16);
-  if (time > 225 && time < 315) {
+  if (time >= 225 && time < 315) {
+    drawLeaves(8, true, 1);
+    leavesFall();
     fill(219, 50, 54);
   } else {
     fill(0);
   }
   text("winter", clockPos.x - 20, 30);
-  if ((time > 315 && time < 365) || (time >= 0 && time < 45)) {
+  if ((time >= 315 && time <= 360) || (time >= 0 && time < 45)) {
+    if (leaves.length == 0) {
+      leavesGrow();
+    } else {
+      if (time > 315) {
+        var radius = map(time, 315, 360, 0, 5);
+      } else {
+        var radius = map(time, 0, 45, 5, 8);
+      }
+      drawLeaves(radius);
+    }
     fill(72, 133, 237);
   } else {
     fill(0);
   }
   text("spring", clockPos.x + 70, 100);
-  if (time > 45 && time < 135) {
+  if (time >= 45 && time < 135) {
+    drawLeaves(8);
     fill(60, 186, 84);
   } else {
     fill(0);
   }
   text("summer", clockPos.x - 27, 180);
   if (time >= 135 && time < 225) {
+    var lerpVal = map(time, 135, 225, 0, 1);
+    drawLeaves(8, true, lerpVal);
     fill(244, 194, 13);
   } else {
     fill(0);
   }
   text("autumn", clockPos.x - 122, 100);
+}
+
+function leavesFall() {
+  for (var i = 0; i < leaves.length; i++) {
+    leaves[i].x += random(-3, 3);
+    leaves[i].y += random(3, 20);
+    if (leaves[i].y > height) {
+      leaves.splice(i,1);
+    }
+  }
+}
+
+function leavesGrow() {
+    for (var i = 0; i < tree.length; i++) {
+      if (!tree[i].finished) {
+        var leaf = tree[i].end.copy();
+        leaf.x += random(-20, 20);
+        leaf.y += random(-20, 20);
+        leaves.push(leaf);
+      }
+    }
+}
+
+function drawLeaves(radius, isCold=false, lerpVal) {
+    for (var i = 0; i < leaves.length; i++) {
+      fill(0, 255, 100, 100);
+      if (isCold) {
+        var col = lerpColor(green, orange, lerpVal);
+        fill(col);
+      }
+      noStroke();
+      ellipse(leaves[i].x, leaves[i].y, radius, radius);
+    }
 }
 
 function setGradient(x, y, w, h, c1, c2) {
