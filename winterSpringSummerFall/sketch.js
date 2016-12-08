@@ -18,7 +18,7 @@ var count = 0;
 var time = 0;
 var clockPos;
 // colors
-var green, red;
+var c3, c4;
 
 function setup() {
   var cHeight = window.innerHeight;
@@ -35,8 +35,8 @@ function setup() {
   c1 = color(255);
   c2 = color(176,196,222);
 
-  green = color(0, 255, 100, 100);
-  orange = color(255,165,0,100);
+  c3 = color(0, 255, 100, 100);
+  c4 = color(255,165,0,100);
 
   setGradient(0, 0, width, height, c1, c2);
 
@@ -102,7 +102,7 @@ function draw() {
       } else {
         var radius = map(time, 0, 45, 5, 8);
       }
-      drawLeaves(radius);
+      drawLeaves(radius, false, 0);
     }
     fill(72, 133, 237);
   } else {
@@ -110,7 +110,7 @@ function draw() {
   }
   text("spring", clockPos.x + 70, 100);
   if (time >= 45 && time < 135) {
-    drawLeaves(8);
+    drawLeaves(8, false, 0);
     fill(60, 186, 84);
   } else {
     fill(0);
@@ -147,17 +147,18 @@ function leavesGrow() {
     }
 }
 
-function drawLeaves(radius, isCold=false, lerpVal) {
+function drawLeaves(lRadius, isCold, lerpVal) {
     for (var i = 0; i < leaves.length; i++) {
       fill(0, 255, 100, 100);
       if (isCold) {
-        var col = lerpColor(green, orange, lerpVal);
+        var col = lerpColor(c3, c4, lerpVal);
         fill(col);
       }
       noStroke();
-      ellipse(leaves[i].x, leaves[i].y, radius, radius);
+      ellipse(leaves[i].x, leaves[i].y, lRadius, lRadius);
     }
 }
+
 
 function setGradient(x, y, w, h, c1, c2) {
   noFill();
