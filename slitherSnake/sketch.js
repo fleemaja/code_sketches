@@ -5,6 +5,11 @@ var s;
 var tailLength = 50;
 var snakeSize = 32;
 var gamePaused = false;
+var highScore = 50;
+
+if (localStorage.getItem("_highScore") === null) {
+  localStorage._highScore = highScore;
+}
 
 function setup() {
   createCanvas(window.innerWidth,window.innerHeight);
@@ -22,6 +27,7 @@ function draw() {
   text("use the arrow keys to move the snake", width/3, 30);
   text("(make sure the game window is in focus to use arrow keys)", width/3, 60);
   text("tail length: " + tailLength, width/8, 30);
+  text("high score: " + localStorage.getItem("_highScore"), width/8, 60);
 
   if (!gamePaused) {
     ghost.update();
@@ -30,6 +36,9 @@ function draw() {
     var ghostVect = createVector(ghost.x, ghost.y);
 
     if (s.eat(food)) {
+      if (tailLength > localStorage.getItem("_highScore")) {
+        localStorage._highScore = tailLength;
+      }
       pickLocation();
     }
 
