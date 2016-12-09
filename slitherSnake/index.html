@@ -4,17 +4,115 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Slither Snake</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
     <style>
-      canvas {
-        top: 0;
-        left: 0;
-        position: fixed;
-      }
+    canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      border: 3px solid #555;
+    }
+
+    .flexcontainer {
+       display: -webkit-flex;
+       display: flex;
+       -webkit-flex-direction: column;
+       flex-direction: column;
+       width: 555px;
+       margin: 0 auto;
+    }
+
+    div {
+      vertical-align: middle;
+    }
+
+    .instructions {
+      display: inline-block;
+      margin: 10px 20px;
+      width: 200px;
+    }
+
+    .row:not(:last-child) {
+      width: 100%;
+      border-bottom: 1px solid lightgrey;
+    }
+
+    body,
+    h1 {
+      margin: 0;
+      padding: 0;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    button {
+      margin-top: 10px;
+      cursor: pointer;
+      font-size: 24px;
+      padding: 10px 40px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button:hover {
+      background: #A0A0A0;
+    }
+
+    #start-screen {
+      font-family: 'Roboto', sans-serif;
+      text-align: center;
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      z-index: 99999;
+      background: white;
+    }
+
+    h1 {
+      background: #9999a1;
+      padding: 5px;
+      color: white;
+    }
     </style>
   </head>
 
   <body>
+
+    <div id="start-screen">
+      <h1>Slither Snake</h1>
+      <div class="flexcontainer">
+        <div class="row">
+          <div class="instructions">
+            <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1481315302/Arrow-keys_utpewf.jpg" height="60" width="92">
+          </div>
+          <div class="instructions">Use the arrow keys to change the snake's direction</div>
+        </div>
+        <div class="row">
+          <div class="instructions">Don't run into your own tail</div>
+          <div class="instructions">
+            <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1481315307/Screen_Shot_2016-12-09_at_2.22.49_PM_f5yqz4.png" height="90" width="174">
+          </div>
+        </div>
+        <div class="row">
+          <div class="instructions">
+            <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1481315311/Screen_Shot_2016-12-09_at_2.24.33_PM_ghqncx.png" height="90" width="190">
+          </div>
+          <div class="instructions">Don't run into the walls</div>
+        </div>
+        <div class="row">
+          <div class="instructions">Eat the red dots to grow and increase your score</div>
+          <div class="instructions">
+            <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1481315317/Screen_Shot_2016-12-09_at_2.25.12_PM_xocpi7.png" height="40" width="48">
+          </div>
+        </div>
+      </div>
+      <button>Play</button>
+    </div>
+
     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.4.22/p5.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.5/addons/p5.dom.min.js"></script>
     <script language="javascript" type="text/javascript" src="sketch.js"></script>
   </body>
 </html>

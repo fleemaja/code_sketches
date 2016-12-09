@@ -4,7 +4,7 @@ var ghost;
 var s;
 var tailLength = 50;
 var snakeSize = 32;
-var gamePaused = false;
+var gamePaused = true;
 var highScore = 50;
 
 if (localStorage.getItem("_highScore") === null) {
@@ -12,11 +12,21 @@ if (localStorage.getItem("_highScore") === null) {
 }
 
 function setup() {
-  createCanvas(window.innerWidth,window.innerHeight);
+  var iHeight = window.innerHeight;
+  if (iHeight < 500) {
+    iHeight = 500;
+  }
+  createCanvas(window.innerWidth,iHeight);
   s = new Snake(width/4, height/2);
   // snake will chase an invisible ghost to steer
   ghost = new Ghost();
   pickLocation();
+  var button = select('button');
+  var startScreen = select('#start-screen');
+  button.mouseClicked(function() {
+    startScreen.hide();
+    gamePaused = false;
+  });
 }
 
 function draw() {
@@ -24,8 +34,6 @@ function draw() {
   noStroke();
   fill(54);
   textSize(16);
-  text("use the arrow keys to move the snake", width/3, 30);
-  text("(make sure the game window is in focus to use arrow keys)", width/3, 60);
   text("tail length: " + tailLength, width/8, 30);
   text("high score: " + localStorage.getItem("_highScore"), width/8, 60);
 
