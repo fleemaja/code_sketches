@@ -8,4 +8,4 @@ A place to store and version control my monthly projects hosted on Codepen. Thes
 [Slither Snake](http://codepen.io/fleemaja/pen/zoRPMY "Slither Snake") - the classic 'snake' game with 'slither.io'-like fluid motion rather than the discrete grid organization and motion of the original.
 
     January 2017
-Giphy Madlibs - This project will use the giphy api to add gif visuals to the user's completed madlibs story. User inputs will be used as giphy search queries (with a random gif chosen from the top results) to build a vertical wall of silly visuals alongside the story.
+[Mad Gifs](http://codepen.io/fleemaja/pen/YNQeXO?editors=0110 "Mad Gifs") - This project will use the Giphy api to add gif visuals to the user's completed Madlibs story. User inputs will be used as Giphy search queries to display silly visuals alongside the story.
