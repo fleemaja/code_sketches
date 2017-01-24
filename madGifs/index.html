@@ -8,6 +8,17 @@
       html {
         font-family: Futura, sans-serif;
         text-align: center;
+        color: #333;
+        margin-bottom: 20px;
+      }
+
+      .hl {
+        background: yellow;
+      }
+
+      .main {
+        margin: 0 auto;
+        max-width: 400px;
       }
 
       h1 {
@@ -16,7 +27,22 @@
 
       label {
         display: block;
-        margin: 5px;
+        margin: 3px;
+      }
+
+      label:nth-child(odd) {
+        background: #ddd;
+      }
+
+      label span {
+        text-align: left;
+        float: left;
+        width: 120px;
+        margin-left: 40px;
+      }
+
+      input[type='text'] {
+        padding: 5px;
       }
 
       .myButton {
@@ -41,13 +67,17 @@
       	position:relative;
       	top:1px;
       }
+
+      .myButton:disabled {
+        cursor: not-allowed;
+        opacity: 0.7;
+      }
     </style>
   </head>
 
   <body>
 
-    <h1>MadGifs</h1>
-
+    <h1>Mad Gifs</h1>
     <div class="main">
       <form class="search-form">
 
@@ -91,14 +121,14 @@
           <input type="text" class="search" id="part-of-the-body" placeholder="Part of the Body">
         </label>
 
-        <label for="plural-noun-1">
+        <label for="plural-1">
           <span>Plural Noun #1</span>
-          <input type="text" class="search" id="plural-noun-1" placeholder="Plural Noun #1">
+          <input type="text" class="search" id="plural-1" placeholder="Plural Noun #1">
         </label>
 
-        <label for="plural-noun-2">
+        <label for="plural-2">
           <span>Plural Noun #2</span>
-          <input type="text" class="search" id="plural-noun-2" placeholder="Plural Noun #2">
+          <input type="text" class="search" id="plural-2" placeholder="Plural Noun #2">
         </label>
 
         <label for="silly-word">
@@ -111,7 +141,7 @@
           <input type="text" class="search" id="type-of-liquid" placeholder="Type of Liquid">
         </label>
 
-        <input type="submit" value="Submit" class="myButton">
+        <input type="submit" value="Submit" class="myButton" title="Fill in every field to generate a Madlib!" disabled>
       </form>
     </div>
 
