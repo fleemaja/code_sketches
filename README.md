@@ -9,5 +9,3 @@ A place to store and version control my monthly projects hosted on Codepen. Thes
 
     January 2017
 [Mad Gifs](http://codepen.io/fleemaja/pen/YNQeXO?editors=0110 "Mad Gifs") - This project uses the Giphy api to add gif visuals to the user's completed Madlibs story. User inputs are used as Giphy search queries to display silly visuals alongside the story.
-
-**BONUS**: [Blowin' In The Wind](http://codepen.io/fleemaja/pen/rjGNVY?editors=0010 "Blowin' In The Wind") - Chest hair simulation with a Perlin noise flow field. User controls a slider that adjusts windiness.
