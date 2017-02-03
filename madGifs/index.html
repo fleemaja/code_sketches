@@ -6,10 +6,16 @@
     <title>Mad Gifs</title>
     <style>
       html {
+        background: url(http://res.cloudinary.com/dkw0kkkgd/image/upload/v1486157610/topographic-pattern_wf6tsp.png);
         font-family: Futura, sans-serif;
         text-align: center;
         color: #555;
         margin-bottom: 20px;
+      }
+
+      body {
+        margin: 0;
+        padding: 0;
       }
 
       .hl {
@@ -17,13 +23,34 @@
       }
 
       .main {
+        background: white;
+        -webkit-box-shadow: 0px 0px 3px 3px #ccc;
+        -moz-box-shadow:    0px 0px 3px 3px #ccc;
+        box-shadow:         0px 0px 3px 3px #ccc;
+        border-radius: 5px;
         margin: 0 auto;
-        margin-bottom: 40px;
+        margin-top: 20px;
+        margin-bottom: 20px;
         max-width: 400px;
+        padding: 15px 15px 15px 15px;
       }
 
       h1 {
         color: #44c767;
+        margin: 0;
+        padding: 0;
+        background: white;
+        -webkit-box-shadow: 0px 0px 3px 3px #ccc;
+        -moz-box-shadow:    0px 0px 3px 3px #ccc;
+        box-shadow:         0px 0px 3px 3px #ccc;
+      }
+
+      img {
+        padding: 3px;
+        background: white;
+        -webkit-box-shadow: 0px 0px 3px 3px #ccc;
+        -moz-box-shadow:    0px 0px 3px 3px #ccc;
+        box-shadow:         0px 0px 3px 3px #ccc;
       }
 
       label {
@@ -47,26 +74,23 @@
       }
 
       .myButton {
-      	background-color:#44c767;
-      	-moz-border-radius:10px;
-      	-webkit-border-radius:10px;
-      	border-radius:10px;
-      	border:1px solid #18ab29;
-      	display:inline-block;
-      	cursor:pointer;
-      	color:#ffffff;
-      	font-size:20px;
-      	padding:12px 24px;
-        margin-top: 20px;
-      	text-decoration:none;
-      	text-shadow:0px 1px 0px #2f6627;
+        color: #fff;
+        border-radius: 5px;
+        font-size: 20px;
+        padding: 10px;
+        width: 75%;
+        margin-top: 15px;
+        background-color: #44c767;
+        text-shadow: -1px 1px #44c767;
+        border: none;
       }
-      .myButton:hover {
-      	background-color:#5cbf2a;
-      }
-      .myButton:active {
-      	position:relative;
-      	top:1px;
+
+      .myButton:active,
+      .myButton:hover,
+      .myButton:focus {
+        background: #2c9347;
+        cursor: pointer;
+        text-shadow: -1px 1px #2c9347;
       }
 
       .myButton:disabled {
