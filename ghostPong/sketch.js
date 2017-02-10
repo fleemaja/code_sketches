@@ -1,76 +1,136 @@
-var blobs = [];
+var player;
+var computer;
+var ball;
 
 function setup() {
-  createCanvas(window.innerWidth, window.innerHeight);
+  var iHeight = window.innerHeight > 500 ? window.innerHeight : 500;
+  createCanvas(window.innerWidth, iHeight);
 
-  drawingContext.shadowOffsetX = 0;
-  drawingContext.shadowOffsetY = 0;
-  drawingContext.shadowBlur = 60;
-  drawingContext.shadowColor = "rgb(255, 176, 190)";
 
-  for (var i = 0; i < 13; i++) {
-    blobs.push(new Blob(random(width), random(height)));
-  }
+  player = new Player();
+  computer = new Computer();
+  ball = new Ball(width/2, height/2);
 }
 
 function draw() {
-  background(13, 33);
+  background(14);
 
-  for (var b = 0; b < blobs.length; b++) {
-    blobs[b].update();
-    blobs[b].show();
+  stroke(255);
+  line(width/2, 0, width/2, height);
+
+  player.show();
+  computer.show();
+  ball.update();
+  ball.show();
+
+  if (keyIsDown(UP_ARROW)) {
+    player.move(0, -4);
+  } else if (keyIsDown(DOWN_ARROW)) {
+    player.move(0, 4);
   }
 }
 
-function Blob(x, y) {
-  this.pos = createVector(x, y);
-  this.vel = p5.Vector.random2D();
-  this.vel.mult(random(1, 3));
-  this.r = random(48, 72);
-  this.yoff = random(1000);
+function Paddle(x, y, width, height) {
+  this.x = x;
+  this.y = y;
+  this.width = width;
+  this.height = height;
+  this.xspeed = 0;
+  this.yspeed = 0;
 
-  this.update = function() {
-    this.pos.add(this.vel);
-    if (this.pos.x > width || this.pos.x < 0) {
-      this.vel.x *= -1;
-    }
-    if (this.pos.y > height || this.pos.y < 0) {
-      this.vel.y *= -1;
+  this.show = function() {
+    fill(255);
+    rect(this.x, this.y, this.width, this.height);
+  }
+}
+
+function keyPressed() {
+  if (keyCode === UP_ARROW) {
+    player.move(0, -4);
+  } else if (keyCode === DOWN_ARROW) {
+    player.move(0, 4);
+  } else {
+    player.move(0, 0);
+  }
+}
+
+function Player() {
+  this.paddle = new Paddle(50, (height/2) - 25, 10, 50);
+
+  this.move = function(x, y) {
+    this.paddle.x += x;
+    this.paddle.y += y;
+    this.paddle.xspeed = x;
+    this.paddle.yspeed = y;
+    if (this.paddle.y < 0) { // all the way to the top
+      this.paddle.y = 0;
+      this.paddle.yspeed = 0;
+    } else if (this.paddle.y + this.paddle.height > height) { // all the way to the bottom
+      this.paddle.y = height - this.paddle.height;
+      this.paddle.yspeed = 0;
     }
   }
 
   this.show = function() {
-    noStroke();
-    fill(255);
-    push();
-    translate(this.pos.x, this.pos.y);
-    beginShape();
-    var xoff = 0;
-    for (var a = 0; a < TWO_PI; a += 0.1) {
-      var offset;
-      if (a > PI/6 && a < 5 * PI/6) {
-        offset = map(noise(xoff, this.yoff), 0, 1, -20, 50);
-      } else {
-        offset = 0;
-      }
-      var r = this.r + offset;
-      var x = r * cos(a);
-      var y = r * sin(a);
-      vertex(x, y);
-      xoff += 0.1;
-    }
-    endShape();
-
-    this.yoff += 0.08;
-    pop();
-
-    var eyeOffset = 15;
-
-    stroke(54);
-    ellipse(this.pos.x - eyeOffset, this.pos.y - eyeOffset, 20, 20);
-    ellipse(this.pos.x + eyeOffset, this.pos.y - eyeOffset, 20, 20);
-    fill(54);
-    ellipse(this.pos.x - eyeOffset, this.pos.y - eyeOffset, 5, 5);
-    ellipse(this.pos.x + eyeOffset, this.pos.y - eyeOffset, 5, 5);
+    this.paddle.show();
   }
 }
+
+function Computer() {
+  this.paddle = new Paddle(width - 50, (height/2) - 25, 10, 50);
+
+  this.show = function() {
+    this.paddle.show();
+  }
+}
+
+function Ball(x, y) {
+  this.x = x;
+  this.y = y;
+  this.xspeed = -3;
+  this.yspeed = 0;
+  this.radius = 10;
+  var topY = this.y;
+  var bottomY = this.y + this.radius;
+
+  this.update = function() {
+    this.x += this.xspeed;
+    this.y += this.yspeed;
+
+    if (this.y < 0) { // hitting the top wall
+      this.y = 0;
+      this.yspeed = -this.yspeed;
+    } else if (this.y + this.radius > height) { // hitting the bottom wall
+      this.y = height - this.radius;
+      this.yspeed = -this.yspeed;
+    }
+
+    if (this.x < 0 || this.x > width) { // a point was scored
+      this.xspeed = -3;
+      this.yspeed = 0;
+      this.x = width/2;
+      this.y = height/2;
+    }
+
+    var paddle1 = player.paddle;
+    var paddle2 = computer.paddle;
+    if(topY > paddle1.y && bottomY < paddle1.y + paddle1.height && this.x > paddle1.x && this.x < paddle1.x + paddle1.width) {
+      // hit the player's paddle
+      this.yspeed += (paddle1.yspeed / 2);
+      this.xspeed = 3;
+      this.x += this.xspeed;
+    }
+
+    if (topY > paddle2.y && bottomY < paddle2.y + paddle2.height && this.x + this.radius > paddle2.x && this.x < paddle2.x) {
+      // hit the player's paddle
+      this.yspeed += (paddle2.yspeed / 2);
+      this.xspeed = -3;
+      this.x += this.xspeed;
+    }
+  };
+
+  this.show = function() {
+    fill(255);
+    rect(this.x, this.y, this.radius, this.radius);
+  }
+};
