@@ -5,7 +5,7 @@
   </th>
   <tr>
     <td>
-      <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1485814100/Screen_Shot_2017-01-30_at_4.06.53_PM_nu6zer.png" alt="Mad Gifs" >
+      <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1487105269/Screen_Shot_2017-02-14_at_2.47.34_PM_dgxmwq.png" alt="Mad Gifs" >
     </td>
     <td>
       <a href="http://codepen.io/fleemaja/full/YNQeXO/" target="_blank">Mad Gifs</a> - This project uses the Giphy api to add gif visuals to the user's completed Madlibs story. User inputs are used as Giphy search queries to display silly visuals alongside the story.
