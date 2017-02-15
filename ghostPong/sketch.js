@@ -4,6 +4,9 @@ var ball;
 
 var playerServe;
 
+// for sparks effect on goal
+var sparks = [];
+
 function setup() {
   var iHeight = window.innerHeight > 500 ? window.innerHeight : 500;
   createCanvas(window.innerWidth, iHeight);
@@ -13,13 +16,14 @@ function setup() {
   ball = new Ball(width/2, height/2);
   scoreboard = new Scoreboard();
   playerServe = true;
+
+  textSize(32);
+  textFont('Raleway Dots');
 }
 
 function draw() {
   background(0, 95);
 
-  // drawingContext.shadowOffsetX = 0;
-  // drawingContext.shadowOffsetY = 0;
   drawingContext.shadowBlur = 30;
   drawingContext.shadowColor = "white";
 
@@ -38,13 +42,19 @@ function draw() {
   computer.update();
   computer.show();
 
-  textSize(32);
-  textFont('Raleway Dots');
   text(scoreboard.playerScore, width/2 - 80, 60);
   text(scoreboard.computerScore, width/2 + 60, 60);
 
   ball.update();
   ball.show();
+
+  for (var i = sparks.length - 1; i >= 0; i--) {
+    sparks[i].update();
+    sparks[i].show();
+    if (sparks[i].done()) {
+      sparks.splice(i, 1);
+    }
+  }
 }
 
 function Paddle(x, y, width, height) {
@@ -163,7 +173,9 @@ function Ball(x, y) {
       this.yspeed = -this.yspeed;
     }
 
-    if (this.x < 0 || this.x > width) { // a point was scored
+    // a point was scored
+    if (this.x < 0 || this.x > width) {
+      shootSparks(this.x, this.y, -this.xspeed);
       this.x < 0 ? scoreboard.computerScored() : scoreboard.playerScored();
       playerServe = !playerServe;
       this.xspeed = playerServe ? -6 : 6;
@@ -194,3 +206,42 @@ function Ball(x, y) {
     rect(this.x, this.y, this.radius, this.radius, 5);
   }
 };
+
+function shootSparks(x, y, xVel) {
+    for (var i = 0; i < 50; i++) {
+      var s = new Spark(x, y, xVel);
+      sparks.push(s);
+   }
+}
+
+function Spark(x, y, xVel) {
+  this.pos = createVector(x, y);
+  this.lifespan = 255;
+
+  this.vel = createVector(random(0, xVel), random(-xVel, xVel));
+  // we just want the direction
+  this.vel.normalize();
+  // then add random speed
+  this.vel.mult(random(0, 10));
+
+  this.update = function() {
+    this.vel.mult(0.95);
+    this.lifespan -= 5;
+    this.pos.add(this.vel);
+  }
+
+  this.done = function() {
+    if (this.lifespan < 0) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  this.show = function() {
+    noStroke();
+    fill(255, this.lifespan);
+    rect(this.pos.x, this.pos.y, 4, 4, 1);
+  }
+
+}
