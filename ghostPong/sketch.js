@@ -4,6 +4,8 @@ var ball;
 
 var playerServe;
 
+var goalWaitPeriod = false;
+
 // for sparks effect on goal
 var sparks = [];
 
@@ -18,10 +20,14 @@ function setup() {
   playerServe = true;
 
   textSize(32);
-  textFont('Raleway Dots');
+  textFont("HelveticaNeue-Light");
 }
 
 function draw() {
+  if (goalWaitPeriod) {
+    translate(random(-10, 10), random(-10, 10));
+  }
+
   background(0, 95);
 
   drawingContext.shadowBlur = 30;
@@ -176,6 +182,10 @@ function Ball(x, y) {
     // a point was scored
     if (this.x < 0 || this.x > width) {
       shootSparks(this.x, this.y, -this.xspeed);
+      goalWaitPeriod = true;
+      setTimeout(function() {
+        goalWaitPeriod = false
+      }, 500);
       this.x < 0 ? scoreboard.computerScored() : scoreboard.playerScored();
       playerServe = !playerServe;
       this.xspeed = playerServe ? -6 : 6;
