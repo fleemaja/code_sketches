@@ -8,6 +8,10 @@ var goalWaitPeriod = false;
 
 // for sparks effect on goal
 var sparks = [];
+// for lightning effect before serve
+var lightningBall;
+
+var xoff = 0.0;
 
 function setup() {
   var iHeight = window.innerHeight > 500 ? window.innerHeight : 500;
@@ -18,6 +22,8 @@ function setup() {
   ball = new Ball(width/2, height/2);
   scoreboard = new Scoreboard();
   playerServe = true;
+  // indicator animation that a serve is coming
+  lightningBall = new LightningBall();
 
   textSize(32);
   textFont("HelveticaNeue-Light");
@@ -31,7 +37,7 @@ function draw() {
   background(0, 95);
 
   drawingContext.shadowBlur = 30;
-  drawingContext.shadowColor = "white";
+  drawingContext.shadowColor = "lightsteelblue";
 
   stroke(255);
   line(width/2, 0, width/2, height);
@@ -51,8 +57,15 @@ function draw() {
   text(scoreboard.playerScore, width/2 - 80, 60);
   text(scoreboard.computerScore, width/2 + 60, 60);
 
-  ball.update();
-  ball.show();
+  if (!goalWaitPeriod) {
+    if (lightningBall.ballIsFormed()) {
+      ball.update();
+      ball.show();
+    } else {
+      lightningBall.update();
+      lightningBall.show();
+    }
+  }
 
   for (var i = sparks.length - 1; i >= 0; i--) {
     sparks[i].update();
@@ -164,6 +177,13 @@ function Ball(x, y) {
   var topY = this.y;
   var bottomY = this.y + this.radius;
 
+  this.resetBall = function() {
+    this.x = width/2;
+    this.y = height/2;
+    this.xspeed = playerServe ? -6 : 6;
+    this.yspeed = random(-1, 1);
+  }
+
   this.update = function() {
     this.x += this.xspeed;
     this.y += this.yspeed;
@@ -184,14 +204,12 @@ function Ball(x, y) {
       shootSparks(this.x, this.y, -this.xspeed);
       goalWaitPeriod = true;
       setTimeout(function() {
-        goalWaitPeriod = false
+        goalWaitPeriod = false;
+        lightningBall.resetLightningBall();
       }, 500);
       this.x < 0 ? scoreboard.computerScored() : scoreboard.playerScored();
       playerServe = !playerServe;
-      this.xspeed = playerServe ? -6 : 6;
-      this.yspeed = random(-1, 1);
-      this.x = width/2;
-      this.y = height/2;
+      this.resetBall();
     }
 
     var paddle1 = player.paddle;
@@ -212,8 +230,10 @@ function Ball(x, y) {
   };
 
   this.show = function() {
-    fill(255);
-    rect(this.x, this.y, this.radius, this.radius, 5);
+    if (!goalWaitPeriod) {
+      fill(255);
+      rect(this.x, this.y, this.radius, this.radius, 5);
+    }
   }
 };
 
@@ -241,11 +261,7 @@ function Spark(x, y, xVel) {
   }
 
   this.done = function() {
-    if (this.lifespan < 0) {
-      return true;
-    } else {
-      return false;
-    }
+    return this.lifespan < 0;
   }
 
   this.show = function() {
@@ -254,4 +270,54 @@ function Spark(x, y, xVel) {
     rect(this.pos.x, this.pos.y, 4, 4, 1);
   }
 
+}
+
+function LightningBall() {
+  this.x = width/2;
+  this.y = height/2;
+  this.lifespan = 355;
+  this.history = [];
+
+  this.resetLightningBall = function() {
+    this.x = width/2;
+    this.y = height/2;
+    this.lifespan = 355;
+    this.history = [];
+  }
+
+  this.ballIsFormed = function() {
+    return this.lifespan < 0;
+  }
+
+  this.update = function() {
+    this.lifespan -= 5;
+    this.x += random(-0.01, 0.01);
+    this.y += random(-0.01, 0.01);
+
+    for (var i = 0; i < this.history.length; i++) {
+      this.history[i].x += random(-10, 10);
+      this.history[i].y += random(-10, 10);
+    }
+
+    var v = createVector(this.x, this.y);
+    this.history.push(v);
+    if (this.history.length > 100) {
+      this.history.splice(0, 1);
+    }
+  }
+
+  this.show = function() {
+    push();
+    stroke(255);
+    strokeWeight(4);
+    line(width/2, 0, width/2, height);
+    noFill();
+    beginShape();
+    for (var i = 0; i < this.history.length; i++) {
+      var pos = this.history[i];
+      vertex(pos.x, pos.y);
+    }
+    endShape();
+    pop();
+  }
 }
