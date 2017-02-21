@@ -1,19 +1,14 @@
 var player;
 var computer;
 var ball;
-
 var playerServe;
-
 var goalWaitPeriod = false;
-
 // for sparks effect on goal
 var sparks = [];
 // for lightning effect before serve
 var lightningBall;
-
 var isPlayerForcePush = false;
 var isCompForcePush = false;
-
 var xoff = 0.0;
 
 function setup() {
@@ -33,8 +28,9 @@ function setup() {
 }
 
 function draw() {
+
   if (goalWaitPeriod) {
-    // EARTHQUAKE
+    // Screen Shakes
     translate(random(-10, 10), random(-10, 10));
   }
 
@@ -64,18 +60,8 @@ function draw() {
   }
   computer.show();
 
-  text(scoreboard.playerScore, width/2 - 80, 60);
-  text(scoreboard.computerScore, width/2 + 60, 60);
-
-  if (!goalWaitPeriod) {
-    if (lightningBall.ballIsFormed()) {
-      ball.update();
-      ball.show();
-    } else {
-      lightningBall.update();
-      lightningBall.show();
-    }
-  }
+  text(scoreboard.playerScore + " / 7", width/2 - 120, 60);
+  text(scoreboard.computerScore + " / 7", width/2 + 60, 60);
 
   for (var i = sparks.length - 1; i >= 0; i--) {
     sparks[i].update();
@@ -84,13 +70,32 @@ function draw() {
       sparks.splice(i, 1);
     }
   }
+
+  if (scoreboard.gameOver()) {
+    fill(25, 123);
+    noStroke();
+    rect(0, 0, width, height);
+    fill(255);
+    var result = scoreboard.playerScore > scoreboard.computerScore ? "You win! " : "You lose! ";
+    text(result + scoreboard.playerScore + " to " + scoreboard.computerScore + ".", width/2 - 130, height/2 - 40);
+    text("Press the spacebar to play again.", width/2 - 240, height/2);
+  } else {
+    if (!goalWaitPeriod) {
+      if (lightningBall.ballIsFormed()) {
+        ball.update();
+        ball.show();
+      } else {
+        lightningBall.update();
+        lightningBall.show();
+      }
+    }
+  }
 }
 
 function keyPressed() {
-  // if spacebar is pressed
-  if (keyCode == 32) {
-    // forceful push with player's paddle
-    isPlayerForcePush = true;
+  // if game over and spacebar is pressed
+  if (scoreboard.gameOver && keyCode === 32) {
+    scoreboard.resetScore();
   }
 }
 
@@ -152,6 +157,15 @@ function Paddle(x, y, width, height) {
 function Scoreboard() {
   this.playerScore = 0;
   this.computerScore = 0;
+
+  this.gameOver = function() {
+    return this.playerScore === 7 || this.computerScore === 7;
+  }
+
+  this.resetScore = function() {
+    this.playerScore = 0;
+    this.computerScore = 0;
+  }
 
   this.playerScored = function() {
     this.playerScore += 1;
@@ -277,17 +291,13 @@ function Ball(x, y) {
       // hit the player's paddle
       this.yspeed += (paddle1.yspeed / 2);
 
-      if (isPlayerForcePush) {
-        this.xspeed = 12;
-      } else {
-        this.xspeed = 6;
-      }
+      isPlayerForcePush = true;
+      this.xspeed = 12;
 
       this.x += this.xspeed;
     }
 
-    var offset = 2;
-    if (bottomY > paddle2.y - offset && topY < paddle2.y + offset + paddle2.height && this.x + this.radius > paddle2.x && this.x - offset < paddle2.x) {
+    if (bottomY > paddle2.y && topY < paddle2.y + paddle2.height && this.x + this.radius > paddle2.x && this.x < paddle2.x) {
       isCompForcePush = true;
       this.xspeed = -12;
       // hit the computer's paddle
@@ -384,7 +394,7 @@ function LightningBall() {
       var pos = this.history[i];
       vertex(pos.x, pos.y);
     }
-    endShape();
+    endShape(CLOSE);
     pop();
   }
 }
