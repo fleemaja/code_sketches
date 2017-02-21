@@ -11,6 +11,9 @@ var sparks = [];
 // for lightning effect before serve
 var lightningBall;
 
+var isPlayerForcePush = false;
+var isCompForcePush = false;
+
 var xoff = 0.0;
 
 function setup() {
@@ -26,15 +29,16 @@ function setup() {
   lightningBall = new LightningBall();
 
   textSize(32);
-  textFont("HelveticaNeue-Light");
+  textFont("Helvetica");
 }
 
 function draw() {
   if (goalWaitPeriod) {
+    // EARTHQUAKE
     translate(random(-10, 10), random(-10, 10));
   }
 
-  background(0, 95);
+  background(25, 55);
 
   drawingContext.shadowBlur = 30;
   drawingContext.shadowColor = "lightsteelblue";
@@ -44,14 +48,20 @@ function draw() {
 
   player.update();
   if (keyIsDown(UP_ARROW)) {
-    player.move(0, -6);
+    player.move(0, -8);
   } else if (keyIsDown(DOWN_ARROW)) {
-    player.move(0, 6);
+    player.move(0, 8);
   }
 
   player.show();
+  if (isPlayerForcePush) {
+    player.paddle.forceUpdate('player');
+  }
 
   computer.update();
+  if (isCompForcePush) {
+    computer.paddle.forceUpdate('computer');
+  }
   computer.show();
 
   text(scoreboard.playerScore, width/2 - 80, 60);
@@ -76,6 +86,14 @@ function draw() {
   }
 }
 
+function keyPressed() {
+  // if spacebar is pressed
+  if (keyCode == 32) {
+    // forceful push with player's paddle
+    isPlayerForcePush = true;
+  }
+}
+
 function Paddle(x, y, width, height) {
   this.x = x;
   this.y = y;
@@ -83,10 +101,51 @@ function Paddle(x, y, width, height) {
   this.height = height;
   this.xspeed = 0;
   this.yspeed = 0;
+  this.forcePushTime = 0;
 
   this.show = function() {
-    fill(255);
+    if (isPlayerForcePush) {
+      fill(255);
+    } else {
+      fill(240);
+    }
     rect(this.x, this.y, this.width, this.height, 5);
+  }
+
+  this.forceUpdate = function(pType) {
+    if (pType == 'player') {
+      if (this.forcePushTime < 6) {
+        this.width += 4;
+        this.y -= 3;
+        this.height += 6;
+        this.forcePushTime += 1;
+      } else if (this.forcePushTime < 12) {
+        this.width -= 4;
+        this.y += 3;
+        this.height -= 6;
+        this.forcePushTime += 1;
+      } else {
+        isPlayerForcePush = false;
+        this.forcePushTime = 0;
+      }
+    } else {
+      if (this.forcePushTime < 6) {
+        this.x -= 4;
+        this.width += 4;
+        this.y -= 3;
+        this.height += 6;
+        this.forcePushTime += 1;
+      } else if (this.forcePushTime < 12) {
+        this.x += 4;
+        this.width -= 4;
+        this.y += 3;
+        this.height -= 6;
+        this.forcePushTime += 1;
+      } else {
+        isCompForcePush = false;
+        this.forcePushTime = 0;
+      }
+    }
   }
 }
 
@@ -151,9 +210,9 @@ function Computer() {
     var yPos = ball.y;
     var diff = -((this.paddle.y + (this.paddle.height / 2)) - yPos);
     if (diff < 0 && diff < -4) { // max speed up
-      diff = -5;
+      diff = -8;
     } else if (diff > 0 && diff > 4) { // max speed down
-      diff = 5;
+      diff = 8;
     }
     this.move(0, diff);
     if (this.paddle.y < 0) {
@@ -217,14 +276,22 @@ function Ball(x, y) {
     if(bottomY >= paddle1.y && topY < paddle1.y + paddle1.height && this.x > paddle1.x - 20 && this.x < paddle1.x + paddle1.width) {
       // hit the player's paddle
       this.yspeed += (paddle1.yspeed / 2);
-      this.xspeed = 6;
+
+      if (isPlayerForcePush) {
+        this.xspeed = 12;
+      } else {
+        this.xspeed = 6;
+      }
+
       this.x += this.xspeed;
     }
 
-    if (bottomY > paddle2.y && topY < paddle2.y + paddle2.height && this.x + this.radius > paddle2.x && this.x < paddle2.x) {
-      // hit the player's paddle
+    var offset = 2;
+    if (bottomY > paddle2.y - offset && topY < paddle2.y + offset + paddle2.height && this.x + this.radius > paddle2.x && this.x - offset < paddle2.x) {
+      isCompForcePush = true;
+      this.xspeed = -12;
+      // hit the computer's paddle
       this.yspeed += (paddle2.yspeed / 2);
-      this.xspeed = -6;
       this.x += this.xspeed;
     }
   };
