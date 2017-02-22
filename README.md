@@ -1,6 +1,19 @@
 <h1>Projects</h1>
 <table>
   <th>
+    February 2017
+  </th>
+  <tr>
+    <td>
+      <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1487804193/Screen_Shot_2017-02-22_at_4.56.12_PM_lx3tkh.png" alt="Ghost Pong" >
+    </td>
+    <td>
+      <a href="http://codepen.io/fleemaja/full/qRJwKO/" target="_blank">Ghost Pong</a> - the classic 'Pong' game with some stylistic flourishes. The 'ball' is a ghost who reacts to getting hit, goals shoot out 'sparks' and cause the screen to shake, etc.
+    </td>
+  </tr>
+</table>
+<table>
+  <th>
     January 2017
   </th>
   <tr>

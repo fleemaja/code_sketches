@@ -12,8 +12,9 @@ var isCompForcePush = false;
 var xoff = 0.0;
 
 function setup() {
-  var iHeight = window.innerHeight > 500 ? window.innerHeight : 500;
-  createCanvas(window.innerWidth, iHeight);
+  var iHeight = window.innerHeight <= 542 ? window.innerHeight - 20 : 522;
+  var iWidth = window.innerWidth <= 957 ? window.innerWidth - 20 : 937;
+  createCanvas(iWidth, iHeight);
 
   player = new Player();
   computer = new Computer();
