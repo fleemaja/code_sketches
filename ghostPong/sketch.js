@@ -6,7 +6,7 @@ var goalWaitPeriod = false;
 // for sparks effect on goal
 var sparks = [];
 // for lightning effect before serve
-var lightningBall;
+var lightningForge;
 var isPlayerForcePush = false;
 var isCompForcePush = false;
 var xoff = 0.0;
@@ -21,32 +21,29 @@ function setup() {
   scoreboard = new Scoreboard();
   playerServe = true;
   // indicator animation that a serve is coming
-  lightningBall = new LightningBall();
+  lightningForge = new LightningForge();
 
   textSize(32);
-  textFont("Helvetica");
+  textFont("Futura");
 }
 
 function draw() {
 
   if (goalWaitPeriod) {
-    // Screen Shakes
-    translate(random(-10, 10), random(-10, 10));
+    // Screen Shakes (number 13 chosen for extra spookiness)
+    translate(random(-13, 13), random(-13, 13));
   }
 
-  background(25, 55);
-
-  drawingContext.shadowBlur = 30;
-  drawingContext.shadowColor = "lightsteelblue";
+  background(25);
 
   stroke(255);
   line(width/2, 0, width/2, height);
 
   player.update();
   if (keyIsDown(UP_ARROW)) {
-    player.move(0, -8);
+    player.move(0, -7);
   } else if (keyIsDown(DOWN_ARROW)) {
-    player.move(0, 8);
+    player.move(0, 7);
   }
 
   player.show();
@@ -78,15 +75,15 @@ function draw() {
     fill(255);
     var result = scoreboard.playerScore > scoreboard.computerScore ? "You win! " : "You lose! ";
     text(result + scoreboard.playerScore + " to " + scoreboard.computerScore + ".", width/2 - 130, height/2 - 40);
-    text("Press the spacebar to play again.", width/2 - 240, height/2);
+    text("Press spacebar to play again.", width/2 - 220, height/2);
   } else {
     if (!goalWaitPeriod) {
-      if (lightningBall.ballIsFormed()) {
+      if (lightningForge.forgeIsFormed()) {
         ball.update();
         ball.show();
       } else {
-        lightningBall.update();
-        lightningBall.show();
+        lightningForge.update();
+        lightningForge.show();
       }
     }
   }
@@ -118,38 +115,25 @@ function Paddle(x, y, width, height) {
   }
 
   this.forceUpdate = function(pType) {
-    if (pType == 'player') {
-      if (this.forcePushTime < 6) {
-        this.width += 4;
-        this.y -= 3;
-        this.height += 6;
-        this.forcePushTime += 1;
-      } else if (this.forcePushTime < 12) {
-        this.width -= 4;
-        this.y += 3;
-        this.height -= 6;
-        this.forcePushTime += 1;
-      } else {
-        isPlayerForcePush = false;
-        this.forcePushTime = 0;
-      }
+    if (this.forcePushTime < 6) {
+      this.x -= 1;
+      this.width += 2;
+      this.y -= 1;
+      this.height += 2;
+      this.forcePushTime += 1;
+    } else if (this.forcePushTime < 12) {
+      this.x += 1;
+      this.width -= 2;
+      this.y += 1;
+      this.height -= 2;
+      this.forcePushTime += 1;
     } else {
-      if (this.forcePushTime < 6) {
-        this.x -= 4;
-        this.width += 4;
-        this.y -= 3;
-        this.height += 6;
-        this.forcePushTime += 1;
-      } else if (this.forcePushTime < 12) {
-        this.x += 4;
-        this.width -= 4;
-        this.y += 3;
-        this.height -= 6;
-        this.forcePushTime += 1;
+      if (pType === 'player') {
+        isPlayerForcePush = false;
       } else {
         isCompForcePush = false;
-        this.forcePushTime = 0;
       }
+      this.forcePushTime = 0;
     }
   }
 }
@@ -224,9 +208,9 @@ function Computer() {
     var yPos = ball.y;
     var diff = -((this.paddle.y + (this.paddle.height / 2)) - yPos);
     if (diff < 0 && diff < -4) { // max speed up
-      diff = -8;
+      diff = -7;
     } else if (diff > 0 && diff > 4) { // max speed down
-      diff = 8;
+      diff = 7;
     }
     this.move(0, diff);
     if (this.paddle.y < 0) {
@@ -246,26 +230,30 @@ function Ball(x, y) {
   this.y = y;
   this.xspeed = -6;
   this.yspeed = random(-1, 1);
-  this.radius = 20;
-  var topY = this.y;
-  var bottomY = this.y + this.radius;
+  this.vel = createVector(this.xspeed, this.yspeed);
+  this.radius = 40;
+  this.yoff = random(1000);
 
   this.resetBall = function() {
     this.x = width/2;
     this.y = height/2;
     this.xspeed = playerServe ? -6 : 6;
     this.yspeed = random(-1, 1);
+    this.vel.x = this.xspeed;
+    this.vel.y = this.yspeed;
   }
 
   this.update = function() {
     this.x += this.xspeed;
     this.y += this.yspeed;
+    this.vel.x = this.xspeed;
+    this.vel.y = this.yspeed;
 
-    topY = this.y;
-    bottomY = this.y + this.radius;
+    // topY = this.y;
+    // bottomY = this.y + this.radius;
 
-    if (this.y < 0) { // hitting the top wall
-      this.y = 0;
+    if (this.y - this.radius <= 0) { // hitting the top wall
+      this.y = this.radius;
       this.yspeed = -this.yspeed;
     } else if (this.y + this.radius > height) { // hitting the bottom wall
       this.y = height - this.radius;
@@ -273,33 +261,34 @@ function Ball(x, y) {
     }
 
     // a point was scored
-    if (this.x < 0 || this.x > width) {
-      shootSparks(this.x, this.y, -this.xspeed);
+    if (this.x - this.radius < 0 || this.x + this.radius > width) {
+      var xSpot = this.x - this.radius < 0 ? 0 : width;
+      shootSparks(xSpot, this.y, -this.xspeed);
       goalWaitPeriod = true;
       setTimeout(function() {
         goalWaitPeriod = false;
-        lightningBall.resetLightningBall();
+        lightningForge.resetLightningForge();
       }, 500);
-      this.x < 0 ? scoreboard.computerScored() : scoreboard.playerScored();
+      xSpot === 0 ? scoreboard.computerScored() : scoreboard.playerScored();
       playerServe = !playerServe;
       this.resetBall();
     }
 
     var paddle1 = player.paddle;
     var paddle2 = computer.paddle;
-    if(bottomY >= paddle1.y && topY < paddle1.y + paddle1.height && this.x > paddle1.x - 20 && this.x < paddle1.x + paddle1.width) {
+    if(this.y + this.radius/2 >= paddle1.y && this.y - this.radius/2 <= paddle1.y + paddle1.height && this.x - this.radius <= paddle1.x + paddle1.width) {
       // hit the player's paddle
       this.yspeed += (paddle1.yspeed / 2);
 
       isPlayerForcePush = true;
-      this.xspeed = 12;
+      this.xspeed = 10;
 
       this.x += this.xspeed;
     }
 
-    if (bottomY > paddle2.y && topY < paddle2.y + paddle2.height && this.x + this.radius > paddle2.x && this.x < paddle2.x) {
+    if (this.y + this.radius/2 >= paddle2.y && this.y - this.radius/2 <= paddle2.y + paddle2.height && this.x + this.radius >= paddle2.x) {
       isCompForcePush = true;
-      this.xspeed = -12;
+      this.xspeed = -10;
       // hit the computer's paddle
       this.yspeed += (paddle2.yspeed / 2);
       this.x += this.xspeed;
@@ -308,8 +297,37 @@ function Ball(x, y) {
 
   this.show = function() {
     if (!goalWaitPeriod) {
+      noStroke();
       fill(255);
-      rect(this.x, this.y, this.radius, this.radius, 5);
+      push();
+      translate(this.x, this.y);
+      rotate(this.vel.heading() - 80);
+      beginShape();
+      var xoff = 0;
+      for (var a = 0; a < TWO_PI; a += 0.1) {
+        var offset;
+        if (a > PI/6 && a < 5 * PI/6) {
+          offset = map(noise(xoff, this.yoff), 0, 1, -0.31 * this.radius, 0.78 * this.radius);
+        } else {
+          offset = map(noise(xoff, this.yoff), 0, 1, -0.08 * this.radius, 0.08 * this.radius);
+        }
+        var r = this.radius + offset;
+        var x = r * cos(a);
+        var y = r * sin(a);
+        vertex(x, y);
+        xoff += 0.1;
+      }
+      endShape(CLOSE);
+
+      this.yoff += 0.08;
+
+      var eyeOffset = 0.23 * this.radius;
+
+      stroke(54);
+      fill(54);
+      ellipse(-eyeOffset, -eyeOffset, 0.26 * this.radius, 0.5 * this.radius);
+      ellipse(eyeOffset, -eyeOffset, 0.26 * this.radius, 0.5 * this.radius);
+      pop();
     }
   }
 };
@@ -342,38 +360,38 @@ function Spark(x, y, xVel) {
   }
 
   this.show = function() {
-    noStroke();
-    fill(255, this.lifespan);
-    rect(this.pos.x, this.pos.y, 4, 4, 1);
+    if (!this.done()) {
+      noStroke();
+      fill(255, this.lifespan);
+      rect(this.pos.x, this.pos.y, this.lifespan/20, this.lifespan/20, 3);
+    }
   }
 
 }
 
-function LightningBall() {
+function LightningForge() {
   this.x = width/2;
   this.y = height/2;
   this.lifespan = 355;
   this.history = [];
 
-  this.resetLightningBall = function() {
+  this.resetLightningForge = function() {
     this.x = width/2;
     this.y = height/2;
     this.lifespan = 355;
     this.history = [];
   }
 
-  this.ballIsFormed = function() {
+  this.forgeIsFormed = function() {
     return this.lifespan < 0;
   }
 
   this.update = function() {
     this.lifespan -= 5;
-    this.x += random(-0.01, 0.01);
-    this.y += random(-0.01, 0.01);
 
     for (var i = 0; i < this.history.length; i++) {
-      this.history[i].x += random(-10, 10);
-      this.history[i].y += random(-10, 10);
+      this.history[i].x += random(-2, 2);
+      this.history[i].y += random(-5, 5);
     }
 
     var v = createVector(this.x, this.y);
