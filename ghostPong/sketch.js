@@ -7,6 +7,7 @@ var goalWaitPeriod = false;
 var sparks = [];
 // for lightning effect before serve
 var lightningForge;
+// for paddle animations
 var isPlayerForcePush = false;
 var isCompForcePush = false;
 var xoff = 0.0;
@@ -58,7 +59,7 @@ function draw() {
   }
   computer.show();
 
-  text(scoreboard.playerScore + " / 7", width/2 - 120, 60);
+  text(scoreboard.playerScore + " / 7", width/2 - 140, 60);
   text(scoreboard.computerScore + " / 7", width/2 + 60, 60);
 
   for (var i = sparks.length - 1; i >= 0; i--) {
@@ -162,7 +163,7 @@ function Scoreboard() {
 }
 
 function Player() {
-  this.paddle = new Paddle(50, (height/2) - 25, 20, 70);
+  this.paddle = new Paddle(30, (height/2) - 25, 20, 70);
 
   this.update = function() {
     this.paddle.xspeed = 0;
@@ -244,14 +245,15 @@ function Ball(x, y) {
     this.vel.y = this.yspeed;
   }
 
+  this.inDangerZone = function(x, y) {
+    return (x < 200 || x > width - 200);
+  }
+
   this.update = function() {
     this.x += this.xspeed;
     this.y += this.yspeed;
     this.vel.x = this.xspeed;
     this.vel.y = this.yspeed;
-
-    // topY = this.y;
-    // bottomY = this.y + this.radius;
 
     if (this.y - this.radius <= 0) { // hitting the top wall
       this.y = this.radius;
@@ -262,8 +264,8 @@ function Ball(x, y) {
     }
 
     // a point was scored
-    if (this.x - this.radius < 0 || this.x + this.radius > width) {
-      var xSpot = this.x - this.radius < 0 ? 0 : width;
+    if (this.x - this.radius/2 < 0 || this.x + this.radius/2 > width) {
+      var xSpot = this.x - this.radius/2 < 0 ? 0 : width;
       shootSparks(xSpot, this.y, -this.xspeed);
       goalWaitPeriod = true;
       setTimeout(function() {
@@ -277,7 +279,7 @@ function Ball(x, y) {
 
     var paddle1 = player.paddle;
     var paddle2 = computer.paddle;
-    if(this.y + this.radius/2 >= paddle1.y && this.y - this.radius/2 <= paddle1.y + paddle1.height && this.x - this.radius <= paddle1.x + paddle1.width) {
+    if(this.y + this.radius/2 >= paddle1.y && this.y - this.radius/2 <= paddle1.y + paddle1.height && this.x - this.radius/2 <= paddle1.x + paddle1.width) {
       // hit the player's paddle
       this.yspeed += (paddle1.yspeed / 2);
 
@@ -287,7 +289,7 @@ function Ball(x, y) {
       this.x += this.xspeed;
     }
 
-    if (this.y + this.radius/2 >= paddle2.y && this.y - this.radius/2 <= paddle2.y + paddle2.height && this.x + this.radius >= paddle2.x) {
+    if (this.y + this.radius/2 >= paddle2.y && this.y - this.radius/2 <= paddle2.y + paddle2.height && this.x + this.radius/2 >= paddle2.x) {
       isCompForcePush = true;
       this.xspeed = -10;
       // hit the computer's paddle
@@ -300,6 +302,7 @@ function Ball(x, y) {
     if (!goalWaitPeriod) {
       noStroke();
       fill(255);
+      var danger = this.inDangerZone(this.x, this.y);
       push();
       translate(this.x, this.y);
       rotate(this.vel.heading() - 80);
@@ -326,8 +329,13 @@ function Ball(x, y) {
 
       stroke(54);
       fill(54);
-      ellipse(-eyeOffset, -eyeOffset, 0.26 * this.radius, 0.5 * this.radius);
-      ellipse(eyeOffset, -eyeOffset, 0.26 * this.radius, 0.5 * this.radius);
+      if (danger) {
+        text(">", -eyeOffset * 2, 0);
+        text("<", eyeOffset/2, 0);
+      } else {
+        ellipse(-eyeOffset, -eyeOffset, 0.26 * this.radius, 0.5 * this.radius);
+        ellipse(eyeOffset, -eyeOffset, 0.26 * this.radius, 0.5 * this.radius);
+      }
       pop();
     }
   }
