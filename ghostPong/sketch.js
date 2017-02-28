@@ -11,11 +11,19 @@ var lightningForge;
 var isPlayerForcePush = false;
 var isCompForcePush = false;
 var xoff = 0.0;
+var gameStarted = false;
 
 function setup() {
   var iHeight = window.innerHeight <= 542 ? window.innerHeight - 20 : 522;
   var iWidth = window.innerWidth <= 957 ? window.innerWidth - 20 : 937;
   createCanvas(iWidth, iHeight);
+
+  var button = select('button');
+  var startScreen = select('#start-screen');
+  button.mouseClicked(function() {
+    startScreen.hide();
+    gameStarted = true;
+  });
 
   player = new Player();
   computer = new Computer();
@@ -30,62 +38,63 @@ function setup() {
 }
 
 function draw() {
-
-  if (goalWaitPeriod) {
-    // Screen Shakes (number 13 chosen for extra spookiness)
-    translate(random(-13, 13), random(-13, 13));
-  }
-
-  background(25);
-
-  stroke(255);
-  line(width/2, 0, width/2, height);
-
-  player.update();
-  if (keyIsDown(UP_ARROW)) {
-    player.move(0, -7);
-  } else if (keyIsDown(DOWN_ARROW)) {
-    player.move(0, 7);
-  }
-
-  player.show();
-  if (isPlayerForcePush) {
-    player.paddle.forceUpdate('player');
-  }
-
-  computer.update();
-  if (isCompForcePush) {
-    computer.paddle.forceUpdate('computer');
-  }
-  computer.show();
-
-  text(scoreboard.playerScore + " / 7", width/2 - 140, 60);
-  text(scoreboard.computerScore + " / 7", width/2 + 60, 60);
-
-  for (var i = sparks.length - 1; i >= 0; i--) {
-    sparks[i].update();
-    sparks[i].show();
-    if (sparks[i].done()) {
-      sparks.splice(i, 1);
+  if (gameStarted) {
+    if (goalWaitPeriod) {
+      // Screen Shakes (number 13 chosen for extra spookiness)
+      translate(random(-13, 13), random(-13, 13));
     }
-  }
 
-  if (scoreboard.gameOver()) {
-    fill(25, 123);
-    noStroke();
-    rect(0, 0, width, height);
-    fill(255);
-    var result = scoreboard.playerScore > scoreboard.computerScore ? "You win! " : "You lose! ";
-    text(result + scoreboard.playerScore + " to " + scoreboard.computerScore + ".", width/2 - 130, height/2 - 40);
-    text("Press spacebar to play again.", width/2 - 220, height/2);
-  } else {
-    if (!goalWaitPeriod) {
-      if (lightningForge.forgeIsFormed()) {
-        ball.update();
-        ball.show();
-      } else {
-        lightningForge.update();
-        lightningForge.show();
+    background(25);
+
+    stroke(255);
+    line(width/2, 0, width/2, height);
+
+    player.update();
+    if (keyIsDown(UP_ARROW)) {
+      player.move(0, -7);
+    } else if (keyIsDown(DOWN_ARROW)) {
+      player.move(0, 7);
+    }
+
+    player.show();
+    if (isPlayerForcePush) {
+      player.paddle.forceUpdate('player');
+    }
+
+    computer.update();
+    if (isCompForcePush) {
+      computer.paddle.forceUpdate('computer');
+    }
+    computer.show();
+
+    text(scoreboard.playerScore + " / 7", width/2 - 140, 60);
+    text(scoreboard.computerScore + " / 7", width/2 + 60, 60);
+
+    for (var i = sparks.length - 1; i >= 0; i--) {
+      sparks[i].update();
+      sparks[i].show();
+      if (sparks[i].done()) {
+        sparks.splice(i, 1);
+      }
+    }
+
+    if (scoreboard.gameOver()) {
+      fill(25, 123);
+      noStroke();
+      rect(0, 0, width, height);
+      fill(255);
+      var result = scoreboard.playerScore > scoreboard.computerScore ? "You win! " : "You lose! ";
+      text(result + scoreboard.playerScore + " to " + scoreboard.computerScore + ".", width/2 - 130, height/2 - 40);
+      text("Press spacebar to play again.", width/2 - 220, height/2);
+    } else {
+      if (!goalWaitPeriod) {
+        if (lightningForge.forgeIsFormed()) {
+          ball.update();
+          ball.show();
+        } else {
+          lightningForge.update();
+          lightningForge.show();
+        }
       }
     }
   }
