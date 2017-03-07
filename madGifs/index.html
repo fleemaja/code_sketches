@@ -7,7 +7,7 @@
     <style>
       html {
         background: url(http://res.cloudinary.com/dkw0kkkgd/image/upload/v1486157610/topographic-pattern_wf6tsp.png);
-        font-family: Futura, sans-serif;
+        font-family: Futura, 'Trebuchet MS', sans-serif;
         text-align: center;
         color: #555;
         margin-bottom: 20px;
@@ -20,44 +20,39 @@
 
       .hl {
           background: #DBFAE4;
+          padding: 3px;
       }
 
-      .main,
-      .story {
+      .hoverable {
+        cursor: pointer;
+      }
+
+      .windows {
+        display: flex;
+        margin: 30px 0px;
+        justify-content: center;
+      }
+
+      .content {
         background: white;
         -webkit-box-shadow: 0px 0px 3px 3px #ccc;
         -moz-box-shadow:    0px 0px 3px 3px #ccc;
         box-shadow:         0px 0px 3px 3px #ccc;
         border-radius: 5px;
-        margin: 0 auto;
-        margin-bottom: 20px;
         max-width: 400px;
         padding: 15px;
-        opacity: 0;
-        transition: all .5s;
-      }
-
-      .main.active,
-      .story.active {
-        transform: translate3d(0, 0, 0);
-        opacity: 1;
-        transition: all 1s;
-        height: auto;
-      }
-
-      .main {
-        margin-top: 20px;
-        transform: translate3d(1000px, 0, 0);
-        /*hack for getting this element out of the flow of the DOM*/
-        height: 0;
-        overflow: visible;
+        flex: 1;
       }
 
       .story {
-        /*hacky thing to correct for setting the displaced form's height to 0*/
-        margin-top: -40px;
-        margin-bottom: 60px;
-        transform: translate3d(-1000px, 0, 0);
+        font-size: 16px;
+        line-height: 24px;
+      }
+
+      .gifWindow {
+        display: none;
+        margin-left: 30px;
+        flex-direction: column;
       }
 
       h1 {
@@ -68,6 +63,17 @@
         -webkit-box-shadow: 0px 0px 3px 3px #ccc;
         -moz-box-shadow:    0px 0px 3px 3px #ccc;
         box-shadow:         0px 0px 3px 3px #ccc;
+      }
+
+      h2 {
+        margin: 0;
+        margin-bottom: 30px;
+      }
+
+      .instructions {
+        font-size: 24px;
+        width: 90%;
+        margin: 20% auto;
       }
 
       img {
@@ -133,8 +139,8 @@
   <body>
 
     <h1>Mad Gifs</h1>
-    <div class="text">
-      <div class="main active">
+    <div class="windows">
+      <div class="content main">
         <form class="search-form">
 
           <label for="a-place">
@@ -201,7 +207,8 @@
         </form>
       </div>
 
-      <div class="story">
+      <div class="content gifWindow">
+        <p class="instructions">Click or hover over an underlined word in the story to see its gif!</p>
       </div>
     </div>
 
