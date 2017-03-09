@@ -10,17 +10,46 @@
         font-family: Futura, 'Trebuchet MS', sans-serif;
         text-align: center;
         color: #555;
-        margin-bottom: 20px;
+        margin-bottom: 30px;
       }
 
-      body {
+      body,
+      p {
         margin: 0;
         padding: 0;
       }
 
-      .hl {
-          background: #DBFAE4;
-          padding: 3px;
+      .greeting {
+        margin-bottom: 15px;
+        color: #111;
+      }
+
+      a {
+        text-decoration: none;
+      }
+
+      .highlight {
+        background: #daf9de;
+        padding: 5px 0;
+      }
+
+      .fancy-highlight {
+        color: #111;
+        text-decoration: none;
+        padding: 0 3px;
+        transition: all .2s ease-out;
+        background: linear-gradient(to bottom,
+                                    rgba(218, 249, 222, 1) 0%,
+                                    rgba(218, 249, 222, 1) 42%,
+                                    rgba(68, 199, 103, 1) 42%,
+                                    rgba(68, 199, 103, 1) 100%);
+        background-repeat: no-repeat;
+        background-size: 100% 200%;
+      }
+
+      .fancy-highlight.active,
+      .fancy-highlight:hover {
+        background-position: 0 100%;
       }
 
       .hoverable {
@@ -30,6 +59,7 @@
       .windows {
         display: flex;
         margin: 30px 0px;
+        margin-bottom: 60px;
         justify-content: center;
       }
 
@@ -42,15 +72,18 @@
         max-width: 400px;
         padding: 15px;
         flex: 1;
+        flex-basis: 100%;
+        overflow: hidden;
       }
 
       .story {
         font-size: 16px;
-        line-height: 24px;
+        line-height: 28px;
       }
 
       .gifWindow {
         display: none;
+        padding: 15px 0px;
         margin-left: 30px;
         flex-direction: column;
       }
@@ -85,6 +118,7 @@
       }
 
       .image-grid {
+        display: none;
         max-width: 1024px;
         margin: 0 auto;
       }
@@ -109,7 +143,7 @@
         padding: 5px;
       }
 
-      .myButton {
+      .madButton {
         color: #fff;
         border-radius: 5px;
         font-size: 20px;
@@ -121,17 +155,35 @@
         border: none;
       }
 
-      .myButton:active,
-      .myButton:hover,
-      .myButton:focus {
+      .show-grid {
+        display: none;
+        max-width: 200px;
+        margin: 0 auto;
+        margin-bottom: 30px;
+      }
+
+      .madButton:active,
+      .madButton:hover,
+      .madButton:focus {
         background: #2c9347;
         cursor: pointer;
         text-shadow: -1px 1px #2c9347;
       }
 
-      .myButton:disabled {
+      .madButton:disabled {
         cursor: not-allowed;
         opacity: 0.7;
+      }
+
+      @media (max-width: 767px) {
+        .windows {
+          flex-wrap: wrap;
+        }
+
+        .gifWindow {
+          margin-top: 40px;
+          margin-left: 0px;
+        }
       }
     </style>
   </head>
@@ -141,69 +193,71 @@
     <h1>Mad Gifs</h1>
     <div class="windows">
       <div class="content main">
+        <p class="greeting">
+          Fill in every field to generate a <a class="fancy-highlight" href="https://en.wikipedia.org/wiki/Mad_Libs" target="_blank">Mad Lib</a>!
+        </p>
         <form class="search-form">
-
           <label for="a-place">
             <span>A Place</span>
-            <input type="text" class="search" id="a-place" placeholder="A Place">
+            <input type="text" class="search" id="a-place" placeholder="A Place" maxlength="23">
           </label>
 
           <label for="celebrity-1">
             <span>Celebrity #1</span>
-            <input type="text" class="search" id="celebrity-1" placeholder="Celebrity #1" >
+            <input type="text" class="search" id="celebrity-1" placeholder="Celebrity #1" maxlength="23">
           </label>
 
           <label for="celebrity-2">
             <span>Celebrity #2</span>
-            <input type="text" class="search" id="celebrity-2" placeholder="Celebrity #2">
+            <input type="text" class="search" id="celebrity-2" placeholder="Celebrity #2" maxlength="23">
           </label>
 
           <label for="noun-1">
             <span>Noun #1</span>
-            <input type="text" class="search" id="noun-1" placeholder="Noun #1">
+            <input type="text" class="search" id="noun-1" placeholder="Noun #1" maxlength="23">
           </label>
 
           <label for="noun-2">
             <span>Noun #2</span>
-            <input type="text" class="search" id="noun-2" placeholder="Noun #2">
+            <input type="text" class="search" id="noun-2" placeholder="Noun #2" maxlength="23">
           </label>
 
           <label for="noun-3">
             <span>Noun #3</span>
-            <input type="text" class="search" id="noun-3" placeholder="Noun #3">
+            <input type="text" class="search" id="noun-3" placeholder="Noun #3" maxlength="23">
           </label>
 
           <label for="noun-4">
             <span>Noun #4</span>
-            <input type="text" class="search" id="noun-4" placeholder="Noun #4">
+            <input type="text" class="search" id="noun-4" placeholder="Noun #4" maxlength="23">
           </label>
 
           <label for="part-of-the-body">
             <span>Part of the Body</span>
-            <input type="text" class="search" id="part-of-the-body" placeholder="Part of the Body">
+            <input type="text" class="search" id="part-of-the-body" placeholder="Part of the Body" maxlength="23">
           </label>
 
           <label for="plural-1">
             <span>Plural Noun #1</span>
-            <input type="text" class="search" id="plural-1" placeholder="Plural Noun #1">
+            <input type="text" class="search" id="plural-1" placeholder="Plural Noun #1" maxlength="23">
           </label>
 
           <label for="plural-2">
             <span>Plural Noun #2</span>
-            <input type="text" class="search" id="plural-2" placeholder="Plural Noun #2">
+            <input type="text" class="search" id="plural-2" placeholder="Plural Noun #2" maxlength="23">
           </label>
 
           <label for="silly-word">
             <span>Silly Word</span>
-            <input type="text" class="search" id="silly-word" placeholder="Silly Word">
+            <input type="text" class="search" id="silly-word" placeholder="Silly Word" maxlength="23">
           </label>
 
           <label for="type-of-liquid">
             <span>Type of Liquid</span>
-            <input type="text" class="search" id="type-of-liquid" placeholder="Type of Liquid">
+            <input type="text" class="search" id="type-of-liquid" placeholder="Type of Liquid" maxlength="23">
           </label>
 
-          <input type="submit" value="Submit" class="myButton" title="Fill in every field to generate a Madlib!" disabled>
+          <input type="submit" value="Make Mad Lib" class="madButton" title="Fill in every field to generate a Mad Lib!" disabled>
         </form>
       </div>
 
@@ -211,6 +265,8 @@
         <p class="instructions">Click or hover over an underlined word in the story to see its gif!</p>
       </div>
     </div>
+
+    <button class="madButton show-grid">Show All Gifs</button>
 
     <div class="image-grid">
     </div>
