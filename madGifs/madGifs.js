@@ -41,7 +41,7 @@ function generateResults(e) {
   e.preventDefault();
   // scroll to top
   window.scrollTo(0, 0);
-  
+
   const re = /\$\$(.*?)\$\$/g;
   let filledTxt = txt;
   let m;

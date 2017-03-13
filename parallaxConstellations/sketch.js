@@ -1,7 +1,7 @@
 var stars = [];
 var starsWithinMouseRadius = [];
 var lines = [];
-var mountain;
+var mountains = [];
 var sand;
 // tree variables
 var tree;
@@ -29,7 +29,8 @@ function setup() {
     stars[i] = new Star();
   }
 
-  mountain = new Mountain(height - 50, height - 200);
+  mountains.push(new Mountain(height - 20, height - 250, false));
+  mountains.push(new Mountain(height - 20, height - 150, true));
 
   sand = new Sand(25);
 
@@ -47,8 +48,13 @@ function draw() {
 
   showLines();
 
-  mountain.show();
+  mountains.forEach(function(m) {
+    m.show();
+    m.update();
+  });
+
   sand.show();
+  tree.update();
   tree.show();
 }
 
@@ -60,7 +66,7 @@ function mouseMoved() {
 
 function showLines() {
   stroke(255);
-  strokeWeight(0.15);
+  strokeWeight(0.25);
   lines.forEach(function(l) {
     line(l[0], l[1], l[2], l[3]);
   });
@@ -87,10 +93,13 @@ function getStarsWithinMouseRadius() {
 
 function Tree() {
   this.create = function() {
-    var a = createVector(width * 0.61, height);
-    var b = createVector(width * 0.61, height - rootLength);
+    branchRatio = 0.63;
+    rootSize = random(24, 42);
+    rootLength = random(70, 140);
+    var a = createVector(width + 200, height);
+    var b = createVector(width + 200, height - rootLength);
     var root = new Branch(a, b, rootSize);
-
+    branches = [];
     branches[0] = root;
 
     for (var b = 0; b < 6; b++) {
@@ -113,11 +122,22 @@ function Tree() {
       branches[i].show();
     }
   }
+
+  this.update = function() {
+    if (branches[0].begin.x < -200) {
+      this.create();
+    } else {
+      branches[0].begin.x -= 4;
+      branches.forEach(function(b) {
+        b.end.x -= 4;
+      });
+    }
+  }
 }
 
 function Star() {
-  this.x = random(0, width);
-  this.y = random(0, height);
+  this.x = random(-50, width + 50);
+  this.y = random(-50, height + 50);
   this.r = random(1, 3);
 
   this.show = function() {
@@ -134,28 +154,61 @@ function Sand(h) {
 
   this.show = function() {
     fill(111, 73, 67);
+    noStroke();
     rect(0, height - this.h, width, this.h);
   }
 }
 
-function Mountain(minY, maxY) {
+function Mountain(minY, maxY, lightColor) {
   this.yoff = random(1000);
   this.xoff = 0;
   this.fill = 0;
   this.vertices = [];
 
   this.vertices.push([0, height]);
-    for (var x = 0; x < width + 7; x += 7) {
+  for (var x = 0; x < width + 7; x += 7) {
+    var y = map(noise(this.xoff, this.yoff), 0, 1, minY, maxY);
+    this.vertices.push([x, y]);
+    this.xoff += 0.05;
+  }
+  this.vertices.push([width, height]);
+
+  this.update = function() {
+    // get rid of constant edge vertices and previous 'first' element
+    innerVerts = this.vertices.slice(1, -1);
+    // shift x value of all vertices by 7 (value chosen to space x values)
+    innerVerts = innerVerts.map(function(vert) {
+      return [vert[0] - 1, vert[1]];
+    });
+    // clear vertices
+    this.vertices = [];
+    // add 'left' closing vertex
+    this.vertices.push([0, height]);
+    // add shifted vertices
+    this.vertices.concat(innerVerts);
+    var that = this;
+    innerVerts.forEach(function(vert) {
+      that.vertices.push(vert);
+    });
+    // every seventh frame add a new vertex
+    if (frameCount % 7 == 0) {
+      this.vertices.splice(2, 1);
       var y = map(noise(this.xoff, this.yoff), 0, 1, minY, maxY);
-      this.vertices.push([x, y]);
+      this.vertices.push([width + 7, y]);
       this.xoff += 0.05;
     }
-  this.vertices.push([width, height]);
+    // add 'right' closing vertex
+    this.vertices.push([width, height]);
+  }
 
   this.show = function() {
     // draw a mountain polygon across the width of the screen with perlin noise determined y values
     noStroke();
-    fill(93, 28, 26);
+    if (lightColor) {
+      fill(93, 28, 26);
+    } else {
+      fill(64, 19, 12);
+    }
     beginShape();
     this.vertices.forEach(function(vert) {
       vertex(vert[0], vert[1]);
