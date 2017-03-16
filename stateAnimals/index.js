@@ -1,6 +1,10 @@
 var svg = d3.select("svg");
 var path = d3.geoPath();
 
+var div = d3.select("body").append("div")
+    .attr("class", "tooltip")
+    .style("opacity", 0);
+
 d3.json("https://d3js.org/us-10m.v1.json", function(error, us) {
   if (error) throw error;
 
@@ -10,11 +14,19 @@ d3.json("https://d3js.org/us-10m.v1.json", function(error, us) {
       .data(topojson.feature(us, us.objects.states).features)
       .enter().append("path")
       .attr("d", path)
-      .style("fill", function(d) {
-           if (STATES[d.id] == 'Tennessee' || STATES[d.id] == 'California')
-               {return "red"}
-           else {return "gray"}
-       });
+      .on("mouseover", function(d) {
+        div.transition()
+          .duration(200)
+          .style("opacity", .9);
+        div.html(STATES[d.id])
+          .style("left", (d3.event.pageX) + "px")
+          .style("top", (d3.event.pageY - 28) + "px");
+        })
+      .on("mouseout", function(d) {
+        div.transition()
+          .duration(500)
+          .style("opacity", 0);
+        });
 
   svg.append("path")
       .attr("class", "state-borders")
@@ -70,5 +82,8 @@ var STATES = {
   '49': 'Utah',
   '50': 'Vermont',
   '51': 'Virginia',
-  '53': 'Washington'
+  '53': 'Washington',
+  '54': 'West Virginia',
+  '55': 'Wisconsin',
+  '56': 'Wyoming'
 };
