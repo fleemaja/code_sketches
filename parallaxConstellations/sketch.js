@@ -3,6 +3,7 @@ var starsWithinMouseRadius = [];
 var lines = [];
 var mountains = [];
 var sand;
+var cactus;
 // tree variables
 var tree;
 var branches = [];
@@ -34,6 +35,8 @@ function setup() {
 
   sand = new Sand(25);
 
+  cactus = new Cactus(72);
+
   tree = new Tree();
   tree.create();
 }
@@ -54,6 +57,10 @@ function draw() {
   });
 
   sand.show();
+
+  cactus.update();
+  cactus.show();
+
   tree.update();
   tree.show();
 }
@@ -255,5 +262,42 @@ function Branch(begin, end, size) {
     var newEnd = p5.Vector.add(this.end, dir);
     var b = new Branch(this.end, newEnd, this.size * branchRatio);
     return b;
+  }
+}
+
+function Cactus(h) {
+  this.h = h;
+  this.w = this.h/4;
+  this.x = width - 111;
+  this.y = height - this.h - random(sand.h);
+  this.big = this.h/4;
+  this.small = 3*this.w/4;
+
+  this.update = function() {
+    if (this.x < -331) {
+      this.x = width + 331;
+    } else {
+      this.x -= 4;
+    }
+  }
+
+  this.show = function() {
+    fill(0);
+    push();
+    // rectMode(CENTER);
+    translate(this.x, this.y);
+    // root
+    rect(0, 0, this.w, this.h, this.w, this.w, 0, 0);
+    // left horizontal
+    rect(-this.big, (this.h/2) - this.small/2, this.big, this.small, 0, 0, 0, this.small);
+    // left vertical
+    rect(-this.big, (this.h/2) - this.small/2 - this.big, this.small, this.big, this.small, this.small, 0, 0);
+
+    // right horizontal
+    rect(this.w, this.h/2 + this.small/2, this.big, this.small, 0, 0, this.small, 0);
+    // right vertical
+    rect(this.big + this.w - this.small, this.h/2 + this.small/2 - this.big, this.small, this.big, this.small, this.small, 0, 0);
+    // rect(, (this.h/2) - this.small/2 - this.big, this.small, this.big);
+    pop();
   }
 }
