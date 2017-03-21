@@ -3,7 +3,8 @@ var starsWithinMouseRadius = [];
 var lines = [];
 var mountains = [];
 var sand;
-var cactus;
+var cacti = [];
+var spikyPlants = [];
 // tree variables
 var tree;
 var branches = [];
@@ -35,7 +36,14 @@ function setup() {
 
   sand = new Sand(25);
 
-  cactus = new Cactus(72);
+
+  for (var i = 0; i < 5; i++) {
+    cacti.push(new Cactus(random(32, 72)));
+  }
+
+  for (var j = 0; j < 5; j++) {
+    spikyPlants.push(new SpikyPlant());
+  }
 
   tree = new Tree();
   tree.create();
@@ -58,8 +66,15 @@ function draw() {
 
   sand.show();
 
-  cactus.update();
-  cactus.show();
+  cacti.forEach(function(c) {
+    c.update();
+    c.show();
+  });
+
+  spikyPlants.forEach(function(sp) {
+    sp.update();
+    sp.show();
+  });
 
   tree.update();
   tree.show();
@@ -134,9 +149,9 @@ function Tree() {
     if (branches[0].begin.x < -200) {
       this.create();
     } else {
-      branches[0].begin.x -= 4;
+      branches[0].begin.x -= 3;
       branches.forEach(function(b) {
-        b.end.x -= 4;
+        b.end.x -= 3;
       });
     }
   }
@@ -268,21 +283,22 @@ function Branch(begin, end, size) {
 function Cactus(h) {
   this.h = h;
   this.w = this.h/4;
-  this.x = width - 111;
-  this.y = height - this.h - random(sand.h);
+  this.x = random(0, width + 331);
+  this.y = height - this.h - random(sand.h/4);
   this.big = this.h/4;
   this.small = 3*this.w/4;
 
   this.update = function() {
     if (this.x < -331) {
-      this.x = width + 331;
+      this.x = width + random(111, 777);
     } else {
-      this.x -= 4;
+      this.x -= 2;
     }
   }
 
   this.show = function() {
-    fill(0);
+    fill(23, 30, 10);
+    noStroke();
     push();
     // rectMode(CENTER);
     translate(this.x, this.y);
@@ -299,5 +315,32 @@ function Cactus(h) {
     rect(this.big + this.w - this.small, this.h/2 + this.small/2 - this.big, this.small, this.big, this.small, this.small, 0, 0);
     // rect(, (this.h/2) - this.small/2 - this.big, this.small, this.big);
     pop();
+  }
+}
+
+function SpikyPlant() {
+  this.baseWidth = 10;
+  this.height = 40;
+  this.x = random(0, width + 331);
+  this.y = height - random(sand.h/2);
+
+  this.update = function() {
+    if (this.x < -331) {
+      this.x = width + random(111, 777);
+    } else {
+      this.x -= 2;
+    }
+  }
+
+  this.show = function() {
+    fill(0, 40, 0);
+    noStroke();
+
+    // triangle(x1,y1,x2,y2,x3,y3)
+    triangle(this.x - this.baseWidth/2,this.y,this.x + this.baseWidth/2,this.y,this.x - 3*this.height/4,this.y - this.height/2);
+    triangle(this.x - this.baseWidth/2,this.y,this.x + this.baseWidth/2,this.y,this.x - this.height/2,this.y - 3*this.height/4);
+    triangle(this.x - this.baseWidth/2,this.y,this.x + this.baseWidth/2,this.y,this.x,this.y - this.height);
+    triangle(this.x - this.baseWidth/2,this.y,this.x + this.baseWidth/2,this.y,this.x + this.height/2,this.y - 3*this.height/4);
+    triangle(this.x - this.baseWidth/2,this.y,this.x + this.baseWidth/2,this.y,this.x + 3*this.height/4,this.y - this.height/2);
   }
 }
