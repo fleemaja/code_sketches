@@ -1,6 +1,19 @@
 <h1>Projects</h1>
 <table>
   <th>
+    March 2017
+  </th>
+  <tr>
+    <td>
+      <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1490119794/Screen_Shot_2017-03-21_at_1.08.32_PM_rn7y6v.png" alt="Desert Constellations" >
+    </td>
+    <td>
+      <a href="http://codepen.io/fleemaja/full/vxLmJO/" target="_blank">Desert Constellations</a> - Interactive side-scrolling canvas sketch. All elements are procedurally drawn and animated with JavaScript. Hovering over the stars reveals constellation-like shapes.
+    </td>
+  </tr>
+</table>
+<table>
+  <th>
     February 2017
   </th>
   <tr>
