@@ -1,0 +1,2621 @@
+{
+  "Alabama": {
+    "amphibians": [
+      {
+          "commonName": "Red Hills Salamander",
+          "scientificName": "Phaeognathus hubrichti",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Phaeognathus_hubrichii.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Red_Hills_salamander",
+          "year": "2000"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Northern Flicker",
+          "scientificName": "Colaptes auratus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Northern_Flicker-27527.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_flicker",
+          "year": "1927"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Alabama Red-Bellied Turtle",
+          "scientificName": "Pseudemys alabamensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Alabama_red-bellied_turtle_US_FWS_cropped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Alabama_red-bellied_turtle",
+          "year": "1990"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Monarch Butterfly",
+          "scientificName": "Danaus plexippus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Monarch_In_May.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Monarch_(butterfly)",
+          "year": "1989"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "American Black Bear",
+          "scientificName": "Ursus americanus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-A_Florida_Black_Bear.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_black_bear",
+          "year": "2006"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Largemouth Bass (fresh water)",
+          "scientificName": "Micropterus salmoides",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Micropterus_punctulatus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
+          "year": "1989"
+      },
+      {
+          "commonName": "Fighting tarpon (salt water)",
+          "scientificName": "Megalops atlanticus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Atlantic_tarpon.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_tarpon",
+          "year": "1955"
+      }
+    ]
+  },
+  "Alaska": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Willow Ptarmigan",
+          "scientificName": "Lagopus lagopus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Denali_National_Park_Ptarmigan.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Willow_ptarmigan",
+          "year": "1955"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Four-Spotted Skimmer Dragonfly",
+          "scientificName": "Libellula quadrimaculata",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Libellula_quadrimaculata_-_Vierflecklibelle.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Four-spotted_chaser",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Moose",
+          "scientificName": "Alces alces",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Bigbullmoose.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Moose",
+          "year": "1998"
+      },
+      {
+          "commonName": "Bowhead Whale",
+          "scientificName": "Balaena mysticetus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Bowheads42.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Bowhead_whale",
+          "year": "1983"
+      },
+      {
+          "commonName": "Alaskan Malamute",
+          "scientificName": "Canis lupus familiaris",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Alaskan_Malamute.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Alaskan_Malamute",
+          "year": "2010"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "King Salmon",
+          "scientificName": "Oncorhynchus tshawytscha",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Chinook_salmon.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Chinook_salmon",
+          "year": "1962"
+      }
+    ]
+  },
+  "Arizona": {
+    "amphibians": [
+      {
+          "commonName": "Arizona Tree Frog",
+          "scientificName": "Hyla eximia",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Hyla_eximia.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Hyla_eximia",
+          "year": "1986"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Cactus Wren",
+          "scientificName": "Campylorhynchus brunneicapillus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Campylorhynchus_brunneicapillus_20061226.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Cactus_wren",
+          "year": "1973"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Arizona Ridge-Nosed Rattlesnake",
+          "scientificName": "Crotalus willardi subspecies willardi",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Crotalus_willardi_willardi_%25282%2529.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Arizona_Ridge-Nosed_Rattlesnake",
+          "year": "1986"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Two-Tailed Swallowtail",
+          "scientificName": "Papilio multicaudata",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Papilio_multicaudata.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Two-tailed_swallowtail",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Ring-Tailed Cat",
+          "scientificName": "Bassariscus astutus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Squaw-ringtail-28073.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Ring-tailed_cat",
+          "year": "1986"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Apache Trout",
+          "scientificName": "Oncorhynchus gilae (subspecies apache)",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Oncorhynchus_apache.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Apache_trout",
+          "year": "1986"
+      }
+    ]
+  },
+  "Arkansas": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Northern Mockingbird",
+          "scientificName": "Mimus polyglottos",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Mimus_polyglottos_adult_01_cropped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_mockingbird",
+          "year": "1929"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "1973"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Quivira-Whitetail-Buck.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1993"
+      }
+    ],
+    "fish": []
+  },
+  "California": {
+    "amphibians": [
+      {
+          "commonName": "California Red-Legged Frog",
+          "scientificName": "Rana draytonii",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Rana_aurora.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/California_red-legged_frog",
+          "year": "1986"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "California Quail",
+          "scientificName": "Callipepla californica",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-California_quail.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/California_quail",
+          "year": "1931"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Desert Tortoise",
+          "scientificName": "Gopherus agassizii",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-DesertTortoise.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Desert_tortoise",
+          "year": "1972"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "California Dogface Butterfly",
+          "scientificName": "Zerene eurydice",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-DogfaceStamp.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/California_dogface_butterfly",
+          "year": "1972"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "California Grizzly Bear",
+          "scientificName": "Ursus arctos californicus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Monarch_the_bear.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/California_grizzly_bear",
+          "year": "1953"
+      },
+      {
+          "commonName": "Gray Whale",
+          "scientificName": "Eschrichtius robustus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Gray_whale.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Gray_whale",
+          "year": "1975"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Golden Trout (fresh water)",
+          "scientificName": "Oncorhynchus mykiss (subspecies aguabonita)",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Small_Golden_Trout.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Golden_trout",
+          "year": "1947"
+      },
+      {
+          "commonName": "Garibaldi (salt water)",
+          "scientificName": "Hypsypops rubicundus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Hypsypops_rubicundus_adult.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Garibaldi_(fish)",
+          "year": "1995"
+      }
+    ]
+  },
+  "Colorado": {
+    "amphibians": [
+      {
+          "commonName": "Western Tiger Salamander",
+          "scientificName": "Ambystoma mavortium",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Ambystoma_mavortium_2006.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Barred_tiger_salamander",
+          "year": "2012"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Lark bunting",
+          "scientificName": "Calamospiza melanocorys",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-IMG_7043_lark_bunting.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Lark_bunting",
+          "year": "1931"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Western Painted Turtle",
+          "scientificName": "Chrysemys picta subspecies bellii",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-A4_Western_painted_turtle.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Western_painted_turtle",
+          "year": "2008"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Colorado Hairstreak Butterfly",
+          "scientificName": "Hypaurotis crysalus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Colorado_Hairstreak%252C_MM.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Colorado_hairstreak_butterfly",
+          "year": "1996"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Rocky Mountain Bighorn Sheep",
+          "scientificName": "Ovis canadensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Bighorn_pair.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Bighorn_sheep",
+          "year": "1961"
+      },
+      {
+          "commonName": "Colorado Shelter Pets",
+          "scientificName": "",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Black_cat_Animal_Rescue_GalawebDesign.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Pet_adoption",
+          "year": "2013"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Greenback Cutthroat Trout",
+          "scientificName": "Oncorhynchus clarki (subspecies stomias)",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Greenbackcutthroat.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Greenback_cutthroat_trout",
+          "year": "1994"
+      }
+    ]
+  },
+  "Connecticut": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "American Robin",
+          "scientificName": "Turdus migratorius",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Turdus-migratorius-002.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_robin",
+          "year": "1943"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "European Mantis",
+          "scientificName": "Mantis religiosa",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-European_mantis.png",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_mantis",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Sperm Whale",
+          "scientificName": "Physeter macrocephalus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Sperm_whale_pod.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Sperm_whale",
+          "year": "1975"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "American Shad",
+          "scientificName": "Alosa sapidissima",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Dentonshad1904.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_shad",
+          "year": "2003"
+      }
+    ]
+  },
+  "Delaware": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Delaware Blue Hen",
+          "scientificName": "Gallus gallus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-BlueHenChicken.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Delaware_Blue_Hen",
+          "year": "1939"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "7-Spotted Ladybug",
+          "scientificName": "Coccinella septempunctata",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-BIEDRONA.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Coccinella_septempunctata",
+          "year": "1974"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Grey Fox",
+          "scientificName": "Urocyon cinereoargenteus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Urocyon_cinereoargenteus_Back_Bay_National_Wildlife_Refuge.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Gray_fox",
+          "year": "2010"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Weakfish",
+          "scientificName": "Cynoscion regalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Cynoscion_regalis_%2528line_art%2529.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Weakfish",
+          "year": "1981"
+      }
+    ]
+  },
+  "District of Columbia": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Wood Thrush",
+          "scientificName": "Hylocichla mustelina",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Hylocichla_mustelina_%2528cropped%2529.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Wood_thrush",
+          "year": "1938"
+      }
+    ],
+    "reptiles": [],
+    "insects": [],
+    "mammals": [],
+    "fish": []
+  },
+  "Florida": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Northern Mockingbird",
+          "scientificName": "Mimus polyglottos",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Mimus_polyglottos_adult_02_cropped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_mockingbird",
+          "year": "1927"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "American Alligator",
+          "scientificName": "Alligator mississippiensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-American_Alligator.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_alligator",
+          "year": "1987"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Zebra Longwing",
+          "scientificName": "Heliconius charitonius",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Heliconius_charithonia_Kaldari_1_cropped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Zebra_longwing",
+          "year": "1996"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Florida Panther",
+          "scientificName": "Puma concolor coryi",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Puma_concolor_coryi_cropped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Florida_panther",
+          "year": "1982"
+      },
+      {
+          "commonName": "Manatee",
+          "scientificName": "Trichechus inunguis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-FL_fig04.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Manatee",
+          "year": "1975"
+      },
+      {
+          "commonName": "Dolphin",
+          "scientificName": "Tursiops truncatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Tursiops_truncatus_01.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Common_bottlenose_dolphin",
+          "year": "1975"
+      },
+      {
+          "commonName": "Florida Cracker Horse",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Cracker_horse_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Florida_Cracker_Horse",
+          "year": "2008"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Florida largemouth bass (fresh water)",
+          "scientificName": "Micropterus salmoides (subspecies floridanus)",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Micropterus_punctulatus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
+          "year": "2007"
+      },
+      {
+          "commonName": "Atlantic sailfish (salt water)",
+          "scientificName": "Istiophorus albicans",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-PSM_V26_D359_The_american_sailfish_istiophorus_americanus.jpg?response-content-disposition=inline&X-Amz-Security-Token=FQoDYXdzEMX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDKUNVTgNJOVdR%2FyEGiKrAq6s1BTpggFq3a9g%2BrK%2F6OGCMQ7DqHmB%2FyNyCtSAMPwlXrEz3wMEL6AUYeUuw6fReG0qSG0TvkMkhPpfiqAp74NGuI%2BXn1LH25mxFdudDYqbWvOgVZ7O97LvB8gccFWnM5qWrYiH8QykBUSvQsrwx2nIuE%2Fsd92VDgda%2F9BJmywQ2ugAL8CyE8BWHajHbenZJKJOpRYLQcbL295rtiPdql0fSEdVHNK8ESctRHRwjoPcINPlZxKWRtN2seBlwRWgKLd3ngM%2F4ft064U2Zn0Muq8dB6X5LaDS07QwFDgyE6blgA9CpQdRA00d0lp56U2aLk1kQRyeJZCi1V5AEBkLnsKMm3fwWbXx4gMF6X3A%2FmduBnXRaisLcz8%2BLtuOM%2FONLrKNDZvhouVxCQD0KP7t1cYF&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20170325T014831Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAI2GHKONKKTYYCPKA%2F20170325%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=09390fd475630e192f8922a66043b599d3311ced54e49d66fb89cdb1cfb60bf7",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_sailfish",
+          "year": "2007"
+      }
+    ]
+  },
+  "Georgia": {
+    "amphibians": [
+      {
+          "commonName": "American Green Tree Frog",
+          "scientificName": "Hyla cinerea",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-American_green_tree_frog_1.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_green_tree_frog",
+          "year": "2005"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Brown Thrasher",
+          "scientificName": "Toxostoma rufum",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Brown_Thrasher-27527-2.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brown_thrasher",
+          "year": "1928"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Gopher Tortoise",
+          "scientificName": "Gopherus polyphemus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Gopherus_polyphemus_Tomfriedel.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Gopher_tortoise",
+          "year": "1989"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "1975"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-White-tailed_Deer-27527-3.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "2015"
+      },
+      {
+          "commonName": "Right Whale",
+          "scientificName": "Eubalaena glacialis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Eubalaena_japonica3.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Right_whale",
+          "year": "1985"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Largemouth Bass (fresh water)",
+          "scientificName": "Micropterus salmoides",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Micropterus_punctulatus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
+          "year": "1970"
+      }
+    ]
+  },
+  "Hawaii": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Hawaiian Goose",
+          "scientificName": "Branta sandvicensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Branta_sandvicensis_-WWT_Slimbridge%252C_Gloucestershire%252C_England-8a.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Nene_(bird)",
+          "year": "1957"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Kamehameha Butterfly",
+          "scientificName": "Vanessa tameamea",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Vanessa_tameamea1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Kamehameha_butterfly",
+          "year": "2009"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Hawaiian Monk Seal",
+          "scientificName": "Neomonachus schauinslandi",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Monachus_schauinslandi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Hawaiian_monk_seal",
+          "year": "2008"
+      },
+      {
+          "commonName": "Humpback Whale",
+          "scientificName": "Megaptera novaeangliae",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Humpback_Whale_underwater_shot.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Humpback_whale",
+          "year": "1979"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Humuhumunukunukuāpuaʻa",
+          "scientificName": "Rhinecanthus rectangulus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Reef_Triggerfish_1.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Humuhumunukunuku%C4%81pua%CA%BBa",
+          "year": "2006"
+      }
+    ]
+  },
+  "Idaho": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Mountain Bluebird",
+          "scientificName": "Sialia currucoides",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Mountain_Bluebird.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Mountain_bluebird",
+          "year": "1931"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Monarch Butterfly",
+          "scientificName": "Danaus plexippus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Monarch_In_May.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Monarch_(butterfly)",
+          "year": "1992"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Appaloosa Horse",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Appaloosa46-2.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Appaloosa",
+          "year": "1975"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Cutthroat Trout",
+          "scientificName": "Oncorhynchus clarki",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Yellowstone_Cutthroat_Trout.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Cutthroat_trout",
+          "year": "1990"
+      }
+    ]
+  },
+  "Illinois": {
+    "amphibians": [
+      {
+          "commonName": "Eastern Tiger Salamander",
+          "scientificName": "Ambystoma tigrinum",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Tiger_salamander.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Tiger_salamander",
+          "year": "2005"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Northern Cardinal",
+          "scientificName": "Cardinalis cardinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Cardinal.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_cardinal",
+          "year": "1929"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Painted Turtle",
+          "scientificName": "Chrysemys picta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Midland_Painted_Turtle%252C_front_view.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Painted_turtle",
+          "year": "2005"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Monarch Butterfly",
+          "scientificName": "Danaus plexippus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Monarch_In_May.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Monarch_(butterfly)",
+          "year": "1975"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-White-tailed_deer.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1982"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Bluegill",
+          "scientificName": "Lepomis macrochirus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Lepomis_macrochirus_UMFS_2014_2.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Bluegill",
+          "year": "1991"
+      }
+    ]
+  },
+  "Indiana": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Northern Cardinal",
+          "scientificName": "Cardinalis cardinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Cardinal.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_cardinal",
+          "year": "1933"
+      }
+    ],
+    "reptiles": [],
+    "insects": [],
+    "mammals": [],
+    "fish": [
+      {
+          "commonName": "Largemouth Bass (fresh water)",
+          "scientificName": "Micropterus salmoides",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Micropterus_punctulatus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
+          "year": "1970"
+      }
+    ]
+  },
+  "Iowa": {
+    "amphibians": [
+      {
+          "commonName": "American Bullfrog",
+          "scientificName": "Rana catesbeiana",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-North-American-bullfrog1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_bullfrog",
+          "year": "Unofficial"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Eastern Goldfinch",
+          "scientificName": "Spinus tristis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Carduelis-tristis-002.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_goldfinch",
+          "year": "1933"
+      }
+    ],
+    "reptiles": [],
+    "insects": [],
+    "mammals": [],
+    "fish": [
+      {
+          "commonName": "Channel Catfish",
+          "scientificName": "Ictalurus punctatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Ictalurus_punctatus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Channel_catfish",
+          "year": "2001"
+      }
+    ]
+  },
+  "Kansas": {
+    "amphibians": [
+      {
+          "commonName": "Barred Tiger Salamander",
+          "scientificName": "Ambystoma mavortium",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Ambystoma_mavortium_2006.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Barred_tiger_salamander",
+          "year": "2005"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Western Meadowlark",
+          "scientificName": "Sturnella neglecta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-WesternMeadowlark23.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Western_meadowlark",
+          "year": "1933"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Ornate Box Turtle",
+          "scientificName": "Terrapene ornata",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Terrapene_ornata_ornata_mirror_image.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Terrapene_ornata",
+          "year": "1986"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "American Bison",
+          "scientificName": "Bison bison",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Bison_Bull_in_Nebraska.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_bison",
+          "year": "1955"
+      }
+    ],
+    "fish": []
+  },
+  "Kentucky": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Northern Cardinal",
+          "scientificName": "Cardinalis cardinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Cardinal.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_cardinal",
+          "year": "1942"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Viceroy Butterfly",
+          "scientificName": "Limenitis archippus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Viceroy_Butterfly.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Viceroy_butterfly",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Gray Squirrel",
+          "scientificName": "Sciurus carolinensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-GroundSquirrelPosing.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Eastern_gray_squirrel",
+          "year": "1968"
+      },
+      {
+          "commonName": "Thoroughbred",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Horse-racing-4.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Thoroughbred",
+          "year": "1996"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Kentucky Spotted Bass",
+          "scientificName": "Micropterus punctulatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Micropterus_punctulatus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Spotted_bass",
+          "year": "1956"
+      }
+    ]
+  },
+  "Louisiana": {
+    "amphibians": [
+      {
+          "commonName": "American Green Tree Frog",
+          "scientificName": "Hyla cinerea",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-American_green_tree_frog_1.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_green_tree_frog",
+          "year": "1993"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Brown Pelican",
+          "scientificName": "Pelecanus occidentalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Brown_pelican_-_natures_pics.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brown_pelican",
+          "year": "1966"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "American Alligator",
+          "scientificName": "Alligator mississippiensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-American_Alligator.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_alligator",
+          "year": "1983"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "American Black Bear",
+          "scientificName": "Ursus americanus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Louisiana_black_bear.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_black_bear",
+          "year": "1992"
+      },
+      {
+          "commonName": "Catahoula Leopard Dog",
+          "scientificName": "Canis lupus familiaris",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Ch-Catahoula_002.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Catahoula_Cur",
+          "year": "1979"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "White Crappie",
+          "scientificName": "Pomoxis annularis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-White_Crappie.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Crappie",
+          "year": "1993"
+      }
+    ]
+  },
+  "Maine": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Black-Capped Chickadee",
+          "scientificName": "Poecile atricapilla",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Poecile-atricapilla-001.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Black-capped_chickadee",
+          "year": "1927"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Moose",
+          "scientificName": "Alces alces",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Lonesome-Lake-Moose.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Moose",
+          "year": "1979"
+      },
+      {
+          "commonName": "Maine Coon",
+          "scientificName": "Felis catus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-MaineCoonSilverTabby.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Maine_Coon",
+          "year": "1985"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Atlantic Salmon",
+          "scientificName": "Salmo salar",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Atlantischer_Lachs.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_salmon",
+          "year": ""
+      }
+    ]
+  },
+  "Maryland": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Baltimore Oriole",
+          "scientificName": "Icterus galbula",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Icterus-galbula-002.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Baltimore_oriole",
+          "year": "1947"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Diamondback Terrapin",
+          "scientificName": "Malaclemys terrapin",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Diamondback_turtle_adult_female.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Diamondback_terrapin",
+          "year": "1994"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Baltimore Checkerspot Butterfly",
+          "scientificName": "Euphydryas phaeton",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-BaltimoreDS.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Baltimore_checkerspot_butterfly",
+          "year": "1973"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Thoroughbred",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Applebite-Gentlemen.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Thoroughbred",
+          "year": "2003"
+      },
+      {
+          "commonName": "Chesapeake Bay Retriever",
+          "scientificName": "Canis lupus familiaris",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-MH_Chesapeake.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Chesapeake_Bay_Retriever",
+          "year": "1964"
+      },
+      {
+          "commonName": "Calico Cat",
+          "scientificName": "Felis catus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Creamycalico.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Calico_cat",
+          "year": "2001"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Rockfish (Striped Bass)",
+          "scientificName": "Morone saxatilis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Striped_bass_FWS_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
+          "year": "1965"
+      }
+    ]
+  },
+  "Massachusetts": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Black-Capped Chickadee",
+          "scientificName": "Poecile atricapilla",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Black_capped_chickadee_cp.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Black-capped_chickadee",
+          "year": "1941"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Garter Snake",
+          "scientificName": "Thamnophis (whole genus)",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Thamnophis_sirtalis_sirtalis_Wooster.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Garter_snake",
+          "year": "2006"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "7-Spotted Ladybug",
+          "scientificName": "Coccinella septempunctata",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-BIEDRONA.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Coccinella_septempunctata",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Right Whale",
+          "scientificName": "Eubalaena glacialis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Eubalaena_glacialis_with_calf.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Right_whale",
+          "year": "1980"
+      },
+      {
+          "commonName": "Morgan Horse",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-SilverMorgan.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Morgan_horse",
+          "year": "1970"
+      },
+      {
+        "commonName": "Tabby Cat",
+        "scientificName": "Felis catus",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Jammlich_crop.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/Tabby_cat",
+        "year": "1988"
+      },
+      {
+        "commonName": "Boston Terrier",
+        "scientificName": "Canis lupus familiaris",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-BostonTerrierBrindleStand_w.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/Boston_Terrier",
+        "year": "1979"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Cod",
+          "scientificName": "Gadus morhua",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Atlantic_cod.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_cod",
+          "year": ""
+      }
+    ]
+  },
+  "Michigan": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "American Robin",
+          "scientificName": "Turdus migratorius",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-American_Robin_KSC01pp1005.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_robin",
+          "year": "1931"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Painted Turtle",
+          "scientificName": "Chrysemys picta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Midland_Painted_Turtle%252C_front_view.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Painted_turtle",
+          "year": "1995"
+      }
+    ],
+    "insects": [],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Deer_Night.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1997"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Brook Trout",
+          "scientificName": "Salvelinus fontinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Salvelinus_fontinalis.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
+          "year": "1988"
+      }
+    ]
+  },
+  "Minnesota": {
+    "amphibians": [
+      {
+          "commonName": "Northern Leopard Frog",
+          "scientificName": "Rana pipiens",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Northern_leopard_frog_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_leopard_frog",
+          "year": "1999"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Common Loon",
+          "scientificName": "Gavia immer",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Common_Loon_head_sideways.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Common_loon",
+          "year": "1961"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Monarch Butterfly",
+          "scientificName": "Danaus plexippus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Monarch_In_May.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Monarch_(butterfly)",
+          "year": "2000"
+      }
+    ],
+    "mammals": [],
+    "fish": [
+      {
+          "commonName": "Walleye",
+          "scientificName": "Sander vitreus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Sander_vitreus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Walleye",
+          "year": "1965"
+      }
+    ]
+  },
+  "Mississippi": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Northern Mockingbird",
+          "scientificName": "Mimus polyglottos",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Mimus_polyglottos_adult_01_cropped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_mockingbird",
+          "year": "1944"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "American Alligator",
+          "scientificName": "Alligator mississippiensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-American_Alligator.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_alligator",
+          "year": "2005"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "1980"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Deer_running.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1974"
+      },
+      {
+          "commonName": "Bottlenosed Dolphin",
+          "scientificName": "Tursiops truncatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Perdido_Bay_Dolphin_2007.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Common_bottlenose_dolphin",
+          "year": "1974"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Largemouth Bass (fresh water)",
+          "scientificName": "Micropterus salmoides",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Micropterus_punctulatus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
+          "year": "1974"
+      }
+    ]
+  },
+  "Missouri": {
+    "amphibians": [
+      {
+          "commonName": "American Bullfrog",
+          "scientificName": "Rana catesbeiana",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-North-American-bullfrog1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_bullfrog",
+          "year": "2005"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Eastern Bluebird",
+          "scientificName": "Sialia sialis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-EasternbluebirdB9.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Eastern_bluebird",
+          "year": "1927"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Three-Toed Box Turtle",
+          "scientificName": "Terrapene carolina subspecies triunguis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Three-toed_Box_Turtle.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Three-toed_box_turtle",
+          "year": "2007"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Missouri Mule",
+          "scientificName": "Equus mulus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-NRCSDC01002_-_Flickr_-_USDAgov.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Mule",
+          "year": "1995"
+      },
+      {
+          "commonName": "Missouri Fox Trotting Horse",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Quick_Trigger_Missouri_Fox_Trotter.jpeg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Missouri_Fox_Trotter",
+          "year": "2002"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Channel Catfish",
+          "scientificName": "Ictalurus punctatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Ictalurus_punctatus1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Channel_catfish",
+          "year": "1997"
+      }
+    ]
+  },
+  "Montana": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Western Meadowlark",
+          "scientificName": "Sturnella neglecta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-WesternMeadowlark23.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Western_meadowlark",
+          "year": "1941"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Mourning Cloak Butterfly",
+          "scientificName": "Nymphalis antiopa",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Nymphalis_antiopa.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Nymphalis_antiopa",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Grizzly Bear",
+          "scientificName": "Ursus arctos",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Grizzly_bear_glacier_national_park_3.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Grizzly_bear",
+          "year": "1983"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Cutthroat Trout",
+          "scientificName": "Oncorhynchus clarki",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Oncorhynchus_clarkii_virginalis.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Cutthroat_trout",
+          "year": "1997"
+      }
+    ]
+  },
+  "Nebraska": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Western Meadowlark",
+          "scientificName": "Sturnella neglecta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-WesternMeadowlark23.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Western_meadowlark",
+          "year": "1929"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-White_tailed_deer_Nebraska.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1981"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Channel Catfish",
+          "scientificName": "Ictalurus punctatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Ictalurus_punctatus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Channel_catfish",
+          "year": "1997"
+      }
+    ]
+  },
+  "Nevada": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Mountain Bluebird",
+          "scientificName": "Sialia currucoides",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Mountain_Bluebird.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Mountain_bluebird",
+          "year": "1967"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Desert Tortoise",
+          "scientificName": "Gopherus agassizii",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-DesertTortoise.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Desert_tortoise",
+          "year": "1989"
+      }
+    ],
+    "insects": [],
+    "mammals": [
+      {
+          "commonName": "Desert Bighorn Sheep",
+          "scientificName": "Ovis canadensis nelsoni",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Ovis_canadensis_nelsoni_vof_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Desert_bighorn_sheep",
+          "year": "1973"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Lahontan Cutthroat Trout",
+          "scientificName": "Oncorhynchus clarki (subspecies henshawi)",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Lahontan_pyramid.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Lahontan_cutthroat_trout",
+          "year": ""
+      }
+    ]
+  },
+  "New Hampshire": {
+    "amphibians": [
+      {
+          "commonName": "Red-Spotted Newt",
+          "scientificName": "Notophthalmus viridescens",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Notophthalmus_viridescensPCCA20040816-3983A.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Eastern_newt",
+          "year": "1985"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Purple Finch",
+          "scientificName": "Carpodacus purpureus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Purple_Finch.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Purple_finch",
+          "year": "1957"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "7-Spotted Ladybug",
+          "scientificName": "Coccinella septempunctata",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-BIEDRONA.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Coccinella_septempunctata",
+          "year": "1977"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-White-tailed_deer+(1).JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1983"
+      },
+      {
+          "commonName": "Chinook",
+          "scientificName": "Canis lupus familiaris",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Mountan_Laurel_Ajax_the_Chinook_dog.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Chinook_(dog)",
+          "year": "2009"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Brook Trout (freshwater)",
+          "scientificName": "Salvelinus fontinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Salvelinus_fontinalis.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
+          "year": "1994"
+      },
+      {
+          "commonName": "Striped Bass (salt water game fish)",
+          "scientificName": "Morone saxatilis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Striped_bass_FWS_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_tarpon",
+          "year": "1994"
+      }
+    ]
+  },
+  "New Jersey": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Eastern Goldfinch",
+          "scientificName": "Spinus tristis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Goldfinch_tgo.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_goldfinch",
+          "year": "1935"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Horse",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Morgan_parked_out.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Horse",
+          "year": "1977"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Brook Trout (freshwater)",
+          "scientificName": "Salvelinus fontinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Salvelinus_fontinalis.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
+          "year": "1991"
+      }
+    ]
+  },
+  "New Mexico": {
+    "amphibians": [
+      {
+          "commonName": "New Mexico Spadefoot Toad",
+          "scientificName": "Spea multiplicata",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Nmspadefoot.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/New_Mexico_spadefoot_toad",
+          "year": "2003"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Roadrunner",
+          "scientificName": "Geococcyx californianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Geococcyx_californianus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Greater_roadrunner",
+          "year": "1949"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "New Mexico Whiptail Lizard",
+          "scientificName": "Cnemidophorus neomexicanus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Cnemidophorus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/New_Mexico_whiptail_lizard",
+          "year": "2003"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Tarantula Hawk Wasp",
+          "scientificName": "Pepsis grossa",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Pepsis_formosa02.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Tarantula_hawk",
+          "year": "1989"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "American Black Bear",
+          "scientificName": "Ursus americanus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Yellowstone-black-bear-07895.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_black_bear",
+          "year": "1963"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Rio Grande Cutthroat Trout",
+          "scientificName": "Oncorhynchus clarki (subspecies virginalis)",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Oncorhynchus_clarkii_virginalis.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Rio_Grande_cutthroat_trout",
+          "year": "2005"
+      }
+    ]
+  },
+  "New York": {
+    "amphibians": [
+      {
+          "commonName": "Wood Frog",
+          "scientificName": "Lithobates sylvaticus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Lithobates_sylvaticus_%2528wood_frog%2529.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Wood_frog",
+          "year": "2015"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Eastern Bluebird",
+          "scientificName": "Sialia sialis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-EasternbluebirdB9.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Eastern_bluebird",
+          "year": "1970"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Common Snapping Turtle",
+          "scientificName": "Chelydra serpentina",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Common_Snapping_Turtle_1429.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Common_snapping_turtle",
+          "year": "2006"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "9-Spotted Ladybug",
+          "scientificName": "Coccinella novemnotata",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Coccinella_septempunctata_Fort_Worth.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Coccinella_novemnotata",
+          "year": "1989"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Beaver",
+          "scientificName": "Castor canadensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-American_Beaver.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/North_American_beaver",
+          "year": "1975"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Brook Trout",
+          "scientificName": "Salvelinus fontinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Salvelinus_fontinalis.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
+          "year": "1975"
+      },
+      {
+          "commonName": "Striped bass (marine)",
+          "scientificName": "Morone saxatilis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Striped_bass_FWS_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
+          "year": ""
+      }
+    ]
+  },
+  "North Carolina": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Northern Cardinal",
+          "scientificName": "Cardinalis cardinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Cardinal.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_cardinal",
+          "year": "1943"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Eastern Box Turtle",
+          "scientificName": "Terrapene carolina subspecies carolina",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Eastern_box_turtle_mirror_image.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Terrapene_carolina_carolina",
+          "year": "1979"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "1973"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Gray Squirrel",
+          "scientificName": "Sciurus carolinensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Sciurus_carolinensis2.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Eastern_gray_squirrel",
+          "year": "1969"
+      },
+      {
+          "commonName": "Plott Hound",
+          "scientificName": "Canis lupus familiaris",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Plotthund_Kynnagardens_Ziggy_Lundamo.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Plott_Hound",
+          "year": "1989"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Channel Bass",
+          "scientificName": "Sciaenops ocellatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Channelbass.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Red_drum",
+          "year": "1971"
+      }
+    ]
+  },
+  "North Dakota": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Western Meadowlark",
+          "scientificName": "Sturnella neglecta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-WesternMeadowlark23.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Western_meadowlark",
+          "year": "1970"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Convergent Lady Beetle",
+          "scientificName": "Hippodamia convergens",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Hippodamia_convergens_08085.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Convergent_lady_beetle",
+          "year": "2011"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Nokota Horse",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Nokota_Horses_cropped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Nokota_horse",
+          "year": "1993"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Northern Pike",
+          "scientificName": "Esox lucius",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Europaeischer_Hecht.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_pike",
+          "year": ""
+      }
+    ]
+  },
+  "Ohio": {
+    "amphibians": [
+      {
+          "commonName": "Spotted Salamander",
+          "scientificName": "Ambystoma maculatum",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Spotted_salamander_on_leaf.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Spotted_salamander",
+          "year": "2010"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Northern Cardinal",
+          "scientificName": "Cardinalis cardinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Cardinal.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_cardinal",
+          "year": "1933"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Northern Black Racer",
+          "scientificName": "Coluber constrictor subspecies constrictor",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Coluber_constrictorPCCP20030612-1115B.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Coluber_constrictor",
+          "year": "1995"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "7-Spotted Ladybug",
+          "scientificName": "Coccinella septempunctata",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-BIEDRONA.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Coccinella_septempunctata",
+          "year": "1975"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-White-tailed_deer%252C_Heath_Ohio.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1988"
+      }
+    ],
+    "fish": []
+  },
+  "Oklahoma": {
+    "amphibians": [
+      {
+          "commonName": "American Bullfrog",
+          "scientificName": "Rana catesbeiana",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-North-American-bullfrog1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_bullfrog",
+          "year": "1997"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Scissor-Tailed Flycatcher",
+          "scientificName": "Tyrannus forficatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Scissortailedfly700.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Scissor-tailed_flycatcher",
+          "year": "1951"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Common Collared Lizard",
+          "scientificName": "Crotaphytus collaris",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Collared_Lizard_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Common_collared_lizard",
+          "year": "1969"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "1992"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Quivira-Whitetail-Buck.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1990"
+      },
+      {
+        "commonName": "American Bison",
+        "scientificName": "Bison bison",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Bison_bison_Wichita_Mountain_Oklahoma.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/American_bison",
+        "year": "1972"
+      },
+      {
+        "commonName": "Raccoon",
+        "scientificName": "Procyon lotor",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Raccoon%252C_Young_%2528179494277%2529.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/Raccoon",
+        "year": "1989"
+      },
+      {
+        "commonName": "Mexican Free-Tailed Bat",
+        "scientificName": "Tadarida brasiliensis",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Tadarida_brasiliensis.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/Mexican_free-tailed_bat",
+        "year": "2006"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "White Bass",
+          "scientificName": "Morone chrysops",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Morone_chrysops1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White_bass",
+          "year": ""
+      }
+    ]
+  },
+  "Oregon": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Western Meadowlark",
+          "scientificName": "Sturnella neglecta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-WesternMeadowlark23.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Western_meadowlark",
+          "year": "1927"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Oregon Swallowtail",
+          "scientificName": "Papilio oregonius",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Papiliooregoniusstamp.jpeg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Oregon_swallowtail",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "American Beaver",
+          "scientificName": "Castor canadensis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Beaver_Yearling_Grooming_Alhambra_Creek_2008.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/North_American_beaver",
+          "year": "1969"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Chinook Salmon",
+          "scientificName": "Oncorhynchus tshawytscha",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Chinook_salmon.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Chinook_Salmon",
+          "year": "1961"
+      }
+    ]
+  },
+  "Pennsylvania": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Ruffed Grouse",
+          "scientificName": "Bonasa umbellus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Bonasa-umbellus-001edit1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Ruffed_grouse",
+          "year": "1931"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Pennsylvania Firefly",
+          "scientificName": "Photuris pennsylvanica",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Photuris_pennsylvanicus_1665.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Monarch_(butterfly)",
+          "year": "1974"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-White-tailed_deer_fawn_in_Berwyn_PA.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1959"
+      },
+      {
+          "commonName": "Great Dane",
+          "scientificName": "Canis lupus familiaris",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Great_dane.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Great_Dane",
+          "year": "1965"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Brook Trout",
+          "scientificName": "Salvelinus fontinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Salvelinus_fontinalis.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
+          "year": "1970"
+      }
+    ]
+  },
+  "Rhode Island": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Rhode Island Red",
+          "scientificName": "Gallus gallus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Rhode_Island_Red.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Rhode_Island_Red",
+          "year": "1954"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "American Burying Beetle",
+          "scientificName": "Nicrophorus americanus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Nicrophorus_americanus_-_Sankt-Peterburg.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Nicrophorus_americanus",
+          "year": "2015"
+      }
+    ],
+    "mammals": [],
+    "fish": [
+      {
+          "commonName": "Striped Bass",
+          "scientificName": "Morone saxatilis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Striped_bass_FWS_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
+          "year": ""
+      }
+    ]
+  },
+  "South Carolina": {
+    "amphibians": [
+      {
+          "commonName": "Spotted Salamander",
+          "scientificName": "Ambystoma maculatum",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Spotted_salamander_on_leaf.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Spotted_salamander",
+          "year": "1999"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Carolina Wren",
+          "scientificName": "Thryothorus ludovicianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Carolina_Wren_2.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Carolina_wren",
+          "year": "1948"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Loggerhead Sea Turtle",
+          "scientificName": "Caretta caretta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Loggerhead_Sea_Turtle_mirror_image.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Loggerhead_sea_turtle",
+          "year": "1988"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Carolina Mantis",
+          "scientificName": "Stagmomantis carolina",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Mantis2_6065.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Carolina_mantis",
+          "year": "1988"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "White-Tailed Deer",
+          "scientificName": "Odocoileus virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-White-tailed_Deer-27527-3.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+          "year": "1972"
+      },
+      {
+          "commonName": "Bottlenose Dolphin",
+          "scientificName": "Tursiops truncatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Tursiops_truncatus_01.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Common_bottlenose_dolphin",
+          "year": "2009"
+      },
+      {
+          "commonName": "Right Whale",
+          "scientificName": "Balaena australis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Nordkaper.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Right_whale",
+          "year": "2009"
+      },
+      {
+          "commonName": "Boykin Spaniel",
+          "scientificName": "Canis lupus familiaris",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Boykin_Spaniel_Winter.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Boykin_Spaniel",
+          "year": "1985"
+      },
+      {
+          "commonName": "Mule",
+          "scientificName": "Equus mulus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Momo_260905.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Mule",
+          "year": "2010"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Striped Bass",
+          "scientificName": "Morone saxatilis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Striped_bass_FWS_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
+          "year": "1972"
+      }
+    ]
+  },
+  "South Dakota": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Ring-Necked Pheasant",
+          "scientificName": "Phasianus colchicus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Phasianus_colchicus_2_tom_%2528Lukasz_Lukasik%2529.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Common_pheasant",
+          "year": "1943"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "1978"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Coyote",
+          "scientificName": "Canis latrans",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Canis_latrans_latrans_Pennington_County_SD.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Coyote",
+          "year": "1949"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Walleye",
+          "scientificName": "Sander vitreus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Sander_vitreus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Walleye",
+          "year": ""
+      }
+    ]
+  },
+  "Tennessee": {
+    "amphibians": [
+      {
+          "commonName": "Tennessee Cave Salamander",
+          "scientificName": "Gyrinophilus palleucus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Gyrinophilus_palleucus_Tennessee_Cave_Salamander.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Tennessee_cave_salamander",
+          "year": "1995"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Northern Mockingbird",
+          "scientificName": "Mimus polyglottos",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Mimus_polyglottos_adult_01_cropped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_mockingbird",
+          "year": "1933"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Eastern Box Turtle",
+          "scientificName": "Terrapene carolina subspecies carolina",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Eastern_box_turtle_mirror_image.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Terrapene_carolina_carolina",
+          "year": "1995"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Common Eastern Firefly",
+          "scientificName": "Photinus pyralis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Photinus_pyralis_Firefly_2.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Photinus_pyralis",
+          "year": "1975"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Raccoon",
+          "scientificName": "Procyon lotor",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Racoon_Memphis_TN_2013-03-26_001.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Raccoon",
+          "year": "1972"
+      },
+      {
+          "commonName": "Tennessee Walking Horse",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Tennessee_Walking_Horse4.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Tennessee_Walking_Horse",
+          "year": "2000"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Largemouth bass",
+          "scientificName": "Micropterus salmoides",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Micropterus_punctulatus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
+          "year": ""
+      }
+    ]
+  },
+  "Texas": {
+    "amphibians": [
+      {
+          "commonName": "Texas Toad",
+          "scientificName": "Bufo speciosus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Bufo_speciosus.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Texas_toad",
+          "year": "2009"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Northern Mockingbird",
+          "scientificName": "Mimus polyglottos",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Mimus_polyglottos_adult_02_cropped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_mockingbird",
+          "year": "1927"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Texas Horned Lizard",
+          "scientificName": "Phrynosoma cornutum",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Federal_horned_toad_pic_crop.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Texas_horned_lizard",
+          "year": "1993"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Monarch Butterfly",
+          "scientificName": "Danaus plexippus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Monarch_In_May.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Monarch_(butterfly)",
+          "year": "1995"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Nine-Banded Armadillo",
+          "scientificName": "Dasypus novemcinctus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Armadillo1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Nine-banded_armadillo",
+          "year": "1995"
+      },
+      {
+          "commonName": "Texas Longhorn",
+          "scientificName": "Bos taurus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Texas_Longhorn_Steer_Rocksprings.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Texas_Longhorn",
+          "year": "1995"
+      },
+      {
+        "commonName": "Mexican Free-Tailed Bat",
+        "scientificName": "Tadarida brasiliensis",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Tadarida_brasiliensis.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/Mexican_free-tailed_bat",
+        "year": "1995"
+      },
+      {
+        "commonName": "Blue Lacy",
+        "scientificName": "Canis lupus familiaris",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-BlueLacyPhoto1.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/Blue_Lacy",
+        "year": "2005"
+      },
+      {
+        "commonName": "American Quarter Horse",
+        "scientificName": "Equus ferus caballus",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-American_quarter_horse.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/American_Quarter_Horse",
+        "year": "2009"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Guadalupe Bass",
+          "scientificName": "Micropterus treculii",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Guadalupe_bass_-_Micropterus_treculii.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Guadalupe_bass",
+          "year": "1989"
+      }
+    ]
+  },
+  "Utah": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "California Gull",
+          "scientificName": "Larus californicus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-CaliforniaGull23.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/California_gull",
+          "year": "1955"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "1983"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Rocky Mountain Elk",
+          "scientificName": "Cervus elpahus nelsoni",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Rocky-mountain-elk.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Rocky_Mountain_elk",
+          "year": "1971"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Bonneville Cutthroat Trout",
+          "scientificName": "Oncorhynchus clarki (subspecies utah)",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Bonneville_cutthroat.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Bonneville_cutthroat_trout",
+          "year": "1997"
+      }
+    ]
+  },
+  "Vermont": {
+    "amphibians": [
+      {
+          "commonName": "Northern Leopard Frog",
+          "scientificName": "Rana pipiens",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Northern_leopard_frog_1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_leopard_frog",
+          "year": "1998"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Hermit Thrush",
+          "scientificName": "Catharus guttatus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Hermitthrush63.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Hermit_thrush",
+          "year": "1941"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Painted Turtle",
+          "scientificName": "Chrysemys picta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Midland_Painted_Turtle%252C_front_view.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Painted_turtle",
+          "year": "1994"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "1978"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Morgan Horse",
+          "scientificName": "Equus ferus caballus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-BayMorgan.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Morgan_horse",
+          "year": "1961"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Brook Trout",
+          "scientificName": "Salvelinus fontinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Brook_Trout_Salvelinus_fontinalis_2900px.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
+          "year": ""
+      }
+    ]
+  },
+  "Virginia": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Northern Cardinal",
+          "scientificName": "Cardinalis cardinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Cardinal.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_cardinal",
+          "year": "1950"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Eastern Tiger Swallowtail",
+          "scientificName": "Papilio glaucus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Pristine_Eastern_Tiger_Swallowtail.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Eastern_tiger_swallowtail",
+          "year": ""
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Virginia Big-Eared Bat",
+          "scientificName": "Corynorhinus townsendii virginianus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Virginia_big-eared_bat_female.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Virginia_big-eared_bat",
+          "year": "2005"
+      },
+      {
+          "commonName": "American Foxhound",
+          "scientificName": "Canis lupus familiaris",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-AmericanFoxhound2.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_Foxhound",
+          "year": "1966"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Brook Trout (fresh water)",
+          "scientificName": "Salvelinus fontinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Salvelinus_fontinalis.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
+          "year": ""
+      },
+      {
+          "commonName": "Striped bass (salt water)",
+          "scientificName": "Morone saxatilis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Striped_Bass.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
+          "year": ""
+      }
+    ]
+  },
+  "Washington": {
+    "amphibians": [
+      {
+          "commonName": "Pacific Tree Frog",
+          "scientificName": "Pseudacris regilla",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/amphibians/200px-Hyla_regilla.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Pacific_tree_frog",
+          "year": "2007"
+      }
+    ],
+    "birds": [
+      {
+          "commonName": "Willow Goldfinch",
+          "scientificName": "Spinus tristis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Carduelis-tristis-001.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_goldfinch",
+          "year": "1951"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "Green Darner Dragonfly",
+          "scientificName": "Anax junius",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Green_Darner.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Green_darner",
+          "year": "1997"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Olympic Marmot",
+          "scientificName": "Marmota olympus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-OlympicMarmotImageFromNPSFlipped.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Olympic_marmot",
+          "year": "2009"
+      },
+      {
+          "commonName": "Orca",
+          "scientificName": "Orcinus orca",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Killerwhales_jumping.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Killer_whale",
+          "year": "2005"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Steelhead Trout",
+          "scientificName": "Oncorhynchus mykiss",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Oncorhynchus_mykiss.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Rainbow_trout",
+          "year": "1969"
+      }
+    ]
+  },
+  "West Virginia": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Northern Cardinal",
+          "scientificName": "Cardinalis cardinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-Cardinal.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_cardinal",
+          "year": "1949"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Timber Rattlesnake",
+          "scientificName": "Crotalus horridus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-C_horridus.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Crotalus_horridus",
+          "year": "2008"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "2002"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "American Black Bear",
+          "scientificName": "Ursus americanus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Black-bear-climbing-water_-_West_Virginia_-_ForestWander.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_black_bear",
+          "year": "1973"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "West Virginia Golden Brook Trout",
+          "scientificName": "Salvelinus fontinalis",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Salvelinus_fontinalis.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
+          "year": ""
+      }
+    ]
+  },
+  "Wisconsin": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "American Robin",
+          "scientificName": "Turdus migratorius",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-American_Robin_2006.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_robin",
+          "year": "1949"
+      }
+    ],
+    "reptiles": [],
+    "insects": [
+      {
+          "commonName": "European Honey Bee",
+          "scientificName": "Apis mellifera",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Apis_mellifera_bi.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/European_honey_bee",
+          "year": "1977"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "Badger",
+          "scientificName": "Taxidea taxus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-AmericanBadger.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_badger",
+          "year": "1957"
+      },
+      {
+          "commonName": "Dairy Cow",
+          "scientificName": "Bos taurus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-AyrshireCattle1.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Dairy_cattle",
+          "year": "1971"
+      },
+      {
+        "commonName": "White-Tailed Deer",
+        "scientificName": "Odocoileus virginianus",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-White-tailed_deer_fawn_in_Berwyn_PA.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/White-tailed_deer",
+        "year": "1957"
+      },
+      {
+        "commonName": "American Water Spaniel",
+        "scientificName": "Canis lupus familiaris",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-Chien_d%2527eau_americain_champion_1.JPG",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/American_Water_Spaniel",
+        "year": "1985"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Muskellunge",
+          "scientificName": "Esox masquinongy",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Muskellunge_USFWS.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Muskellunge",
+          "year": "1955"
+      }
+    ]
+  },
+  "Wyoming": {
+    "amphibians": [],
+    "birds": [
+      {
+          "commonName": "Western Meadowlark",
+          "scientificName": "Sturnella neglecta",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/birds/120px-WesternMeadowlark23.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Western_meadowlark",
+          "year": "1927"
+      }
+    ],
+    "reptiles": [
+      {
+          "commonName": "Horned Lizard",
+          "scientificName": "Phrynosoma (whole genus)",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/reptiles/200px-Short_Horned_Lizard.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Horned_lizard",
+          "year": "1993"
+      }
+    ],
+    "insects": [
+      {
+          "commonName": "Sheridan's Green Hairstreak",
+          "scientificName": "Callophrys sheridanii",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/insects/150px-Callophrys_sheridanii_15737_%2528cropped%2529.JPG",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Sheridan%27s_green_hairstreak",
+          "year": "2009"
+      }
+    ],
+    "mammals": [
+      {
+          "commonName": "American Bison",
+          "scientificName": "Bison bison",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/mammals/100px-American_bison_k5680-1.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/American_bison",
+          "year": "1985"
+      }
+    ],
+    "fish": [
+      {
+          "commonName": "Cutthroat Trout",
+          "scientificName": "Oncorhynchus clarkii",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Yellowstone_Cutthroat_Trout.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Cutthroat_trout",
+          "year": ""
+      }
+    ]
+  }
+};
