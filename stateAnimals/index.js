@@ -1,37 +1,51 @@
 var svg = d3.select("svg");
 var path = d3.geoPath();
 
+var selectedCategory = 'birds';
+
 var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
 
-d3.json("https://d3js.org/us-10m.v1.json", function(error, us) {
-  if (error) throw error;
-
-  svg.append("g")
-      .attr("class", "states")
-      .selectAll("path")
-      .data(topojson.feature(us, us.objects.states).features)
-      .enter().append("path")
-      .attr("d", path)
-      .on("mouseover", function(d) {
-        div.transition()
-          .duration(200)
-          .style("opacity", .9);
-        div.html(STATES[d.id])
-          .style("left", (d3.event.pageX) + "px")
-          .style("top", (d3.event.pageY - 28) + "px");
-        })
-      .on("mouseout", function(d) {
-        div.transition()
-          .duration(500)
-          .style("opacity", 0);
-        });
-
-  svg.append("path")
-      .attr("class", "state-borders")
-      .attr("d", path(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; })));
+var stateAnimals; // a global
+d3.json("https://fleemaja.github.io/data/stateAnimals.json", function(error, json) {
+  if (error) return console.warn(error);
+  stateAnimals = json;
+  visualizeIt();
 });
+
+function visualizeIt() {
+  d3.json("https://d3js.org/us-10m.v1.json", function(error, us) {
+    if (error) throw error;
+
+    svg.append("g")
+        .attr("class", "states")
+        .selectAll("path")
+        .data(topojson.feature(us, us.objects.states).features)
+        .enter().append("path")
+        .attr("d", path)
+        .on("mouseover", function(d) {
+          var animal = stateAnimals[STATES[d.id]][selectedCategory][0];
+          var name = animal['commonName'];
+          var img = animal['imgURL'];
+          div.transition()
+            .duration(200)
+            .style("opacity", .9);
+          div.html(`<p class="info-header">State ${capitalizeFirstLetter(selectedCategory)} of ${STATES[d.id]}<p>${name}</p><img src='${img}' alt='${name}' />`)
+            .style("left", (d3.event.pageX) + "px")
+            .style("top", (d3.event.pageY - 28) + "px");
+          })
+        .on("mouseout", function(d) {
+          div.transition()
+            .duration(500)
+            .style("opacity", 0);
+          });
+
+    svg.append("path")
+        .attr("class", "state-borders")
+        .attr("d", path(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; })));
+  });
+}
 
 // topojson ids to State Names (Key-Value Map)
 var STATES = {
@@ -88,13 +102,20 @@ var STATES = {
   '56': 'Wyoming'
 };
 
+function capitalizeFirstLetter(string) {
+    return string.charAt(0).toUpperCase() + string.slice(1);
+}
+
 // follow along nav highlight
 const triggers = document.querySelectorAll('a');
 const highlight = document.createElement('span');
+
 highlight.classList.add('highlight');
 document.body.append(highlight);
-function highlightLink() {
-  const linkCoords = this.getBoundingClientRect();
+
+function highlightLink(link) {
+  selectedCategory = link.id;
+  const linkCoords = link.getBoundingClientRect();
   const coords = {
     width: linkCoords.width,
     height: linkCoords.height,
@@ -105,8 +126,14 @@ function highlightLink() {
   highlight.style.height = `${coords.height}px`;
   highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
 }
+
 function selectCategory(e) {
   e.preventDefault();
+  highlightLink(this);
 }
-triggers.forEach(a => a.addEventListener('mouseenter', highlightLink));
+
 triggers.forEach(a => a.addEventListener('click', selectCategory));
+
+// default = highlight birds
+const birds = document.querySelector('#birds');
+highlightLink(birds);
