@@ -6,7 +6,7 @@
     <title>State Animals</title>
     <style>
       html {
-        background: #a3a3a7;
+        background: #f7f9fc;
         text-align: center;
         font-family: 'Trebuchet MS', sans-serif;
       }
@@ -20,15 +20,27 @@
 
       .states {
         fill: #fff;
+        stroke: #555;
+        cursor: pointer;
       }
 
-      .states :hover {
-        fill: lightsteelblue;
+      .noAnimalStates {
+        fill: #333;
+        cursor: default;
+      }
+
+      .states:hover {
+        fill: orange;
+      }
+
+      .noAnimalStates:hover {
+        fill: #222;
+        cursor: default;
       }
 
       .state-borders {
         fill: none;
-        stroke: #aaa;
+        stroke: #555;
         stroke-width: 1px;
         stroke-linejoin: round;
         stroke-linecap: round;
@@ -36,23 +48,24 @@
       }
 
       .tooltip {
-          position: absolute;
-          text-align: center;
-          width: auto;
-          height: auto;
-          padding: 2px 12px;
-          font: 12px sans-serif;
-          background: #111;
-          color: white;
-          border: 0px;
-          border-radius: 8px;
-          pointer-events: none;
+        position: absolute;
+        text-align: center;
+        width: auto;
+        height: auto;
+        padding: 2px 12px;
+        font: 12px sans-serif;
+        background: #111;
+        color: white;
+        border: 0px;
+        border-radius: 8px;
+        pointer-events: none;
       }
 
       a {
         text-decoration: none;
-        color:black;
-        background:rgba(0,0,0,0.05);
+        color: #222;
+        /*background: rgba(0,0,0,0.05);*/
+        font-size: 20px;
         border-radius: 20px
       }
 
@@ -90,12 +103,12 @@
 
     <nav>
       <ul class="menu">
-        <li><a href="" id="mammals">Mammals</a></li>
-        <li><a href="" id="amphibians">Amphibians</a></li>
-        <li><a href="" id="birds">Birds</a></li>
-        <li><a href="" id="reptiles">Reptiles</a></li>
-        <li><a href="" id="insects">Insects</a></li>
-        <li><a href="" id="fish">Fish</a></li>
+        <li><a href="#" id="mammals">Mammals</a></li>
+        <li><a href="#" id="amphibians">Amphibians</a></li>
+        <li><a href="#" id="birds">Birds</a></li>
+        <li><a href="#" id="reptiles">Reptiles</a></li>
+        <li><a href="#" id="insects">Insects</a></li>
+        <li><a href="#" id="fish">Fish</a></li>
       </ul>
     </nav>
 

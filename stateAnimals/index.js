@@ -19,33 +19,104 @@ function visualizeIt() {
     if (error) throw error;
 
     svg.append("g")
-        .attr("class", "states")
         .selectAll("path")
         .data(topojson.feature(us, us.objects.states).features)
         .enter().append("path")
         .attr("d", path)
+        .attr("class", function(d) {
+          var animals = stateAnimals[STATES[d.id]][selectedCategory];
+          return (animals.length > 0 ? "states" : "states noAnimalStates");
+        })
         .on("mouseover", function(d) {
-          var animal = stateAnimals[STATES[d.id]][selectedCategory][0];
-          var name = animal['commonName'];
-          var img = animal['imgURL'];
-          div.transition()
-            .duration(200)
-            .style("opacity", .9);
-          div.html(`<p class="info-header">State ${capitalizeFirstLetter(selectedCategory)} of ${STATES[d.id]}<p>${name}</p><img src='${img}' alt='${name}' />`)
-            .style("left", (d3.event.pageX) + "px")
-            .style("top", (d3.event.pageY - 28) + "px");
-          })
+          var animals = stateAnimals[STATES[d.id]][selectedCategory];
+          if (animals.length > 0) {
+            var plural = animals.length > 1;
+            var category = formatCategory(selectedCategory, plural);
+            var htmlStr = `<p class="info-header">State ${category} of ${STATES[d.id]}</p>`;
+            div.transition()
+              .duration(200)
+              .style("opacity", .9);
+            animals.forEach(function(animal) {
+              var name = animal['commonName'];
+              var img = animal['imgURL'];
+              htmlStr += `<p>${name}</p><img src='${img}' alt='${name}' />`;
+            })
+            div.html(htmlStr)
+              .style("left", (d3.event.pageX) + "px")
+              .style("top", (d3.event.pageY - 28) + "px");
+          } else {
+            div.transition()
+              .duration(200)
+              .style("opacity", .9);
+            div.html(`<p>${STATES[d.id]}</p><p>No State ${formatCategory(selectedCategory, false)}</p>`)
+              .style("left", (d3.event.pageX) + "px")
+              .style("top", (d3.event.pageY - 28) + "px");
+          }
+        })
         .on("mouseout", function(d) {
-          div.transition()
-            .duration(500)
-            .style("opacity", 0);
-          });
+          var animals = stateAnimals[STATES[d.id]][selectedCategory];
+          if (animals.length > 0) {
+            div.transition()
+              .duration(500)
+              .style("opacity", 0);
+          }
+        });
 
     svg.append("path")
         .attr("class", "state-borders")
         .attr("d", path(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; })));
   });
 }
+
+function switchCategory() {
+  svg.selectAll(".states")
+  .attr("class", function(d) {
+    var animals = stateAnimals[STATES[d.id]][selectedCategory];
+    return (animals.length > 0 ? "states" : "states noAnimalStates");
+  })
+}
+
+function formatCategory(string, plural) {
+    var capitalized = string.charAt(0).toUpperCase() + string.slice(1);
+    return plural ? capitalized : capitalized.slice(0, -1);
+}
+
+// follow along nav highlight
+const triggers = document.querySelectorAll('a');
+const highlight = document.createElement('span');
+
+highlight.classList.add('highlight');
+document.body.append(highlight);
+
+function highlightLink(link) {
+  selectedCategory = link.id;
+  switchCategory();
+  const linkCoords = link.getBoundingClientRect();
+  const coords = {
+    width: linkCoords.width,
+    height: linkCoords.height,
+    top: linkCoords.top + window.scrollY,
+    left: linkCoords.left + window.scrollX
+  };
+  highlight.style.width = `${coords.width}px`;
+  highlight.style.height = `${coords.height}px`;
+  highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+}
+
+function selectCategory(e) {
+  e.preventDefault();
+  highlightLink(this);
+}
+
+triggers.forEach(a => a.addEventListener('click', selectCategory));
+window.addEventListener("resize", function() {
+  var selectedLink = document.querySelector(`#${selectedCategory}`);
+  highlightLink(selectedLink);
+});
+
+// default = highlight birds
+const birds = document.querySelector('#birds');
+highlightLink(birds);
 
 // topojson ids to State Names (Key-Value Map)
 var STATES = {
@@ -101,39 +172,3 @@ var STATES = {
   '55': 'Wisconsin',
   '56': 'Wyoming'
 };
-
-function capitalizeFirstLetter(string) {
-    return string.charAt(0).toUpperCase() + string.slice(1);
-}
-
-// follow along nav highlight
-const triggers = document.querySelectorAll('a');
-const highlight = document.createElement('span');
-
-highlight.classList.add('highlight');
-document.body.append(highlight);
-
-function highlightLink(link) {
-  selectedCategory = link.id;
-  const linkCoords = link.getBoundingClientRect();
-  const coords = {
-    width: linkCoords.width,
-    height: linkCoords.height,
-    top: linkCoords.top + window.scrollY,
-    left: linkCoords.left + window.scrollX
-  };
-  highlight.style.width = `${coords.width}px`;
-  highlight.style.height = `${coords.height}px`;
-  highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
-}
-
-function selectCategory(e) {
-  e.preventDefault();
-  highlightLink(this);
-}
-
-triggers.forEach(a => a.addEventListener('click', selectCategory));
-
-// default = highlight birds
-const birds = document.querySelector('#birds');
-highlightLink(birds);
