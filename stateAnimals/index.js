@@ -45,11 +45,29 @@ function visualizeIt() {
             div.transition()
               .duration(200)
               .style("opacity", .9);
-            animals.forEach(function(animal) {
-              var name = animal['commonName'];
-              var img = animal['imgURL'];
-              htmlStr += `<p>${name}</p><img src='${img}' alt='${name}' />`;
-            })
+            if (animals.length < 4) {
+              animals.forEach(function(animal) {
+                var name = animal['commonName'];
+                var img = animal['imgURL'];
+                htmlStr += `<p>${name}</p><img src='${img}' alt='${name}' />`;
+              })
+            } else {
+              htmlStr += '<table>';
+              var index = 0;
+              animals.forEach(function(animal) {
+                if (index % 2 == 0) {
+                  htmlStr += '<tr>';
+                }
+                var name = animal['commonName'];
+                var img = animal['imgURL'];
+                htmlStr += `<td valign="top"><p>${name}</p><img src='${img}' alt='${name}' /></td>`;
+                if (index % 2 == 1) {
+                  htmlStr += '</tr>';
+                }
+                index += 1;
+              })
+              htmlStr += '</table>';
+            }
             div.html(htmlStr)
               .style("left", function() {
                 if (d3.event.pageX < width/2) {
@@ -61,7 +79,13 @@ function visualizeIt() {
                   return (width - d3.event.pageX) + "px"
                 }
               })
-              .style("top", (d3.event.pageY - (300 * (d3.event.pageY/height))) + "px");
+              .style("top", function() {
+                if (selectedCategory === 'mammals' && (STATES[d.id] === 'Texas' || STATES[d.id] === 'South Carolina')) {
+                  return (d3.event.pageY - 400) + "px";
+                } else {
+                  return (d3.event.pageY - (300 * (d3.event.pageY/height))) + "px";
+                }
+              })
           } else {
             div.transition()
               .duration(200)
