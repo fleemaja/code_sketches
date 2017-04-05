@@ -503,7 +503,7 @@
       {
           "commonName": "Atlantic sailfish (salt water)",
           "scientificName": "Istiophorus albicans",
-          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-PSM_V26_D359_The_american_sailfish_istiophorus_americanus.jpg?response-content-disposition=inline&X-Amz-Security-Token=FQoDYXdzEMX%2F%2F%2F%2F%2F%2F%2F%2F%2F%2FwEaDKUNVTgNJOVdR%2FyEGiKrAq6s1BTpggFq3a9g%2BrK%2F6OGCMQ7DqHmB%2FyNyCtSAMPwlXrEz3wMEL6AUYeUuw6fReG0qSG0TvkMkhPpfiqAp74NGuI%2BXn1LH25mxFdudDYqbWvOgVZ7O97LvB8gccFWnM5qWrYiH8QykBUSvQsrwx2nIuE%2Fsd92VDgda%2F9BJmywQ2ugAL8CyE8BWHajHbenZJKJOpRYLQcbL295rtiPdql0fSEdVHNK8ESctRHRwjoPcINPlZxKWRtN2seBlwRWgKLd3ngM%2F4ft064U2Zn0Muq8dB6X5LaDS07QwFDgyE6blgA9CpQdRA00d0lp56U2aLk1kQRyeJZCi1V5AEBkLnsKMm3fwWbXx4gMF6X3A%2FmduBnXRaisLcz8%2BLtuOM%2FONLrKNDZvhouVxCQD0KP7t1cYF&X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Date=20170325T014831Z&X-Amz-SignedHeaders=host&X-Amz-Expires=300&X-Amz-Credential=ASIAI2GHKONKKTYYCPKA%2F20170325%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Signature=09390fd475630e192f8922a66043b599d3311ced54e49d66fb89cdb1cfb60bf7",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-PSM_V26_D359_The_american_sailfish_istiophorus_americanus.jpg",
           "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_sailfish",
           "year": "2007"
       }

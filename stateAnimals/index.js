@@ -3,6 +3,15 @@ var path = d3.geoPath();
 
 var selectedCategory = 'birds';
 
+var body = document.body,
+    html = document.documentElement;
+
+var height = Math.max( body.scrollHeight, body.offsetHeight,
+                       html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+var width = Math.max( body.scrollWidth, body.offsetWidth,
+                      html.clientWidth, html.scrollWidth, html.offsetWidth );
+
 var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
@@ -42,14 +51,32 @@ function visualizeIt() {
               htmlStr += `<p>${name}</p><img src='${img}' alt='${name}' />`;
             })
             div.html(htmlStr)
-              .style("left", (d3.event.pageX) + "px")
-              .style("top", (d3.event.pageY - 28) + "px");
+              .style("left", function() {
+                if (d3.event.pageX < width/2) {
+                  return d3.event.pageX + "px"
+                }
+              })
+              .style("right", function() {
+                if (d3.event.pageX > width/2) {
+                  return (width - d3.event.pageX) + "px"
+                }
+              })
+              .style("top", (d3.event.pageY - (300 * (d3.event.pageY/height))) + "px");
           } else {
             div.transition()
               .duration(200)
               .style("opacity", .9);
             div.html(`<p>${STATES[d.id]}</p><p>No State ${formatCategory(selectedCategory, false)}</p>`)
-              .style("left", (d3.event.pageX) + "px")
+              .style("left", function() {
+                if (d3.event.pageX < width/2) {
+                  return d3.event.pageX + "px"
+                }
+              })
+              .style("right", function() {
+                if (d3.event.pageX > width/2) {
+                  return (width - d3.event.pageX) + "px"
+                }
+              })
               .style("top", (d3.event.pageY - 28) + "px");
           }
         })
@@ -78,7 +105,7 @@ function switchCategory() {
 
 function formatCategory(string, plural) {
     var capitalized = string.charAt(0).toUpperCase() + string.slice(1);
-    return plural ? capitalized : capitalized.slice(0, -1);
+    return plural || string === 'fish' ? capitalized : capitalized.slice(0, -1);
 }
 
 // follow along nav highlight
