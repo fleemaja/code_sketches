@@ -12,6 +12,23 @@ var height = Math.max( body.scrollHeight, body.offsetHeight,
 var width = Math.max( body.scrollWidth, body.offsetWidth,
                       html.clientWidth, html.scrollWidth, html.offsetWidth );
 
+var transforms = ["transform",
+                  "msTransform",
+                  "webkitTransform",
+                  "mozTransform",
+                  "oTransform"];
+
+var transformProperty = getSupportedPropertyName(transforms);
+
+function getSupportedPropertyName(properties) {
+    for (var i = 0; i < properties.length; i++) {
+        if (typeof document.body.style[properties[i]] != "undefined") {
+            return properties[i];
+        }
+    }
+    return null;
+}
+
 var div = d3.select("body").append("div")
     .attr("class", "tooltip")
     .style("opacity", 0);
@@ -80,8 +97,10 @@ function visualizeIt() {
                 }
               })
               .style("top", function() {
-                if (selectedCategory === 'mammals' && (STATES[d.id] === 'Texas' || STATES[d.id] === 'South Carolina')) {
+                if (selectedCategory === 'mammals' && (STATES[d.id] === 'Texas')) {
                   return (d3.event.pageY - 400) + "px";
+                } else if (selectedCategory === 'mammals' && (STATES[d.id] === 'South Carolina' || STATES[d.id] === 'Alaska')) {
+                  return (d3.event.pageY - 300) + "px";
                 } else {
                   return (d3.event.pageY - (300 * (d3.event.pageY/height))) + "px";
                 }
@@ -154,7 +173,7 @@ const triggers = document.querySelectorAll('.category');
 const highlight = document.createElement('span');
 
 highlight.classList.add('highlight');
-document.body.append(highlight);
+document.body.appendChild(highlight);
 
 function highlightLink(link) {
   selectedCategory = link.id;
@@ -168,7 +187,7 @@ function highlightLink(link) {
   };
   highlight.style.width = `${coords.width}px`;
   highlight.style.height = `${coords.height}px`;
-  highlight.style.transform = `translate(${coords.left}px, ${coords.top}px)`;
+  highlight.style[transformProperty] = `translate(${coords.left}px, ${coords.top}px)`;
 }
 
 function selectCategory(e) {
@@ -176,7 +195,7 @@ function selectCategory(e) {
   highlightLink(this);
 }
 
-triggers.forEach((a) => a.addEventListener('click', selectCategory));
+[].forEach.call(triggers, (a) => a.addEventListener('click', selectCategory));
 window.addEventListener("resize", function() {
   var selectedLink = document.querySelector(`#${selectedCategory}`);
   highlightLink(selectedLink);

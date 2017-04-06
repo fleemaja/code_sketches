@@ -1,6 +1,19 @@
 <h1>Projects</h1>
 <table>
   <th>
+    April 2017
+  </th>
+  <tr>
+    <td>
+      <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1491504873/Screen_Shot_2017-04-06_at_1.53.49_PM_u45o5t.png" alt="US State Animals" >
+    </td>
+    <td>
+      <a href="http://codepen.io/fleemaja/full/KWLeKR/" target="_blank">U.S. State Animals</a> - Interactive d3.js map displaying the United States' designated state animals. Hovering over a state reveals a tooltip with that state's designated state animal of a selected category.
+    </td>
+  </tr>
+</table>
+<table>
+  <th>
     March 2017
   </th>
   <tr>
