@@ -60,7 +60,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_tarpon",
           "year": "1955"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Alaska": {
     "amphibians": [],
@@ -114,7 +115,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Chinook_salmon",
           "year": "1962"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Arizona": {
     "amphibians": [
@@ -170,7 +172,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Apache_trout",
           "year": "1986"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Arkansas": {
     "amphibians": [],
@@ -202,7 +205,8 @@
           "year": "1993"
       }
     ],
-    "fish": []
+    "fish": [],
+    "crustaceans": []
   },
   "California": {
     "amphibians": [
@@ -272,7 +276,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Garibaldi_(fish)",
           "year": "1995"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Colorado": {
     "amphibians": [
@@ -335,7 +340,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Greenback_cutthroat_trout",
           "year": "1994"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Connecticut": {
     "amphibians": [],
@@ -375,7 +381,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/American_shad",
           "year": "2003"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Delaware": {
     "amphibians": [],
@@ -415,7 +422,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Weakfish",
           "year": "1981"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "District of Columbia": {
     "amphibians": [],
@@ -431,7 +439,8 @@
     "reptiles": [],
     "insects": [],
     "mammals": [],
-    "fish": []
+    "fish": [],
+    "crustaceans": []
   },
   "Florida": {
     "amphibians": [],
@@ -507,7 +516,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_sailfish",
           "year": "2007"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Georgia": {
     "amphibians": [
@@ -570,7 +580,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
           "year": "1970"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Hawaii": {
     "amphibians": [],
@@ -617,7 +628,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Humuhumunukunuku%C4%81pua%CA%BBa",
           "year": "2006"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Idaho": {
     "amphibians": [],
@@ -657,7 +669,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Cutthroat_trout",
           "year": "1990"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Illinois": {
     "amphibians": [
@@ -713,7 +726,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Bluegill",
           "year": "1991"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Indiana": {
     "amphibians": [],
@@ -737,7 +751,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
           "year": "1970"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Iowa": {
     "amphibians": [
@@ -769,7 +784,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Channel_catfish",
           "year": "2001"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Kansas": {
     "amphibians": [
@@ -817,7 +833,8 @@
           "year": "1955"
       }
     ],
-    "fish": []
+    "fish": [],
+    "crustaceans": []
   },
   "Kentucky": {
     "amphibians": [],
@@ -864,7 +881,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Spotted_bass",
           "year": "1956"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Louisiana": {
     "amphibians": [
@@ -927,6 +945,15 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Crappie",
           "year": "1993"
       }
+    ],
+    "crustaceans": [
+      {
+        "commonName": "Louisiana Crawfish",
+        "scientificName": "Procambarus clarkii",
+        "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/crustaceans/220px-Procambarus_clarkii.jpg",
+        "wikipediaURL": "https://en.wikipedia.org/wiki/Procambarus_clarkii",
+        "year": "1983"
+      }
     ]
   },
   "Maine": {
@@ -974,7 +1001,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_salmon",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Maryland": {
     "amphibians": [],
@@ -1035,6 +1063,15 @@
           "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Striped_bass_FWS_1.jpg",
           "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
           "year": "1965"
+      }
+    ],
+    "crustaceans": [
+      {
+          "commonName": "Blue Crab",
+          "scientificName": "Callinectes sapidus",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/crustaceans/220px-The_Childrens_Museum_of_Indianapolis_-_Atlantic_blue_crab.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Callinectes_sapidus",
+          "year": "1989"
       }
     ]
   },
@@ -1105,7 +1142,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_cod",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Michigan": {
     "amphibians": [],
@@ -1145,7 +1183,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
           "year": "1988"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Minnesota": {
     "amphibians": [
@@ -1185,7 +1224,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Walleye",
           "year": "1965"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Mississippi": {
     "amphibians": [],
@@ -1240,7 +1280,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
           "year": "1974"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Missouri": {
     "amphibians": [
@@ -1303,7 +1344,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Channel_catfish",
           "year": "1997"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Montana": {
     "amphibians": [],
@@ -1343,7 +1385,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Cutthroat_trout",
           "year": "1997"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Nebraska": {
     "amphibians": [],
@@ -1383,7 +1426,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Channel_catfish",
           "year": "1997"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Nevada": {
     "amphibians": [],
@@ -1423,7 +1467,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Lahontan_cutthroat_trout",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "New Hampshire": {
     "amphibians": [
@@ -1485,7 +1530,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Atlantic_tarpon",
           "year": "1994"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "New Jersey": {
     "amphibians": [],
@@ -1525,7 +1571,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
           "year": "1991"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "New Mexico": {
     "amphibians": [
@@ -1581,7 +1628,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Rio_Grande_cutthroat_trout",
           "year": "2005"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "New York": {
     "amphibians": [
@@ -1644,7 +1692,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "North Carolina": {
     "amphibians": [],
@@ -1699,7 +1748,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Red_drum",
           "year": "1971"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "North Dakota": {
     "amphibians": [],
@@ -1739,7 +1789,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Northern_pike",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Ohio": {
     "amphibians": [
@@ -1787,7 +1838,8 @@
           "year": "1988"
       }
     ],
-    "fish": []
+    "fish": [],
+    "crustaceans": []
   },
   "Oklahoma": {
     "amphibians": [
@@ -1864,7 +1916,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/White_bass",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Oregon": {
     "amphibians": [],
@@ -1903,6 +1956,15 @@
           "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/fish/200px-Chinook_salmon.jpg",
           "wikipediaURL": "https://en.wikipedia.org/wiki/Chinook_Salmon",
           "year": "1961"
+      }
+    ],
+    "crustaceans": [
+      {
+          "commonName": "Dungeness Crab",
+          "scientificName": "Metacarcinus magister",
+          "imgURL": "https://s3.amazonaws.com/us-state-animals/stateAnimals/crustaceans/220px-DungenessCrab.jpg",
+          "wikipediaURL": "https://en.wikipedia.org/wiki/Dungeness_crab",
+          "year": "2009"
       }
     ]
   },
@@ -1951,7 +2013,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
           "year": "1970"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Rhode Island": {
     "amphibians": [],
@@ -1983,7 +2046,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "South Carolina": {
     "amphibians": [
@@ -2067,7 +2131,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
           "year": "1972"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "South Dakota": {
     "amphibians": [],
@@ -2107,7 +2172,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Walleye",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Tennessee": {
     "amphibians": [
@@ -2170,7 +2236,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Largemouth_bass",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Texas": {
     "amphibians": [
@@ -2254,7 +2321,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Guadalupe_bass",
           "year": "1989"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Utah": {
     "amphibians": [],
@@ -2294,7 +2362,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Bonneville_cutthroat_trout",
           "year": "1997"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Vermont": {
     "amphibians": [
@@ -2350,7 +2419,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Virginia": {
     "amphibians": [],
@@ -2404,7 +2474,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Striped_bass",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Washington": {
     "amphibians": [
@@ -2459,7 +2530,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Rainbow_trout",
           "year": "1969"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "West Virginia": {
     "amphibians": [],
@@ -2507,7 +2579,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Brook_trout",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Wisconsin": {
     "amphibians": [],
@@ -2568,7 +2641,8 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Muskellunge",
           "year": "1955"
       }
-    ]
+    ],
+    "crustaceans": []
   },
   "Wyoming": {
     "amphibians": [],
@@ -2616,6 +2690,7 @@
           "wikipediaURL": "https://en.wikipedia.org/wiki/Cutthroat_trout",
           "year": ""
       }
-    ]
+    ],
+    "crustaceans": []
   }
-};
+}

@@ -105,17 +105,31 @@ function visualizeIt() {
           }
         })
         .on("mouseout", function(d) {
-          var animals = stateAnimals[STATES[d.id]][selectedCategory];
-          if (animals.length > 0) {
-            div.transition()
-              .duration(500)
-              .style("opacity", 0);
-          }
+          div.transition()
+            .duration(500)
+            .style("opacity", 0);
         });
 
     svg.append("path")
         .attr("class", "state-borders")
         .attr("d", path(topojson.mesh(us, us.objects.states, function(a, b) { return a !== b; })));
+
+    svg.append("text")
+        .attr("x", 726)
+        .attr("y", 50)
+        .attr("text-anchor", "middle")
+        .style("font-size", "20px")
+        .style("fill", "#777")
+        .text("U.S. State Animals");
+
+    svg.append("text")
+        .attr("class", "instructions")
+        .attr("x", 726)
+        .attr("y", 70)
+        .attr("text-anchor", "middle")
+        .style("font-size", "14px")
+        .style("fill", "#222")
+        .text("Hover over a state to view its state " + formatCategory(selectedCategory, false));
   });
 }
 
@@ -125,6 +139,9 @@ function switchCategory() {
     var animals = stateAnimals[STATES[d.id]][selectedCategory];
     return (animals.length > 0 ? "states" : "states noAnimalStates");
   })
+
+  svg.select('.instructions')
+  .text("Hover over a state to view its state " + formatCategory(selectedCategory, false));
 }
 
 function formatCategory(string, plural) {
@@ -133,7 +150,7 @@ function formatCategory(string, plural) {
 }
 
 // follow along nav highlight
-const triggers = document.querySelectorAll('a');
+const triggers = document.querySelectorAll('.category');
 const highlight = document.createElement('span');
 
 highlight.classList.add('highlight');
@@ -159,10 +176,15 @@ function selectCategory(e) {
   highlightLink(this);
 }
 
-triggers.forEach(a => a.addEventListener('click', selectCategory));
+triggers.forEach((a) => a.addEventListener('click', selectCategory));
 window.addEventListener("resize", function() {
   var selectedLink = document.querySelector(`#${selectedCategory}`);
   highlightLink(selectedLink);
+
+  height = Math.max( body.scrollHeight, body.offsetHeight,
+                         html.clientHeight, html.scrollHeight, html.offsetHeight );
+
+  width = html.clientWidth;
 });
 
 // default = highlight birds

@@ -6,9 +6,9 @@
     <title>State Animals</title>
     <style>
       html {
-        background: #f7f9fc;
+        background: #F9F9FA;
         text-align: center;
-        font-family: 'Trebuchet MS', sans-serif;
+        font-family: sans-serif;
       }
 
       .info-header {
@@ -25,7 +25,7 @@
       }
 
       .noAnimalStates {
-        fill: #333;
+        fill: #999;
         cursor: default;
       }
 
@@ -34,7 +34,7 @@
       }
 
       .noAnimalStates:hover {
-        fill: #222;
+        fill: #777;
         cursor: default;
       }
 
@@ -57,7 +57,7 @@
         background: #111;
         color: white;
         border: 0px;
-        border-radius: 8px;
+        border-radius: 2px;
         pointer-events: none;
       }
 
@@ -65,21 +65,22 @@
         text-decoration: none;
         color: #222;
         /*background: rgba(0,0,0,0.05);*/
-        font-size: 20px;
-        border-radius: 20px
+        font-size: 18px;
+        border-radius: 2px;
+        border-bottom: 1px solid gray;
       }
 
       .highlight {
         transition: all 0.2s;
-        border-bottom:2px solid white;
+        /*border-bottom:2px solid white;*/
         position: absolute;
         top:0;
-        background:white;
+        background: white;
         left:0;
         z-index: -1;
-        border-radius:20px;
+        border-radius:2px;
         display: block;
-        box-shadow: 0 0 10px rgba(0,0,0,0.2)
+        box-shadow: 0 0 20px rgb(153,84,0);
       }
 
       .menu {
@@ -96,6 +97,11 @@
         margin:0 20px;
         color:black;
       }
+
+      .wiki-link {
+        margin: 80px 0px 40px 0;
+        font-size: 14px;
+      }
     </style>
   </head>
 
@@ -103,16 +109,24 @@
 
     <nav>
       <ul class="menu">
-        <li><a href="#" id="mammals">Mammals</a></li>
-        <li><a href="#" id="amphibians">Amphibians</a></li>
-        <li><a href="#" id="birds">Birds</a></li>
-        <li><a href="#" id="reptiles">Reptiles</a></li>
-        <li><a href="#" id="insects">Insects</a></li>
-        <li><a href="#" id="fish">Fish</a></li>
+        <li><a href="#" class="category" id="mammals">Mammals</a></li>
+        <li><a href="#" class="category" id="amphibians">Amphibians</a></li>
+        <li><a href="#" class="category" id="birds">Birds</a></li>
+        <li><a href="#" class="category" id="reptiles">Reptiles</a></li>
+        <li><a href="#" class="category" id="insects">Insects</a></li>
+        <li><a href="#" class="category" id="fish">Fish</a></li>
+        <li><a href="#" class="category" id="crustaceans">Crustaceans</a></li>
       </ul>
     </nav>
 
     <svg width="960" height="600"></svg>
+
+    <div class="wiki-link">
+      <span>Learn more about the U.S. state animals on </span>
+      <a href="https://en.wikipedia.org/wiki/Lists_of_U.S._state_animals" target="_blank">
+        Wikipedia
+      </a>
+    </div>
 
     <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.5.0/d3.min.js"></script>
     <script language="javascript" type="text/javascript" src="https://d3js.org/topojson.v2.min.js"></script>
