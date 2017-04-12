@@ -12,11 +12,11 @@ function setup() {
   drawingContext.shadowBlur = 50;
   drawingContext.shadowColor = 'black';
 
-  from = color(255, 255, 255, 0.9 * 255);
+  from = color(55, 55, 55, 5);
   to = color(179, 255, 200, 0.9 * 255);
 
   var hexSize = startSize;
-  var hexNum = 0;
+  var hexNum = 1;
   while (hexSize < width) {
     hexagons.push(new Hexagon(hexSize, hexNum));
     // hexSize += 50;
@@ -28,6 +28,7 @@ function setup() {
 
 function draw() {
   background(51);
+
   hexagons.forEach(function(h) {
     h.render();
     h.update();
@@ -41,20 +42,20 @@ function Hexagon(size, rotation) {
 }
 
 Hexagon.prototype.update = function() {
-  // this.size *= 1.0;
-  var col = map(this.size, startSize, width/3, 0, 1);
-  this.color = lerpColor(from, to, col);
-  this.rotation += 0.005;
+  if (this.size > width) {
+    this.size = startSize;
+  }
 
-  // if (this.size > width) {
-  //   this.size = 20;
-  //   this.rotation = 0;
-  // }
+  var mult = map(this.size, startSize, width, 1.005, 1.018);
+  this.size *= mult;
+  var col = map(this.size, startSize, width/2, 0, 1);
+  this.color = lerpColor(from, to, col);
+  this.rotation += 0.004;
 }
 
 Hexagon.prototype.render = function() {
   noFill();
-  strokeWeight(this.size * 0.29);
+  strokeWeight(this.size * 0.3);
   stroke(this.color);
   push();
   translate(width * 0.5, height * 0.5);
