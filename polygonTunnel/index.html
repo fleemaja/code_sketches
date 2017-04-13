@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polygon Tunnel</title>
+
+    <style>
+      canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+      }
+
+      .options {
+          font-family: sans-serif;
+          position: fixed;
+          bottom: 0;
+          left: 0;
+          width: 100%;
+          background: white;
+          z-index: 1;
+      }
+    </style>
+
+  </head>
+
+  <body>
+    <!-- <![if gte IE 9 | !IE]> -->
+    <div class="options">
+      <label for="base">Color Picker:</label>
+      <input id="base" type="color" name="base" value="#b3ffc8">
+
+      <label for="stroke">Stroke Width:</label>
+      <input id="stroke" type="range" name="stroke" value="0.33" min="0.01" max="0.4" step="0.01">
+
+      <label for="points">Polygon Points:</label>
+      <input id="points" type="range" name="points" value="6" min="3" max="18" step="1">
+    </div>
+    <!-- <![endif]> -->
+
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.7/p5.min.js"></script>
+    <script language="javascript" type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.5.8/addons/p5.dom.min.js"></script>
+    <script language="javascript" type="text/javascript" src="sketch.js"></script>
+  </body>
+</html>
