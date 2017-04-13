@@ -1,9 +1,10 @@
 var polygons = [];
 var from;
 var to;
-var startSize = 4;
+var startSize = 1;
 var strokeSize = 0.33;
 var polygonPoints = 6;
+var rotationOffset = 4;
 
 function setup() {
   var iHeight = constrain(window.innerHeight, 500, 900);
@@ -14,7 +15,6 @@ function setup() {
   drawingContext.shadowBlur = 50;
   drawingContext.shadowColor = 'black';
 
-  // dark interpolated color
   from = color(55, 55, 55, 0);
   chooseColor();
 
@@ -50,10 +50,9 @@ function setupPolygons() {
   var polyId = 0;
   while (polySize < width) {
     polygons.push(new Polygon(polySize, polyRot, polyId));
-    // hexSize += 50;
     var mult = map(polySize, startSize, width, 1.13, 1.5);
     polySize *= mult;
-    polyRot += 4;
+    polyRot += rotationOffset;
     polyId += 1;
   }
 }
@@ -67,10 +66,6 @@ function hexToRgb(hex) {
     } : null;
 }
 
-function mousePressed() {
-    console.log("first: " + polygons[0].rotation + ", last: " + polygons[polygons.length - 1].rotation);
-}
-
 function draw() {
   background(51);
 
@@ -80,7 +75,8 @@ function draw() {
   });
 }
 
-function Polygon(size, rotation) {
+function Polygon(size, rotation, id) {
+  this.id = id;
   this.size = size;
   this.rotation = rotation;
   this.color = lerpColor(from, to, 0);
@@ -89,7 +85,7 @@ function Polygon(size, rotation) {
 Polygon.prototype.update = function() {
   if (this.size > (width * 1.5)) {
     this.size = startSize;
-    // this.rotation = 0;
+    this.rotation = getPrevRotation(this.id) - rotationOffset;
   }
 
   var mult = map(this.size, startSize, width, 1.005, 1.018);
@@ -108,6 +104,15 @@ Polygon.prototype.render = function() {
   rotate(this.rotation);
   polygon(0, 0, this.size, polygonPoints);
   pop();
+}
+
+function getPrevRotation(id) {
+  var lastIndex = polygons.length - 1;
+  if (id === lastIndex) {
+    return polygons[0].rotation;
+  } else {
+    return polygons[id + 1].rotation;
+  }
 }
 
 function polygon(x, y, radius, npoints) {

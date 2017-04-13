@@ -21,6 +21,20 @@
           background: white;
           z-index: 1;
       }
+
+      .option {
+        float: left;
+        margin: 10px;
+      }
+
+      label, input {
+        display: block;
+      }
+
+      label {
+        font-size: 12px;
+        font-weight: 900;
+      }
     </style>
 
   </head>
@@ -28,14 +42,21 @@
   <body>
     <!-- <![if gte IE 9 | !IE]> -->
     <div class="options">
-      <label for="base">Color Picker:</label>
-      <input id="base" type="color" name="base" value="#b3ffc8">
 
-      <label for="stroke">Stroke Width:</label>
-      <input id="stroke" type="range" name="stroke" value="0.33" min="0.01" max="0.4" step="0.01">
+      <div class="option">
+        <label for="stroke">Stroke Width:</label>
+        <input id="stroke" type="range" name="stroke" value="0.33" min="0.01" max="0.4" step="0.01">
+      </div>
 
-      <label for="points">Polygon Points:</label>
-      <input id="points" type="range" name="points" value="6" min="3" max="18" step="1">
+      <div class="option">
+        <label for="points">Polygon Points:</label>
+        <input id="points" type="range" name="points" value="6" min="3" max="18" step="1">
+      </div>
+
+      <div class="option">
+        <label for="base">Color:</label>
+        <input id="base" type="color" name="base" value="#b3ffc8">
+      </div>
     </div>
     <!-- <![endif]> -->
 
