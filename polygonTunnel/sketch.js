@@ -5,6 +5,7 @@ var startSize = 1;
 var strokeSize = 0.33;
 var polygonPoints = 6;
 var rotationOffset = 4;
+var rotSpeed = 0.004;
 
 function setup() {
   var iHeight = constrain(window.innerHeight, 500, 900);
@@ -18,15 +19,21 @@ function setup() {
   from = color(55, 55, 55, 0);
   chooseColor();
 
-  var colourPick = select('#base');
-  var stroke = select('#stroke');
-  var points = select('#points');
+  var colourPickEl = select('#base');
+  var strokeEl = select('#stroke');
+  var pointsEl = select('#points');
+  var rotSpeedEl = select('#rotSpeed');
 
-  colourPick.changed(chooseColor);
-  stroke.changed(chooseStroke);
-  points.changed(choosePoly);
+  colourPickEl.changed(chooseColor);
+  strokeEl.changed(chooseStroke);
+  pointsEl.changed(choosePoly);
+  rotSpeedEl.changed(chooseRotSpeed);
 
   setupPolygons();
+}
+
+function chooseRotSpeed() {
+  rotSpeed = select('#rotSpeed').value();
 }
 
 function choosePoly() {
@@ -92,7 +99,7 @@ Polygon.prototype.update = function() {
   this.size *= mult;
   var col = map(this.size, startSize, width/2, 0, 1);
   this.color = lerpColor(from, to, col);
-  this.rotation += 0.004;
+  this.rotation += rotSpeed;
 }
 
 Polygon.prototype.render = function() {
