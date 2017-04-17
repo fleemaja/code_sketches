@@ -1,8 +1,15 @@
 <h1>Projects</h1>
 <table>
-  <th>
-    April 2017
-  </th>
+  <tr>
+    <td>
+      <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1492463281/Screen_Shot_2017-04-17_at_4.07.23_PM_jhpngj.png" alt="Polygon Tunnel" >
+    </td>
+    <td>
+      <a href="http://codepen.io/fleemaja/full/OpKevE/" target="_blank">Polygon Tunnel</a> - Trippy 3d tunnel motion effect made with p5.js 2d polygon outlines. The user can adjust polygon border size, number of polygon points, color, and rotation speed.
+    </td>
+  </tr>
+</table>
+<table>
   <tr>
     <td>
       <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1491504873/Screen_Shot_2017-04-06_at_1.53.49_PM_u45o5t.png" alt="US State Animals" >
@@ -13,9 +20,6 @@
   </tr>
 </table>
 <table>
-  <th>
-    March 2017
-  </th>
   <tr>
     <td>
       <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1490119794/Screen_Shot_2017-03-21_at_1.08.32_PM_rn7y6v.png" alt="Desert Constellations" >
@@ -26,9 +30,6 @@
   </tr>
 </table>
 <table>
-  <th>
-    February 2017
-  </th>
   <tr>
     <td>
       <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1487804193/Screen_Shot_2017-02-22_at_4.56.12_PM_lx3tkh.png" alt="Ghost Pong" >
@@ -39,9 +40,6 @@
   </tr>
 </table>
 <table>
-  <th>
-    January 2017
-  </th>
   <tr>
     <td>
       <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1487271035/madGifs_r9v4gk.png" alt="Mad Gifs" >
@@ -53,9 +51,6 @@
 </table>
 <br/>
 <table>
-  <th>
-    December 2016
-  </th>
   <tr>
     <td>
       <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1484174013/Screen_Shot_2017-01-11_at_4.30.01_PM_wsbedt.png" alt="Slither Snake" >
@@ -67,9 +62,6 @@
 </table>
 <br/>
 <table>
-  <th>
-    November 2016
-  </th>
   <tr>
     <td>
       <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1484174019/Screen_Shot_2017-01-11_at_4.22.30_PM_zbqo5l.png" alt="Winter Spring Summer Autumn" >
