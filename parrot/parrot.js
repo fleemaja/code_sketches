@@ -2,6 +2,9 @@ window.SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecogn
 
 var synth = window.speechSynthesis;
 
+var topbeak = Snap("#top-beak");
+var bottombeak = Snap("#bottom-beak");
+
 const recognition = new SpeechRecognition();
 recognition.interimResults = true;
 let p = document.createElement('p');
@@ -23,10 +26,14 @@ recognition.addEventListener('result', e => {
     p = document.createElement('p');
     words.prepend(p);
     var utterThis = new SpeechSynthesisUtterance(poopScript);
+    var voices = synth.getVoices();
+    utterThis.voice = voices.filter(function(voice) { return voice.name === 'Daniel'})[0];
     synth.speak(utterThis);
+    talkOut();
     utterThis.onend = function(event) {
       listening = true;
-      console.log('Utterance has finished being spoken after ' + event.elapsedTime + ' milliseconds.');
+      topbeak.stop();
+      bottombeak.stop();
       recognition.start();
     };
   }
@@ -40,3 +47,19 @@ recognition.addEventListener('end', function() {
   }
 });
 recognition.start();
+
+function talkOut() {
+    var tbbox = topbeak.getBBox();
+    var bbbox = bottombeak.getBBox();
+
+    topbeak.animate({transform: "r-14," + tbbox.cx + "," + tbbox.cy }, 150, talkIn.bind(null));
+    bottombeak.animate({transform: "r9," + bbbox.cx + "," + bbbox.cy }, 150);
+};
+
+function talkIn() {
+    var tbbox = topbeak.getBBox();
+    var bbbox = bottombeak.getBBox();
+
+    topbeak.animate({transform: "r9," + tbbox.cx + "," + tbbox.cy }, 150, talkOut.bind(null));
+    bottombeak.animate({transform: "r-9," + bbbox.cx + "," + bbbox.cy }, 150);
+};

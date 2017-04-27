@@ -2,6 +2,16 @@
 <table>
   <tr>
     <td>
+      <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1493330533/Screen_Shot_2017-04-27_at_5.01.16_PM_kto5bb.png" alt="Talk Back Parrot" >
+    </td>
+    <td>
+      <a href="http://codepen.io/fleemaja/full/OmMEZw/" target="_blank">Talk Back Parrot</a> - SVG parrot that repeats whatever you say back to you. Uses the speechSynthesis and speechRecognition browser APIs. Only works on browsers with these experimental features (best bet is Chrome). Microphone has to be enabled too. Animated with Snap.svg.
+    </td>
+  </tr>
+</table>
+<table>
+  <tr>
+    <td>
       <img src="http://res.cloudinary.com/dkw0kkkgd/image/upload/v1492463281/Screen_Shot_2017-04-17_at_4.07.23_PM_jhpngj.png" alt="Polygon Tunnel" >
     </td>
     <td>
