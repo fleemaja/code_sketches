@@ -1,32 +1,3 @@
-class Car {
-  constructor() {
-    this.position = createVector(width/2, height/2)
-    this.width = width/36
-    this.length = this.width * 2
-    this.direction = 0
-    this.rotation = 0
-  }
-
-  turn() {
-    this.direction += this.rotation
-  }
-
-  setRotation(angle) {
-    this.rotation = angle
-  }
-
-  render() {
-    push()
-    fill(255, 100, 100)
-    noStroke()
-    rectMode(CENTER)
-    translate(this.position.x, this.position.y)
-    rotate(this.direction)
-    rect(0, 0, this.width, this.length)
-    pop()
-  }
-}
-
 let car;
 
 function setup() {
@@ -36,7 +7,11 @@ function setup() {
 }
 
 function keyReleased() {
-  car.setRotation(0)
+  if (keyCode == UP_ARROW) {
+    car.accelerating(false)
+  } else if (keyCode == RIGHT_ARROW || keyCode == LEFT_ARROW) {
+    car.setRotation(0)
+  }
 }
 
 function keyPressed() {
@@ -44,6 +19,8 @@ function keyPressed() {
     car.setRotation(PI/36)
   } else if (keyCode == LEFT_ARROW) {
     car.setRotation(-PI/36)
+  } else if (keyCode == UP_ARROW) {
+    car.accelerating(true)
   }
 }
 
@@ -51,6 +28,8 @@ function draw() {
   drawSoccerField()
   car.render()
   car.turn()
+  car.update()
+  car.detectEdges()
 }
 
 function drawSoccerField() {
