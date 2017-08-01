@@ -1,15 +1,19 @@
 class Car {
-  constructor() {
-    this.position = createVector(width/4, height/2)
+  constructor(paintColor, startX) {
+    this.position = createVector(startX, height/2)
     this.width = width/36
     this.length = this.width * 2
     this.isAccelerating = false
     this.rotation = 0
+    this.color = paintColor
     const options = { density: 0.01, friction: 0.2 }
     this.body = Bodies.rectangle(
       this.position.x, this.position.y, this.length, this.width, options
     )
     World.add(world, this.body)
+    if (startX > width/2) {
+      Body.setAngle(this.body, PI)
+    }
   }
 
   update() {
@@ -17,6 +21,8 @@ class Car {
       this.accelerate()
     }
     this.rotate(this.rotation)
+    this.position.x = this.body.position.x
+    this.position.y = this.body.position.y
   }
 
   accelerating(isAccelerating) {
@@ -34,6 +40,12 @@ class Car {
     Body.setAngularVelocity(this.body, rotation)
   }
 
+  pointTowardsBall() {
+    const desired = p5.Vector.sub(ball.position, this.position)
+    const angle = desired.heading()
+    Body.setAngle(this.body, angle);
+  }
+
   render() {
     var angle = this.body.angle;
     push()
@@ -47,11 +59,11 @@ class Car {
     ellipse(-this.length/3, -this.width/2, this.width/4, this.width/8)
     ellipse(-this.length/3, this.width/2, this.width/4, this.width/8)
     // car body
-    fill(255, 100, 100)
+    fill(this.color)
     rect(0, 0, this.length, this.width, 5);
     fill(54);
     rect(-this.length/24, 0, 0.7 * this.length, 0.8 * this.width, 5);
-    fill(255, 100, 100);
+    fill(this.color);
     rect(-this.length/12, 0, 0.45 * this.length, 0.6 * this.width, 5);
     // headlights
     fill(255, 255, 200)

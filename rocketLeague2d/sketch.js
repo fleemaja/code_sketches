@@ -7,6 +7,7 @@ let engine;
 let world;
 
 let car;
+let computerCar;
 let ball;
 
 // for goal explosion effect
@@ -14,6 +15,9 @@ let sparks = [];
 
 let goalHeight;
 let goalWaitPeriod = false;
+
+let playerScore = 0;
+let computerScore = 0;
 
 function setup() {
   const w = window.innerWidth
@@ -30,7 +34,13 @@ function setup() {
 
   addWalls()
 
-  car = new Car()
+  const redHexVals = [255, 100, 100]
+  const playerStartX = width/4;
+  car = new Car(redHexVals, playerStartX)
+  const blueHexVals = [100, 100, 255]
+  const computerStartX = 3*width/4;
+  computerCar = new Car(blueHexVals, computerStartX)
+
   ball = new Ball()
 }
 
@@ -65,9 +75,17 @@ function draw() {
   car.render()
   car.update()
 
+  computerCar.render()
+  computerCar.update()
+
+  computerCar.accelerating(true)
+  computerCar.pointTowardsBall()
+
+
   ball.render()
   if (ball.didScore()) {
     const [x, y] = [ball.body.position.x, ball.body.position.y]
+    x < width/2 ? computerScore++ : playerScore++;
     shootSparks(x, y)
     goalWaitPeriod = true
     setTimeout(function() {
@@ -75,10 +93,15 @@ function draw() {
     }, 1000);
   }
 
+  fill(4);
+  textSize(48);
+  text(playerScore, 100, height/8);
+  text(computerScore, width - 120, height/8);
+
   if (goalWaitPeriod) {
     fill(random(255), random(255), random(255));
     textSize(64);
-    text("GOOOOOOAL", width/3, height/8)
+    text("GOOOOOOAL", width/2 - 200, height/8)
   }
 
   // update, show, and delete sparks for goals

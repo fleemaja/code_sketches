@@ -25,6 +25,9 @@ class Ball {
   }
 
   render() {
+    this.position.x = this.body.position.x
+    this.position.y = this.body.position.y
+
     push()
     translate(this.body.position.x, this.body.position.y)
     rotate(this.body.angle)
