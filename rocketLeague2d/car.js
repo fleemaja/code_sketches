@@ -1,12 +1,14 @@
 class Car {
   constructor(paintColor, startX) {
-    this.position = createVector(startX, height/2)
+    const startY = startX < width/2 ? height/4 : 3*height/4
+    this.position = createVector(startX, startY)
     this.width = width/36
     this.length = this.width * 2
     this.isAccelerating = false
     this.rotation = 0
     this.color = paintColor
-    const options = { density: 0.01, friction: 0.2 }
+    this.history = [];
+    const options = { density: 0.01, friction: 0.2, mass: 50 }
     this.body = Bodies.rectangle(
       this.position.x, this.position.y, this.length, this.width, options
     )
@@ -21,6 +23,10 @@ class Car {
       this.accelerate()
     }
     this.rotate(this.rotation)
+    this.history.push([this.body.position.x, this.body.position.y]);
+    if (this.history.length > exaustClouds) {
+      this.history.splice(0, 1);
+    }
     this.position.x = this.body.position.x
     this.position.y = this.body.position.y
   }
@@ -69,6 +75,19 @@ class Car {
     fill(255, 255, 200)
     ellipse(this.length/2, -this.width/3, this.width/8, this.width/4);
     ellipse(this.length/2, this.width/3, this.width/8, this.width/4);
+    pop()
+    push()
+    noStroke();
+    const carWidth = this.width;
+    this.history.forEach(function(h, i) {
+      const [ x, y ] = h
+      push()
+      translate(x, y)
+      rotate(angle);
+      fill(54, i);
+      ellipse(-carWidth, 0, exaustClouds - i + random(-10, 10), exaustClouds - i + random(-3, 3));
+      pop()
+    })
     pop()
   }
 }

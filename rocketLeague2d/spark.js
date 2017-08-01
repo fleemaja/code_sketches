@@ -28,5 +28,4 @@ class Spark {
       rect(this.pos.x, this.pos.y, this.lifespan/20, this.lifespan/20, 3);
     }
   }
-
 }

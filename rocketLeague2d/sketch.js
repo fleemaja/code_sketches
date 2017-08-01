@@ -6,6 +6,7 @@ const Body = Matter.Body;
 let engine;
 let world;
 
+const exaustClouds = 25;
 let car;
 let computerCar;
 let ball;
@@ -21,7 +22,8 @@ let computerScore = 0;
 
 function setup() {
   const w = window.innerWidth
-  const h = window.innerHeight
+  // keep field dimensions nice
+  const h = min(window.innerHeight, w * 0.61);
   createCanvas(w, h)
 
   goalHeight = width/6
@@ -29,7 +31,7 @@ function setup() {
   engine = Engine.create();
   world = engine.world;
 
-  // disable matter.js gravity
+  // disable matter.js gravity (top-down game)
   engine.world.gravity.y = 0;
 
   addWalls()
@@ -93,15 +95,21 @@ function draw() {
     }, 1000);
   }
 
+  textSize(18);
+  noStroke();
+  fill(255, 100, 100);
+  text("player", width/2 - 100, height/16);
+  fill(100, 100, 255);
+  text("computer", width/2 + 50, height/16)
   fill(4);
   textSize(48);
-  text(playerScore, 100, height/8);
-  text(computerScore, width - 120, height/8);
+  text(playerScore, width/2 - 88, height/6);
+  text(computerScore, width/2 + 78, height/6);
 
   if (goalWaitPeriod) {
     fill(random(255), random(255), random(255));
     textSize(64);
-    text("GOOOOOOAL", width/2 - 200, height/8)
+    text("GOOOOOOAL", width/2 - 200, height/2)
   }
 
   // update, show, and delete sparks for goals
@@ -149,7 +157,7 @@ function drawSoccerField() {
 }
 
 function addWalls() {
-  const wallThickness = 50;
+  const wallThickness = 500;
   const wt2 = wallThickness/2;
 
   bottomWall = new Wall(width/2, height + wt2, width, wallThickness, 0)
