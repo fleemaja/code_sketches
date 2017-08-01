@@ -16,18 +16,12 @@ class Car {
     if (this.isAccelerating) {
       this.accelerate()
     }
-    // if (this.isRotating) {
     this.rotate(this.rotation)
-    // }
   }
 
   accelerating(isAccelerating) {
     this.isAccelerating = isAccelerating
   }
-
-  // rotating(isAccelerating) {
-  //   this.isAccelerating = isAccelerating
-  // }
 
   accelerate() {
     var force = p5.Vector.fromAngle(this.body.angle)
@@ -43,12 +37,26 @@ class Car {
   render() {
     var angle = this.body.angle;
     push()
-    fill(255, 100, 100)
-    noStroke()
     rectMode(CENTER)
     translate(this.body.position.x, this.body.position.y)
     rotate(angle);
-    rect(0, 0, this.length, this.width)
+    // tires
+    fill(54)
+    ellipse(this.length/3, -this.width/2, this.width/4, this.width/8)
+    ellipse(this.length/3, this.width/2, this.width/4, this.width/8)
+    ellipse(-this.length/3, -this.width/2, this.width/4, this.width/8)
+    ellipse(-this.length/3, this.width/2, this.width/4, this.width/8)
+    // car body
+    fill(255, 100, 100)
+    rect(0, 0, this.length, this.width, 5);
+    fill(54);
+    rect(-this.length/24, 0, 0.7 * this.length, 0.8 * this.width, 5);
+    fill(255, 100, 100);
+    rect(-this.length/12, 0, 0.45 * this.length, 0.6 * this.width, 5);
+    // headlights
+    fill(255, 255, 200)
+    ellipse(this.length/2, -this.width/3, this.width/8, this.width/4);
+    ellipse(this.length/2, this.width/3, this.width/8, this.width/4);
     pop()
   }
 }

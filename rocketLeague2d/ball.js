@@ -13,12 +13,26 @@ class Ball {
     World.add(world, this.body)
   }
 
+  didScore() {
+    const [x, y] = [this.body.position.x, this.body.position.y]
+    const topOfGoalY = height/2 + goalHeight/2
+    const bottomOfGoalY = height/2 - goalHeight/2
+    const withinGoalRange = y < topOfGoalY && y > bottomOfGoalY
+    if (withinGoalRange) {
+      return (x <= this.radius/2 || x >= width - this.radius/2)
+    }
+    return false
+  }
+
   render() {
     push()
     translate(this.body.position.x, this.body.position.y)
-    fill(255)
-    noStroke()
+    rotate(this.body.angle)
+    fill(173,255,47)
     ellipse(0, 0, this.radius)
+    fill(54)
+    ellipse(0, 0, this.radius/3)
+    line(-this.radius/2, 0, this.radius/2, 0)
     pop()
   }
 }
