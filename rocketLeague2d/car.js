@@ -1,70 +1,54 @@
 class Car {
   constructor() {
-    this.position = createVector(width/2, height/2)
+    this.position = createVector(width/4, height/2)
     this.width = width/36
     this.length = this.width * 2
-    this.direction = 0
-    this.rotation = 0
-    this.velocity = createVector(0, 0)
     this.isAccelerating = false
+    this.rotation = 0
+    const options = { density: 0.01, friction: 0.2 }
+    this.body = Bodies.rectangle(
+      this.position.x, this.position.y, this.length, this.width, options
+    )
+    World.add(world, this.body)
   }
 
   update() {
     if (this.isAccelerating) {
       this.accelerate()
     }
-    this.position.add(this.velocity)
-    // FRICTION
-    this.velocity.mult(0.95)
+    // if (this.isRotating) {
+    this.rotate(this.rotation)
+    // }
   }
 
   accelerating(isAccelerating) {
     this.isAccelerating = isAccelerating
   }
 
+  // rotating(isAccelerating) {
+  //   this.isAccelerating = isAccelerating
+  // }
+
   accelerate() {
-    var force = p5.Vector.fromAngle(this.direction)
-    force.mult(0.5)
-    this.velocity.add(force)
+    var force = p5.Vector.fromAngle(this.body.angle)
+    force.mult(0.02);
+    Body.applyForce(this.body, this.body.position, force)
   }
 
-  turn() {
-    this.direction += this.rotation
-  }
-
-  setRotation(angle) {
-    this.rotation = angle
-  }
-
-  detectEdges() {
-    const x = this.position.x
-    const y = this.position.y
-    const leftWallX = this.width
-    const rightWallX = width - this.width
-    const topWallY = this.width
-    const bottomWallY = height - this.width
-
-    if (x > rightWallX) {
-      this.position.x = rightWallX
-    } else if (x < leftWallX) {
-      this.position.x = leftWallX
-    }
-
-    if (y < topWallY) {
-      this.position.y = topWallY
-    } else if (y > bottomWallY) {
-      this.position.y = bottomWallY
-    }
+  rotate(rotation) {
+    this.rotation = rotation
+    Body.setAngularVelocity(this.body, rotation)
   }
 
   render() {
+    var angle = this.body.angle;
     push()
     fill(255, 100, 100)
     noStroke()
     rectMode(CENTER)
-    translate(this.position.x, this.position.y)
-    rotate(this.direction + PI/2)
-    rect(0, 0, this.width, this.length)
+    translate(this.body.position.x, this.body.position.y)
+    rotate(angle);
+    rect(0, 0, this.length, this.width)
     pop()
   }
 }
