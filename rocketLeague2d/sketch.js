@@ -89,6 +89,8 @@ function draw() {
     const [x, y] = [ball.body.position.x, ball.body.position.y]
     x < width/2 ? computerScore++ : playerScore++;
     shootSparks(x, y)
+    Body.setPosition(ball.body, { x: width/2, y: height/2 });
+    Body.setVelocity(ball.body, { x: 0, y: 0 });
     goalWaitPeriod = true
     setTimeout(function() {
       goalWaitPeriod = false
